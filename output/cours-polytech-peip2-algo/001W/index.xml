@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>1</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001W/</fr:uri>
+    <fr:display-uri>001W</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/001W/</fr:route>
+    <fr:title text="Accès hors des bornes du tableau">Accès hors des bornes du tableau</fr:title>
+    <fr:taxon>Remarque</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Si l'on a déclaré un tableau <html:code>monTableau</html:code> de taille <fr:tex display="inline"><![CDATA[24]]></fr:tex>, l'on pourra accéder et affecter sans problème toutes les positions de <fr:tex display="inline"><![CDATA[0]]></fr:tex> à <fr:tex display="inline"><![CDATA[23]]></fr:tex> dans ce tableau. En revanche, on considerera qu'essayer d'accéder u d'affecter toute position supérieure ou égale à <fr:tex display="inline"><![CDATA[24]]></fr:tex> est une erreur (même si parfois le programme ne détecte pas cette erreur).</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>1</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0026/</fr:uri>
+            <fr:display-uri>0026</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0026/</fr:route>
+            <fr:title text="Accès à une position et affectation">Accès à une position et affectation</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Une fois un tableau déclaré, on peut accéder aux valeur stockées dans ce tableau. Par exemple, si l'on a déclaré un tableau s'appelant <html:code>monTableau</html:code> de taille <fr:tex display="inline"><![CDATA[9]]></fr:tex>, on pourra accéder à la position <fr:tex display="inline"><![CDATA[2]]></fr:tex> de ce tableau en écrivant
+<html:pre><html:cpp>
+<![CDATA[monTableau[2]]]>
+</html:cpp></html:pre>
+On pourra aussi modifier la valeur de la position <fr:tex display="inline"><![CDATA[2]]></fr:tex> de ce tableau, pour par exemple lui affecter la valeur 1729 en écrivant
+<html:pre><html:cpp>
+<![CDATA[monTableau[2] = 1729;]]>
+</html:cpp></html:pre></html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>1</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0027/</fr:uri>
+                <fr:display-uri>0027</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0027/</fr:route>
+                <fr:title text="Manipulations de tableaux">Manipulations de tableaux</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:ol><html:li>Ecrire un programme qui initialise un tableau s'appelant <html:code>monTableau</html:code> de taille <fr:tex display="inline"><![CDATA[5]]></fr:tex>, contenant initialement les valeurs <fr:tex display="inline"><![CDATA[
+\begin {array}{|c|c|c|c|c|}
+\hline 
+0&1&2&3&4\\
+\hline 
+\end {array}
+]]></fr:tex></html:li>
+<html:li>A l'aide d'une boucle, écrire une fonction <html:code>incrementeTout</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et tableau d'entier de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie une copie du tableau dans laquelle toutes les valeurs ont été incrémente de <fr:tex display="inline"><![CDATA[1]]></fr:tex>.</html:li>
+<html:li>On appelle la fonction <html:code>incrementeTout(5,monTableau)</html:code>, quel est le tableau renvoyé en résultat?</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>1</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001W/</fr:uri>
+                <fr:display-uri>001W</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/001W/</fr:route>
+                <fr:title text="Accès hors des bornes du tableau">Accès hors des bornes du tableau</fr:title>
+                <fr:taxon>Remarque</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Si l'on a déclaré un tableau <html:code>monTableau</html:code> de taille <fr:tex display="inline"><![CDATA[24]]></fr:tex>, l'on pourra accéder et affecter sans problème toutes les positions de <fr:tex display="inline"><![CDATA[0]]></fr:tex> à <fr:tex display="inline"><![CDATA[23]]></fr:tex> dans ce tableau. En revanche, on considerera qu'essayer d'accéder u d'affecter toute position supérieure ou égale à <fr:tex display="inline"><![CDATA[24]]></fr:tex> est une erreur (même si parfois le programme ne détecte pas cette erreur).</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>1</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001X/</fr:uri>
+                <fr:display-uri>001X</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/001X/</fr:route>
+                <fr:title text="Valeur non initialisée">Valeur non initialisée</fr:title>
+                <fr:taxon>Remarque</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>On considérera qu'essayer d'accéder à une valeur avant qu'elle ait été initialisée est une erreur, même si en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> c'est accepté et cela renvoie une valeur par défaut associé au type de donnée du tableau. Par exemple, on considérera le code suivant comme incorrect pour ce cours, même s'il s'agit d'un code <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> valide
+<html:pre><html:cpp><![CDATA[int[8] monTableau;
+if(monTableau[4] == 5){ // On considère cette ligne comme étant une erreur, car monTableau[4] n'a jamais été affecté.
+  return 0;
+}
+return;]]>
+</html:cpp></html:pre></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

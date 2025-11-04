@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>2</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003B/</fr:uri>
+    <fr:display-uri>003B</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/003B/</fr:route>
+    <fr:title text="Illustrations du tri par insertion">Illustrations du tri par insertion</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0039/</fr:uri>
+            <fr:display-uri>0039</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0039/</fr:route>
+            <fr:title text="Tri par insertion">Tri par insertion</fr:title>
+            <fr:taxon>Exercice</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>L'objectif de cet exercice est d'implémenter le tri par insertion</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003A/</fr:uri>
+                <fr:display-uri>003A</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003A/</fr:route>
+                <fr:title text="Le principe du tri par insertion">Le principe du tri par insertion</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Le <fr:link href="https://fr.wikipedia.org/wiki/Tri_par_insertion" type="external">tri par insertion</fr:link> consistant à trier d'abord les deux premières cases du tableau, puis à trier les 3 premières cases en insérant la 3e à la bonne place, puis la 4e en l'insérant à la bonne place, etc. Concrètement avant l'étape <fr:tex display="inline"><![CDATA[i]]></fr:tex>, on aura trié les <fr:tex display="inline"><![CDATA[i-1]]></fr:tex> premières cases du tableau. On va alors regarder la case en position <fr:tex display="inline"><![CDATA[i]]></fr:tex> et comparer son contenu avec toutes les cases des positions <fr:tex display="inline"><![CDATA[0,...,i-1]]></fr:tex>, jusqu'à trouver la position <fr:tex display="inline"><![CDATA[k]]></fr:tex> à laquelle cette case doit être insérée, pour que le tableau soit trié. Finalement, on va insérer une la valeur de la case <fr:tex display="inline"><![CDATA[i]]></fr:tex> en position <fr:tex display="inline"><![CDATA[k]]></fr:tex>, et pour se faire, il faudra aussi décaler toutes les valeurs dans les positions <fr:tex display="inline"><![CDATA[k,...,i-1]]></fr:tex> de <fr:tex display="inline"><![CDATA[1]]></fr:tex> vers la droite. Cela termine l'étape <fr:tex display="inline"><![CDATA[i]]></fr:tex>, à l'issue de laquelle on aura effectivement trié les {i} premières cases du tableau.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003B/</fr:uri>
+                <fr:display-uri>003B</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003B/</fr:route>
+                <fr:title text="Illustrations du tri par insertion">Illustrations du tri par insertion</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003C/</fr:uri>
+                <fr:display-uri>003C</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003C/</fr:route>
+                <fr:title text="Insertion dans un tableau trié">Insertion dans un tableau trié</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:ol><html:li>Ecrire une fonction <html:code>inserer</html:code> qui prend en entrée un entier {n}, un tableau de taille <fr:tex display="inline"><![CDATA[\ge  n]]></fr:tex> dont les <fr:tex display="inline"><![CDATA[n]]></fr:tex> premières entrées sont triées, et qui insère le contenu de la position <fr:tex display="inline"><![CDATA[n]]></fr:tex> à la bonne position, de manière à ce qu'neusite les <fr:tex display="inline"><![CDATA[n+1]]></fr:tex> prmières entrées du tableau soient triées</html:li>
+<html:li>Evaluer la complexité de cette fonction.</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003D/</fr:uri>
+                <fr:display-uri>003D</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003D/</fr:route>
+                <fr:title text="Le tri par insertion">Le tri par insertion</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:ol><html:li>Ecrire une fonction <html:code>triInsertion</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui effectue le tri par insertion sur ce tableau.</html:li>
+<html:li>Evaluer la complexité de cet algorithme en fonction de <fr:tex display="inline"><![CDATA[n]]></fr:tex>.</html:li>
+<html:li><html:mark>TODO</html:mark> générateur de tableau aléatoires</html:li>
+<html:li>Comparer la courbe obtenue avec la complexité théorique attendue.</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>2</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/</fr:uri>
+            <fr:display-uri>0036</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0036/</fr:route>
+            <fr:title text="Sound of sorting">Sound of sorting</fr:title>
+            <fr:taxon>Logiciel</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+              <html:mark>TODO</html:mark>
+            </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

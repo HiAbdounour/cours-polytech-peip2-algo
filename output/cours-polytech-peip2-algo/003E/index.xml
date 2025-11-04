@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>2</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003E/</fr:uri>
+    <fr:display-uri>003E</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/003E/</fr:route>
+    <fr:title text="Vérifier si un tableau est trié">Vérifier si un tableau est trié</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+      <html:mark>TODO</html:mark>
+    </html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>1</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0029/</fr:uri>
+            <fr:display-uri>0029</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0029/</fr:route>
+            <fr:title text="Algorithmes classiques sur les tableaux">Algorithmes classiques sur les tableaux</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>L'objectif de cette section est de se familiariser avec les tableaux, grâce à plusieurs algorithmes classiques sur ces derniers. Beaucoup de ces algorithmes sont donnés en exercices.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>1</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0030/</fr:uri>
+                <fr:display-uri>0030</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0030/</fr:route>
+                <fr:title text="Trouver le maximum dans un tableau d'entiers">Trouver le maximum dans un tableau d'entiers</fr:title>
+                <fr:taxon>Algorithme</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p><html:pre><html:cpp>
+// Entrée : Un entier n &gt; 0 et un tableau d'entier tableau de taille n
+// Sortie : Un entier représentant le maximum contenu dans tableau
+int maximum (int n, int[] tableau){
+  int max = tableau [0];
+  // A la fin de la boucle i, max contient le maximum
+  // de tableau situé entre les indices 0 et i
+  for (int i = 1; i &lt; n; i++ ){
+    if (max &lt; tableau[i]){
+      max = tableau[i];
+    }
+  }
+  return max;
+}
+</html:cpp></html:pre>
+<html:strong>Complexité</html:strong>: Pour analyser la complexité de cet algorithme, on compte le nombre de comparaison. A chaque passage dans la boucle, on effectue exactement une comparaison (<html:code>max &lt; tableau[i]</html:code>), et on fait <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> passages dans la boucle. Cette fonction fera donc toujours exactement <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> comparaisons, ce qui donne une complexité en <fr:tex display="inline"><![CDATA[\mathcal {O}(n)]]></fr:tex> (<fr:link href="/cours-polytech-peip2-algo/0017/" title="Linéaire" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0017/" display-uri="0017" type="local">complexité linéaire</fr:link>).
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>1</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0031/</fr:uri>
+                <fr:display-uri>0031</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0031/</fr:route>
+                <fr:title text="Minimum d'un tableau">Minimum d'un tableau</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:ol><html:li>Ecrire une fonction <html:code>minimum</html:code> qui prend en argument un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie le minimum de ce tableau</html:li>
+<html:li>Ecrire une fonction <html:code>minimumParmi</html:code> qui prend en argument deux entiers <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n]]></fr:tex> tels que <fr:tex display="inline"><![CDATA[k<n]]></fr:tex>, et un tableau de taille au moins <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie le minimum parmis tous les éléments de ce tableau situé entre les positions <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n-1]]></fr:tex>.</html:li>
+<html:li>Ecrire une fonction <html:code>indiceMinimum</html:code> qui prend en argument deux entiers <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n]]></fr:tex> tels que <fr:tex display="inline"><![CDATA[k<n]]></fr:tex>, et un tableau de taille au moins <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie la position à laquelle se situe minimum parmis tous les éléments de ce tableau situé entre les positions <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n-1]]></fr:tex>.</html:li>
+<html:li>Donner une estimation de la complexité de chacune de ces fonctions.</html:li></html:ol>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0032/</fr:uri>
+                <fr:display-uri>0032</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0032/</fr:route>
+                <fr:title text="Crible d'Erathostene">Crible d'Erathostene</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:mark>TODO</html:mark>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003E/</fr:uri>
+                <fr:display-uri>003E</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003E/</fr:route>
+                <fr:title text="Vérifier si un tableau est trié">Vérifier si un tableau est trié</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:mark>TODO</html:mark>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

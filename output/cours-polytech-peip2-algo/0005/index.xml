@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>10</fr:month>
+      <fr:day>7</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0005/</fr:uri>
+    <fr:display-uri>0005</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/0005/</fr:route>
+    <fr:title text="Les opérations élémentaires">Les opérations élémentaires</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>La définition informelle d'algorithme que l'on a donné a ses limites: on n'a pas défini ce que sont les opérations élémentaires. Donner une définition exacte est l'objet d'un cours de <fr:link href="https://fr.wikipedia.org/wiki/Théorie_de_la_calculabilité" type="external">théorie de la calculabilité</fr:link>. Pour notre usage, on se limitera à l'intuition que les opérations élémentaires sont les opérations qu'un ordinateur peut réaliser de manière très simple et très rapide, comme par exemple additionner deux nombres. On verra que selon les cas, on pourra prendre quelques libertés et considérer des opérations plus complexes comme élémentaire, tout en restant conscient du temps que ces dernière prennent.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>7</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0002/</fr:uri>
+            <fr:display-uri>0002</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0002/</fr:route>
+            <fr:title text="Qu'est-ce qu'un algorithme?">Qu'est-ce qu'un algorithme?</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Ce cours est consacré aux algorithmes. La question de définir les algorithmes, et d'étudier leurs limite dépasse les attendus de ce cours. Il est néanmoins intéressant de commencer par une brève discussion pour comprendre de quoi l'on parle.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>7</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0003/</fr:uri>
+                <fr:display-uri>0003</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0003/</fr:route>
+                <fr:title text="Algorithme (Définition informelle)">Algorithme (Définition informelle)</fr:title>
+                <fr:taxon>Définition</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Un <html:em>algorithme</html:em> est une séquence d'opérations élémentaires à effectuer afin d'obtenir un résultat précis.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>7</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0004/</fr:uri>
+                <fr:display-uri>0004</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0004/</fr:route>
+                <fr:title text="Algorithmes et recettes de cuisine">Algorithmes et recettes de cuisine</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Une analogie que l'on donne couramment est celle d'une recette de cuisine: La recette donne typiquement une série d'instruction que le cuisinier va suivra afin de réaliser son plat (Ex: Faire bouillir de l'eau, ajouter une pincée de sel, ajouter 500g de pates, laisser bouillir pendant 12 min, égouter les pates). Cette analogie nous permet aussi de comprendre ce que l'on entend par "opération élémentaire": un cuisinier débutant aura besoin de la recette pour faire cuire les pates, tandis qu'un cuisinier chevroné se contentera d'une seule étape: "faire cuire des pates".</html:p>
+                <html:p>Contrairement à ce que l'analogie des recettes de cuisine laisse penser, on s'intéresse ici à des algorithmes permettant de réaliser la même opération sur différentes données. Par exemple, lorsque l'on parle d'algorithme pour trier un tableau, on voudra utilier le même algorithme pour trier le tableau
+<fr:tex display="inline"><![CDATA[
+\begin {array}{|c|c|c|c|}
+\hline 
+5 & 8 & 2 & 10 \\
+\hline 
+\end {array}
+]]></fr:tex>
+et le tableau
+<fr:tex display="inline"><![CDATA[
+\begin {array}{|c|c|c|c|}
+\hline 
+7 & 25 & 4 & 9 \\
+\hline 
+\end {array}
+]]></fr:tex>.
+On dit alors que le tableau est une <html:em>entrée</html:em> de l'algorithme.
+</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>7</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0005/</fr:uri>
+                <fr:display-uri>0005</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/0005/</fr:route>
+                <fr:title text="Les opérations élémentaires">Les opérations élémentaires</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>La définition informelle d'algorithme que l'on a donné a ses limites: on n'a pas défini ce que sont les opérations élémentaires. Donner une définition exacte est l'objet d'un cours de <fr:link href="https://fr.wikipedia.org/wiki/Théorie_de_la_calculabilité" type="external">théorie de la calculabilité</fr:link>. Pour notre usage, on se limitera à l'intuition que les opérations élémentaires sont les opérations qu'un ordinateur peut réaliser de manière très simple et très rapide, comme par exemple additionner deux nombres. On verra que selon les cas, on pourra prendre quelques libertés et considérer des opérations plus complexes comme élémentaire, tout en restant conscient du temps que ces dernière prennent.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

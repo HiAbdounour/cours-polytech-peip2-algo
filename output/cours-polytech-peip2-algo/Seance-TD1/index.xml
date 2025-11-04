@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>10</fr:month>
+      <fr:day>27</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD1/</fr:uri>
+    <fr:display-uri>Seance-TD1</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/Seance-TD1/</fr:route>
+    <fr:title text="TD 1">TD 1</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p><html:strong>Objectif:</html:strong> Ce TD a pour but de se refamiliariser avec la syntaxe et la programmation en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource>, et de voir les premiers exemples d'analyse de complexité au passage.</html:p>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2025</fr:year>
+          <fr:month>10</fr:month>
+          <fr:day>27</fr:day>
+        </fr:date>
+        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001K/</fr:uri>
+        <fr:display-uri>001K</fr:display-uri>
+        <fr:route>/cours-polytech-peip2-algo/001K/</fr:route>
+        <fr:title text="Calcul du produit de deux entiers positifs">Calcul du produit de deux entiers positifs</fr:title>
+        <fr:taxon>Exercice</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>Comparer les deux algorithmes suivant pour calculer le produit de deux nombres entiers positifs, et évaluer leur complexité.</html:p>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001L/</fr:uri>
+            <fr:display-uri>001L</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/001L/</fr:route>
+            <fr:title text="Calcul du produit de deux entiers positifs (directement)">Calcul du produit de deux entiers positifs (directement)</fr:title>
+            <fr:taxon>Algorithme</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+              <html:pre>
+                <html:cpp><![CDATA[// Entrées: Deux entiers x et y
+// Sortie: Le produit des deux entrées
+int produit (int x , int y){
+  return x * y;
+}]]>
+</html:cpp>
+              </html:pre>
+            </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001M/</fr:uri>
+            <fr:display-uri>001M</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/001M/</fr:route>
+            <fr:title text="Calcul de la somme de deux entiers positifs (avec une boucle)">Calcul de la somme de deux entiers positifs (avec une boucle)</fr:title>
+            <fr:taxon>Algorithme</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+              <html:pre>
+                <html:cpp><![CDATA[// Entrées: Deux entiers x et y positifs
+// Sortie: Le produit des deux entrées
+int produit (int x , int y){
+  int result;
+  while (y  > 0){
+    result = result + x;
+    y = y - 1;
+  }
+  return result;
+}]]>
+</html:cpp>
+              </html:pre>
+            </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2025</fr:year>
+          <fr:month>10</fr:month>
+          <fr:day>27</fr:day>
+        </fr:date>
+        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001N/</fr:uri>
+        <fr:display-uri>001N</fr:display-uri>
+        <fr:route>/cours-polytech-peip2-algo/001N/</fr:route>
+        <fr:title text="Algorithme mystère (ou de l'importance de bien spécifier les algorithmes que l'on écrit)">Algorithme mystère (ou de l'importance de bien spécifier les algorithmes que l'on écrit)</fr:title>
+        <fr:taxon>Exercice</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>On considère l'algorithme suivant:</html:p>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001O/</fr:uri>
+            <fr:display-uri>001O</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/001O/</fr:route>
+            <fr:title text="Mysère">Mysère</fr:title>
+            <fr:taxon>Algorithme</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+              <html:pre>
+                <html:cpp>
+<![CDATA[// Entrées: Un entier n >= 1
+// Sortie: Un booléen mystère
+bool mystere (int n){
+  int i = 2;
+  bool r = true;
+  while (i < n && r){
+    if (n%i == 0) {
+      r = false;
+    }
+    i = i+1;
+  }
+  return r;
+}]]></html:cpp>
+              </html:pre>
+            </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <html:p><html:ol><html:li>Que renvoie cet algorithme?</html:li>
+<html:li>Quelle est sa complexité?</html:li>
+<html:li>Comment l'améliorer, et quelle est la complexité resultante?</html:li></html:ol>
+Remarquez qu'il est beaucoup plus difficile de comprendre un algorithme lorsqu'on ne sais pas ce qu'il est censé faire, ni à quoi correspondent les variables mises en jeu. Cela illustre la remarque suivante</html:p>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001Y/</fr:uri>
+            <fr:display-uri>001Y</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/001Y/</fr:route>
+            <fr:title text="Conventions de nommage">Conventions de nommage</fr:title>
+            <fr:taxon>Remarque</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Il est important de donner des noms raionnables aux variables, de manière à indiquer ce qu'elles sont censées représenter. Cela rend l'algorithme bien plus compréhensible.
+<html:img src="https://imgs.xkcd.com/comics/x.png" /></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2025</fr:year>
+          <fr:month>10</fr:month>
+          <fr:day>27</fr:day>
+        </fr:date>
+        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001P/</fr:uri>
+        <fr:display-uri>001P</fr:display-uri>
+        <fr:route>/cours-polytech-peip2-algo/001P/</fr:route>
+        <fr:title text="Enumérations">Enumérations</fr:title>
+        <fr:taxon>Recueil d'exercices</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>Voici maintenant une collection d'exercices visant à énumérer tous les nombres satisfaisant certaines propriétés.</html:p>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001Q/</fr:uri>
+            <fr:display-uri>001Q</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/001Q/</fr:route>
+            <fr:title text="Enumération des entiers pairs">Enumération des entiers pairs</fr:title>
+            <fr:taxon>Exercice</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+              <html:ol><html:li>Ecrire un algorithme prenant en entrée un entier <html:code>n</html:code> positif et qui affiche tous les entiers pairs de taille inférieur ou égale à <html:code>n</html:code></html:li>
+<html:li>Analyser la complexité de cet algorithme</html:li></html:ol>
+            </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001R/</fr:uri>
+            <fr:display-uri>001R</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/001R/</fr:route>
+            <fr:title text="Enumération des carrés parfaits">Enumération des carrés parfaits</fr:title>
+            <fr:taxon>Exercice</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+              <html:ol><html:li>Ecrire un algorithme prenant en entrée un entier <html:code>n</html:code> positif et qui affiche tous les entiers carrés parfaits taille inférieur ou égale à <html:code>n</html:code></html:li>
+<html:li>Analyser la complexité de cet algorithme</html:li></html:ol>
+            </html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001S/</fr:uri>
+            <fr:display-uri>001S</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/001S/</fr:route>
+            <fr:title text="Enumération des nombres triangulaires">Enumération des nombres triangulaires</fr:title>
+            <fr:taxon>Exercice</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p><html:strong>Rappel:</html:strong> Un nombre triangulaire est un nombre de la forme <fr:tex display="inline"><![CDATA[1+2+\ldots +n]]></fr:tex>
+<html:ol><html:li>Ecrire un algorithme prenant en entrée un entier <html:code>n</html:code> positif et qui affiche tous les nombres triangulaires de taille inférieur ou égale à <html:code>n</html:code></html:li>
+<html:li>Analyser la complexité de cet algorithme</html:li></html:ol></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2025</fr:year>
+          <fr:month>10</fr:month>
+          <fr:day>27</fr:day>
+        </fr:date>
+        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001T/</fr:uri>
+        <fr:display-uri>001T</fr:display-uri>
+        <fr:route>/cours-polytech-peip2-algo/001T/</fr:route>
+        <fr:title text="Calcul de logarithme">Calcul de logarithme</fr:title>
+        <fr:taxon>Exercice</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+          <html:ol><html:li>Ecrire un algorithme qui prend en entrée deux nombres entiers <fr:tex display="inline"><![CDATA[b,n]]></fr:tex> avec <fr:tex display="inline"><![CDATA[n > 1]]></fr:tex> et qui retourne la partie entière de <fr:tex display="inline"><![CDATA[\log _b(x)]]></fr:tex> à l'aide d'une boucle.</html:li>
+<html:strong>Indice:</html:strong> On rappelle que c'est le plus grand entier <fr:tex display="inline"><![CDATA[q]]></fr:tex> tel que <fr:tex display="inline"><![CDATA[b ^ q \leq  n]]></fr:tex>.
+<html:li>Quelle est la complexité de cet algorithme?</html:li></html:ol>
+        </html:p>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors>
+          <fr:author>
+            <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+          </fr:author>
+        </fr:authors>
+        <fr:date>
+          <fr:year>2025</fr:year>
+          <fr:month>11</fr:month>
+          <fr:day>1</fr:day>
+        </fr:date>
+        <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0027/</fr:uri>
+        <fr:display-uri>0027</fr:display-uri>
+        <fr:route>/cours-polytech-peip2-algo/0027/</fr:route>
+        <fr:title text="Manipulations de tableaux">Manipulations de tableaux</fr:title>
+        <fr:taxon>Exercice</fr:taxon>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:p>
+          <html:ol><html:li>Ecrire un programme qui initialise un tableau s'appelant <html:code>monTableau</html:code> de taille <fr:tex display="inline"><![CDATA[5]]></fr:tex>, contenant initialement les valeurs <fr:tex display="inline"><![CDATA[
+\begin {array}{|c|c|c|c|c|}
+\hline 
+0&1&2&3&4\\
+\hline 
+\end {array}
+]]></fr:tex></html:li>
+<html:li>A l'aide d'une boucle, écrire une fonction <html:code>incrementeTout</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et tableau d'entier de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie une copie du tableau dans laquelle toutes les valeurs ont été incrémente de <fr:tex display="inline"><![CDATA[1]]></fr:tex>.</html:li>
+<html:li>On appelle la fonction <html:code>incrementeTout(5,monTableau)</html:code>, quel est le tableau renvoyé en résultat?</html:li></html:ol>
+        </html:p>
+      </fr:mainmatter>
+    </fr:tree>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001V/</fr:uri>
+            <fr:display-uri>001V</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/001V/</fr:route>
+            <fr:title text="Recueil des TD/TP">Recueil des TD/TP</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p><html:ul><html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD1/" title="TD 1" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD1/" display-uri="Seance-TD1" type="local">TD 1</fr:link></html:li>
+<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD2/" title="TD 2" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD2/" display-uri="Seance-TD2" type="local">TD 2</fr:link></html:li></html:ul>
+<html:ul><html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP1/" title="TP 1 : Tri par sélection et tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP1/" display-uri="Seance-TP1" type="local">TP 1</fr:link></html:li></html:ul></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

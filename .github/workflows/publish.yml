@@ -15,4 +15,4 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: output
+          folder: output/cours-polytech-peip2-algo

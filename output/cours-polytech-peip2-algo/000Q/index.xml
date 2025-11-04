@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>10</fr:month>
+      <fr:day>8</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000Q/</fr:uri>
+    <fr:display-uri>000Q</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/000Q/</fr:route>
+    <fr:title text="Boucles while">Boucles <html:code>while</html:code></fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Les boucles <html:code>while</html:code> permettent de répéter les instructions contenues dans le corps de la boucle tant qu'une condition booléenne est vraie. On l'utilise avec la syntaxe suivante:
+<html:pre><html:cpp>
+<![CDATA[while (condition) {
+  // corps de la boucle
+}]]>
+</html:cpp></html:pre>
+Notons qu'il n'y a pas de garantie que la boucle s'arrête. Pour que la boucle s'arrête, il faut que le corps de la boucle modifie la condition de manière à la rendre fausse à un moment.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>8</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000N/</fr:uri>
+            <fr:display-uri>000N</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/000N/</fr:route>
+            <fr:title text="Boucles">Boucles</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Les boucles sont une <fr:link href="/cours-polytech-peip2-algo/000O/" title="Structure de contrôle" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000O/" display-uri="000O" type="local">structure de contrôle</fr:link> permettant de répéter d'autres instructions un certain nombre de fois, ou jusqu'à ce qu'une condition booléenne devienne valide. Nous utiliserons deux types de boucles
+<html:ol><html:li>Les boucles <html:code>for</html:code></html:li>
+<html:li>Les boucles <html:code>while</html:code></html:li></html:ol></html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>8</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000P/</fr:uri>
+                <fr:display-uri>000P</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/000P/</fr:route>
+                <fr:title text="Boucles for">Boucles <html:code>for</html:code></fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Les boucles <html:code>for</html:code> permettent de répéter les intructions contenues dans le corps de la boucle un nombre certain nombre de fois. Pour ce faire, on définit une variable intermédiaire qui sert de compteur, et que l'on va incrémenter jusqu'à la valeur désirée. La syntaxe pour utiliser une boucle <html:code>for</html:code> est la suivante
+<html:pre><html:cpp>
+<![CDATA[ for(int i = 1; i <= 8; i++){
+  // corps de la boucle
+}]]></html:cpp></html:pre>
+Dans cet exemple, les intructions contenues dans le corps de la boucles sont répétées 8 fois. Décomposons rapidement les différents éléments de la boucle:
+<html:ul><html:li>le code <html:code>int i = 1</html:code> déclare une variable <html:code>i</html:code> de type <html:code>int</html:code> et lui affecte la valeur <html:code>1</html:code></html:li>
+<html:li>le code <html:code>i &lt;= 8</html:code> indique que l'on va passer dans la boucle tant que la condition <html:code>i &lt;= 8</html:code> est vraie</html:li>
+<html:li>le code <html:code>i++</html:code> donne une instruction à effectuer à la fin de chacun des passages dans la boucle, ici on incrémente la variable <html:code>i</html:code> de <html:code>1</html:code> (le code <html:code>i++</html:code> est équivalent à <html:code>i = i+1</html:code>)</html:li></html:ul>
+Notons que dans le corps de la boucle, l'on a accès à la variable <html:code>i</html:code>, et l'on voit sa valeur changer au fil des passages dans la boucle. C'est pourquoi on sera ammené parfois à commencer à compter à partir d'un nombre différent de 1, ou par exemple de 3 en 3. Par exemple, la boucle suivante fait le même nombre d'itérations que la boucle précédente, mais donne des valeurs de la variable <html:code>i</html:code> différentes dans le corps de la boucle pour chacun des passages:
+<html:pre><html:cpp>
+<![CDATA[ for(int i = 5; i <= 32; i = i+3){
+  // corps de la boucle
+}]]></html:cpp></html:pre></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>8</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000Q/</fr:uri>
+                <fr:display-uri>000Q</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/000Q/</fr:route>
+                <fr:title text="Boucles while">Boucles <html:code>while</html:code></fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Les boucles <html:code>while</html:code> permettent de répéter les instructions contenues dans le corps de la boucle tant qu'une condition booléenne est vraie. On l'utilise avec la syntaxe suivante:
+<html:pre><html:cpp>
+<![CDATA[while (condition) {
+  // corps de la boucle
+}]]>
+</html:cpp></html:pre>
+Notons qu'il n'y a pas de garantie que la boucle s'arrête. Pour que la boucle s'arrête, il faut que le corps de la boucle modifie la condition de manière à la rendre fausse à un moment.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

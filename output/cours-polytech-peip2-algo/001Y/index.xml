@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>10</fr:month>
+      <fr:day>27</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001Y/</fr:uri>
+    <fr:display-uri>001Y</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/001Y/</fr:route>
+    <fr:title text="Conventions de nommage">Conventions de nommage</fr:title>
+    <fr:taxon>Remarque</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>Il est important de donner des noms raionnables aux variables, de manière à indiquer ce qu'elles sont censées représenter. Cela rend l'algorithme bien plus compréhensible.
+<html:img src="https://imgs.xkcd.com/comics/x.png" /></html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001N/</fr:uri>
+            <fr:display-uri>001N</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/001N/</fr:route>
+            <fr:title text="Algorithme mystère (ou de l'importance de bien spécifier les algorithmes que l'on écrit)">Algorithme mystère (ou de l'importance de bien spécifier les algorithmes que l'on écrit)</fr:title>
+            <fr:taxon>Exercice</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>On considère l'algorithme suivant:</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>27</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001O/</fr:uri>
+                <fr:display-uri>001O</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/001O/</fr:route>
+                <fr:title text="Mysère">Mysère</fr:title>
+                <fr:taxon>Algorithme</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:pre>
+                    <html:cpp>
+<![CDATA[// Entrées: Un entier n >= 1
+// Sortie: Un booléen mystère
+bool mystere (int n){
+  int i = 2;
+  bool r = true;
+  while (i < n && r){
+    if (n%i == 0) {
+      r = false;
+    }
+    i = i+1;
+  }
+  return r;
+}]]></html:cpp>
+                  </html:pre>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p><html:ol><html:li>Que renvoie cet algorithme?</html:li>
+<html:li>Quelle est sa complexité?</html:li>
+<html:li>Comment l'améliorer, et quelle est la complexité resultante?</html:li></html:ol>
+Remarquez qu'il est beaucoup plus difficile de comprendre un algorithme lorsqu'on ne sais pas ce qu'il est censé faire, ni à quoi correspondent les variables mises en jeu. Cela illustre la remarque suivante</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>27</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001Y/</fr:uri>
+                <fr:display-uri>001Y</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/001Y/</fr:route>
+                <fr:title text="Conventions de nommage">Conventions de nommage</fr:title>
+                <fr:taxon>Remarque</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Il est important de donner des noms raionnables aux variables, de manière à indiquer ce qu'elles sont censées représenter. Cela rend l'algorithme bien plus compréhensible.
+<html:img src="https://imgs.xkcd.com/comics/x.png" /></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>7</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000G/</fr:uri>
+            <fr:display-uri>000G</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/000G/</fr:route>
+            <fr:title text="Variables et affectations">Variables et affectations</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Les variables permettent de stocker des valeur que l'on a besoin de manipuler lors de l'exécution de l'aglorithme. Elles sont déclarées en étant précédées de leur type de donnée comme dans l'exemple suivant
+<html:pre><html:cpp>
+<![CDATA[int x;]]></html:cpp></html:pre>
+Pour affecter une valeur à une variable on utilisera le symbole <html:code>=</html:code>. Ainsi, l'extrait de code suivant déclare une variable <html:code>x</html:code> de type <html:code>int</html:code> et lui affecte la valeur <html:code>5</html:code>
+<html:pre><html:cpp><![CDATA[int x;
+x = 5;]]></html:cpp></html:pre>
+On pourra abréger ce code en 1 seule ligne, en echaînant la déclaration et l'affectation, comme suit
+<html:pre><html:cpp><![CDATA[int x = 5;]]></html:cpp></html:pre>
+On considérera qu'essayer d'accéder à une valeur qui a été déclarée mais à laquelle aucune valeur n'a été affectée est une erreur, même si <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> ne lève pas d'erreur et renvoie une valeur.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>27</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001Y/</fr:uri>
+                <fr:display-uri>001Y</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/001Y/</fr:route>
+                <fr:title text="Conventions de nommage">Conventions de nommage</fr:title>
+                <fr:taxon>Remarque</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Il est important de donner des noms raionnables aux variables, de manière à indiquer ce qu'elles sont censées représenter. Cela rend l'algorithme bien plus compréhensible.
+<html:img src="https://imgs.xkcd.com/comics/x.png" /></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

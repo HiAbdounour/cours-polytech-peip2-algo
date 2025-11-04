@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>10</fr:month>
+      <fr:day>27</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001I/</fr:uri>
+    <fr:display-uri>001I</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/001I/</fr:route>
+    <fr:title text="Calcul de la somme de deux entiers positifs (avec une boucle)">Calcul de la somme de deux entiers positifs (avec une boucle)</fr:title>
+    <fr:taxon>Algorithme</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>
+      <html:pre>
+        <html:cpp>
+<![CDATA[// Entrées: Deux entiers x et y positifs
+// Sortie: La somme des deux entrées
+int somme (int x , int y){
+  while (y  > 0){
+    x = x + 1;
+    y = y - 1;
+  }
+  return x;
+}]]>
+</html:cpp>
+      </html:pre>
+    </html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>27</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001G/</fr:uri>
+            <fr:display-uri>001G</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/001G/</fr:route>
+            <fr:title text="Calcul de la somme de entiers positifs">Calcul de la somme de entiers positifs</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>On va comparer deux algorithmes pour calculer la somme de deux entiers positifs</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>27</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001H/</fr:uri>
+                <fr:display-uri>001H</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/001H/</fr:route>
+                <fr:title text="Calcul de la somme de deux entiers positifs (directement)">Calcul de la somme de deux entiers positifs (directement)</fr:title>
+                <fr:taxon>Algorithme</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:pre>
+                    <html:cpp>
+<![CDATA[// Entrées: Deux entiers x et y
+// Sortie: La somme des deux entrées
+int somme (int x , int y){
+  return x + y;
+}]]>
+</html:cpp>
+                  </html:pre>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>27</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001I/</fr:uri>
+                <fr:display-uri>001I</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/001I/</fr:route>
+                <fr:title text="Calcul de la somme de deux entiers positifs (avec une boucle)">Calcul de la somme de deux entiers positifs (avec une boucle)</fr:title>
+                <fr:taxon>Algorithme</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>
+                  <html:pre>
+                    <html:cpp>
+<![CDATA[// Entrées: Deux entiers x et y positifs
+// Sortie: La somme des deux entrées
+int somme (int x , int y){
+  while (y  > 0){
+    x = x + 1;
+    y = y - 1;
+  }
+  return x;
+}]]>
+</html:cpp>
+                  </html:pre>
+                </html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <html:p>Lorsque les deux nombres donnés sont positifs, les deux algorithmes permettent effectivement de calculer la somme des deux nombres. Pour évaluer la complexité, on va compter le nombre d'additions effectué par chacuns des deux algorithmes. Le premier algorithme effectue une seule addition <html:code>x+y</html:code> pour renvoyer le résultat, il est donc en temps constant. Le second algorithme effectue deux additions par passage dans la boucle (<html:code>x = x + 1</html:code> et <html:code>y = y - 1</html:code>). A chaque passage dans la boucle, la variable <html:code>y</html:code> est décrémentée de <fr:tex display="inline"><![CDATA[1]]></fr:tex>, et on s'arrête lorsque l'on atteint <fr:tex display="inline"><![CDATA[0]]></fr:tex>. Il y a donc autant de passages dans la boucle que la valeur initiale de <html:code>y</html:code>. On dira que le second algorithme est en <fr:tex display="inline"><![CDATA[\mathcal {O}(y)]]></fr:tex>, ou encore linéaire en son second argument.</html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>
