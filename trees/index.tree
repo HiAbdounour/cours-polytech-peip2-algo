@@ -3,8 +3,5 @@
 \p{\strong{Structure du cours:}
 Ce document est un cours d'algorithmique pour la deuxième année de prépa intégrée à l'école d'ingénieur Polytech Paris-Saclay. Il est conçu à l'aide de l'outil [forester](https://www.forester-notes.org/index/index.xml), et a une structure qui peut sembler atypique. Il est en effet constitué de nombreuses "notes atomiques" (c'est-à-dire des notes présentant chacune une seule idée), constituant l'ensemble des connaissances attendues. Le document que vous lisez regroupe toutes ces notes, qui servent à la fois de cours et de base de données de connaissances. Il est donc attendu que le lecteur puisse lire le cours en sautant d'une note à l'autre, en suivant les liens contenus dans ces dernières, lorsque cela lui semble pertinent ou nécessaire. Bien sûr, il est beaucoup plus simple de suivre cette démarche avec le document au format numérique. Par exemple, le dernier chapitre de ce document constitue une référence sur les notions importantes que nous allons étudier et utiliser tout au long du cours. Il n'a pas vocation à être lu de bout-en-bout, mais à servir de point d'ancrage auquel se référer tout au long de ce cours. Il ne faudra donc pas hésiter à sauter à ce chapitre au cours de la lecture autant que nécessaire.}
 
+\p{\strong{[La page du cours](003K)}}
 \p{\strong{[La page des TD/TP](001V)}}
-
-\transclude{0001}
-\transclude{000S}
-\transclude{000V}

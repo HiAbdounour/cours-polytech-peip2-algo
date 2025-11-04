@@ -895,1196 +895,21 @@ int maximum (int n, int[] tableau){
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>
-              <fr:contributor>
+              <fr:author>
                 <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-              </fr:contributor>
+              </fr:author>
             </fr:authors>
-            <fr:uri>http://localhost/index.sync-conflict-20251030-202800-I54U3RZ</fr:uri>
-            <fr:display-uri>index.sync-conflict-20251030-202800-I54U3RZ</fr:display-uri>
-            <fr:route>/index.sync-conflict-20251030-202800-I54U3RZ</fr:route>
-            <fr:title text="Cours d'algorithmique et complexité">Cours d'algorithmique et complexité</fr:title>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>4</fr:day>
+            </fr:date>
+            <fr:uri>http://localhost/003K/</fr:uri>
+            <fr:display-uri>003K</fr:display-uri>
+            <fr:route>/003K/</fr:route>
+            <fr:title text="Cours d'algorithmique PEIP2">Cours d'algorithmique PEIP2</fr:title>
           </fr:frontmatter>
           <fr:mainmatter>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors>
-                  <fr:author>
-                    <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                  </fr:author>
-                </fr:authors>
-                <fr:date>
-                  <fr:year>2025</fr:year>
-                  <fr:month>10</fr:month>
-                  <fr:day>7</fr:day>
-                </fr:date>
-                <fr:uri>http://localhost/0001/</fr:uri>
-                <fr:display-uri>0001</fr:display-uri>
-                <fr:route>/0001/</fr:route>
-                <fr:title text="Rappels d'algorithmique et bases de la programmation">Rappels d'algorithmique et bases de la programmation</fr:title>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>Ce chapitre joue rôle multible. Tout d'abord il a pour but de rappeler les notions d'algorithmique vues dans les cours précédents et de faire un panorama global des sujets auxquels un cours d'algorithmique s'intéresse. Ensuite, il sert à établir les objectifs de ce cours, et exposer les "règles du jeu" en établissant les limites que nous étudierons dans ce cours.</html:p>
-                <fr:tree show-metadata="false">
-                  <fr:frontmatter>
-                    <fr:authors>
-                      <fr:author>
-                        <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                      </fr:author>
-                    </fr:authors>
-                    <fr:date>
-                      <fr:year>2025</fr:year>
-                      <fr:month>10</fr:month>
-                      <fr:day>7</fr:day>
-                    </fr:date>
-                    <fr:uri>http://localhost/0002/</fr:uri>
-                    <fr:display-uri>0002</fr:display-uri>
-                    <fr:route>/0002/</fr:route>
-                    <fr:title text="Qu'est-ce qu'un algorithme?">Qu'est-ce qu'un algorithme?</fr:title>
-                  </fr:frontmatter>
-                  <fr:mainmatter>
-                    <html:p>Ce cours est consacré aux algorithmes. La question de définir les algorithmes, et d'étudier leurs limite dépasse les attendus de ce cours. Il est néanmoins intéressant de commencer par une brève discussion pour comprendre de quoi l'on parle.</html:p>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>10</fr:month>
-                          <fr:day>7</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/0003/</fr:uri>
-                        <fr:display-uri>0003</fr:display-uri>
-                        <fr:route>/0003/</fr:route>
-                        <fr:title text="Algorithme (Définition informelle)">Algorithme (Définition informelle)</fr:title>
-                        <fr:taxon>Définition</fr:taxon>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>Un <html:em>algorithme</html:em> est une séquence d'opérations élémentaires à effectuer afin d'obtenir un résultat précis.</html:p>
-                      </fr:mainmatter>
-                    </fr:tree>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>10</fr:month>
-                          <fr:day>7</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/0004/</fr:uri>
-                        <fr:display-uri>0004</fr:display-uri>
-                        <fr:route>/0004/</fr:route>
-                        <fr:title text="Algorithmes et recettes de cuisine">Algorithmes et recettes de cuisine</fr:title>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>Une analogie que l'on donne couramment est celle d'une recette de cuisine: La recette donne typiquement une série d'instruction que le cuisinier va suivra afin de réaliser son plat (Ex: Faire bouillir de l'eau, ajouter une pincée de sel, ajouter 500g de pates, laisser bouillir pendant 12 min, égouter les pates). Cette analogie nous permet aussi de comprendre ce que l'on entend par "opération élémentaire": un cuisinier débutant aura besoin de la recette pour faire cuire les pates, tandis qu'un cuisinier chevroné se contentera d'une seule étape: "faire cuire des pates".</html:p>
-                        <html:p>Contrairement à ce que l'analogie des recettes de cuisine laisse penser, on s'intéresse ici à des algorithmes permettant de réaliser la même opération sur différentes données. Par exemple, lorsque l'on parle d'algorithme pour trier un tableau, on voudra utilier le même algorithme pour trier le tableau
-<fr:tex display="inline"><![CDATA[
-\begin {array}{|c|c|c|c|}
-\hline 
-5 & 8 & 2 & 10 \\
-\hline 
-\end {array}
-]]></fr:tex>
-et le tableau
-<fr:tex display="inline"><![CDATA[
-\begin {array}{|c|c|c|c|}
-\hline 
-7 & 25 & 4 & 9 \\
-\hline 
-\end {array}
-]]></fr:tex>.
-On dit alors que le tableau est une <html:em>entrée</html:em> de l'algorithme.
-</html:p>
-                      </fr:mainmatter>
-                    </fr:tree>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>10</fr:month>
-                          <fr:day>7</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/0005/</fr:uri>
-                        <fr:display-uri>0005</fr:display-uri>
-                        <fr:route>/0005/</fr:route>
-                        <fr:title text="Les opérations élémentaires">Les opérations élémentaires</fr:title>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>La définition informelle d'algorithme que l'on a donné a ses limites: on n'a pas défini ce que sont les opérations élémentaires. Donner une définition exacte est l'objet d'un cours de <fr:link href="https://fr.wikipedia.org/wiki/Théorie_de_la_calculabilité" type="external">théorie de la calculabilité</fr:link>. Pour notre usage, on se limitera à l'intuition que les opérations élémentaires sont les opérations qu'un ordinateur peut réaliser de manière très simple et très rapide, comme par exemple additionner deux nombres. On verra que selon les cas, on pourra prendre quelques libertés et considérer des opérations plus complexes comme élémentaire, tout en restant conscient du temps que ces dernière prennent.</html:p>
-                      </fr:mainmatter>
-                    </fr:tree>
-                  </fr:mainmatter>
-                </fr:tree>
-                <fr:tree show-metadata="false">
-                  <fr:frontmatter>
-                    <fr:authors>
-                      <fr:author>
-                        <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                      </fr:author>
-                    </fr:authors>
-                    <fr:date>
-                      <fr:year>2025</fr:year>
-                      <fr:month>10</fr:month>
-                      <fr:day>7</fr:day>
-                    </fr:date>
-                    <fr:uri>http://localhost/0008/</fr:uri>
-                    <fr:display-uri>0008</fr:display-uri>
-                    <fr:route>/0008/</fr:route>
-                    <fr:title text="La complexité des algorithmes">La complexité des algorithmes</fr:title>
-                  </fr:frontmatter>
-                  <fr:mainmatter>
-                    <html:p>De manière générale, étant donné un algorithme on s'intéresse à savoir s'il va s'exécuter en pratique même lorsqu'on l'appelle sur des entrées de grande taille. Si l'algorithme que l'on a écrit est correct, la validité du résultat ne dépend pas de la taille de ses entrées, et donc, si l'algorithme est correct et qu'il renvoie un résultat, ce résultat sera correct, même sur des données de grande taille. En revanche, il est possible que l'on n'arrive pas à obtenir de résultat. Cela peut être dû à deux problèmes:
-<html:ol><html:li>L'algorithme prend trop de temps à s'exécuter: il faudrait attendre très longtemps pour obtenir un résultat: Si c'est plusieurs heures, on peut l'envisager. Si c'est plusieurs années, il est peut être encore possible de résoudre le problème en passant sur une machine plus puissante. Au delà de plusieurs siècles on n'a plus vraiment de solution, et dans les pire cas, il faudrait attendre plus longtemps que l'âge de l'univers!</html:li>
-<html:li>L'algorithme est trop gourmand en ressource: il est possible que l'algorithme remplisse complètement la mémoire vive de notre ordinateur, et est contraint de s'arrêter sans produire de résultat, faute de mémoire disponible. Dans les cas les plus bénins, on peut utiliser une machine plus puissante, mais dans les cas les plus extrêmes, l'aglorithme peut demander plus de RAM que tout ce qui a été produit depuis le début de l'humanité!</html:li></html:ol></html:p>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>10</fr:month>
-                          <fr:day>7</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/0006/</fr:uri>
-                        <fr:display-uri>0006</fr:display-uri>
-                        <fr:route>/0006/</fr:route>
-                        <fr:title text="Complexité en temps et en espace">Complexité en temps et en espace</fr:title>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>La complexité en temps est l'évaluation quantitative du temps que va prendre un algorithme pour s'exécuter lorsque ses entrées deviennent très grandes, et la complexité en espace est l'évaluation quantitative de la mémoire dont un algorithme va avoir besoin pour s'exécuter lorsque ses entrées deviennent très grandes.</html:p>
-                        <html:p>Il est souvent possible de jongler avec ces deux paramètres. On se trouve régulièrement face à un choix, où quitte à utiliser plus de mémoire, l'on peut diminuer le temps d'exécution, ou inversement, l'on peut diminuer la consommation mémoire au prix d'un algorithme plus lent à s'exécuter. Il n'y a pas toujours de "bon choix", tout dépend des contraintes auxquelles on fait face (de quelle machine on dispose, de combien de temps on a).</html:p>
-                      </fr:mainmatter>
-                    </fr:tree>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>10</fr:month>
-                          <fr:day>7</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/0009/</fr:uri>
-                        <fr:display-uri>0009</fr:display-uri>
-                        <fr:route>/0009/</fr:route>
-                        <fr:title text="Complexité asymptotique">Complexité asymptotique</fr:title>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>On parle en général de complexité "lorsque les entrées deviennent très grande", ce que l'on résume souvent par le mot <html:em>asymptotique</html:em>. Sur une machine moderne, et avec des petites entrées, la majorité des algorithmes s'exécutent très rapidement, et il n'y a pas beaucoup d'intérêt à évaluer la complexité. En revanche lorsque l'on répète les opérations un grand nombre de fois et que les entrées que l'on traite deviennent très grandes, des différences importantes peuvent se faire sentir, et c'est là que les paramètres peuvent devenir limitant.</html:p>
-                      </fr:mainmatter>
-                    </fr:tree>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>10</fr:month>
-                          <fr:day>7</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/000A/</fr:uri>
-                        <fr:display-uri>000A</fr:display-uri>
-                        <fr:route>/000A/</fr:route>
-                        <fr:title text="Complexité en temps">Complexité en temps</fr:title>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>Dans ce cours, on s'intéresse principalement à la complexité en temps, même s'il est utile de garder en tête la notion complexité mémoire, et la possibilité de jongler entre les deux. Par la suite, lorsque l'on parle de complexité sans plus de précision, il s'agira toujours de complexité en temps.</html:p>
-                        <html:p>Il est très difficile de calculer exactement a priori combien de temps un algorithme va mettre pour s'exécuter suivant la taille de ses entrées. C'est pourquoi on utilise un proxy. C'est à dire que l'on va compter à la place  le nombre d'opérations élémentaires qu'un algorithme doit effectuer, et on va contenter de l'approximation que plus on doit effectuer d'opérations élémentaires, plus l'algorithme va prendre de temps à s'exécuter</html:p>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>10</fr:month>
-                              <fr:day>7</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/0007/</fr:uri>
-                            <fr:display-uri>0007</fr:display-uri>
-                            <fr:route>/0007/</fr:route>
-                            <fr:title text="Complexité d'un algorithme">Complexité d'un algorithme</fr:title>
-                            <fr:taxon>Définition</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>La <html:em>complexité</html:em> d'un algorithme est le nombre d'opérations élémentaire que cet algorithme doit réaliser en fonction de ses entrées.</html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                      </fr:mainmatter>
-                    </fr:tree>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>10</fr:month>
-                          <fr:day>7</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/000B/</fr:uri>
-                        <fr:display-uri>000B</fr:display-uri>
-                        <fr:route>/000B/</fr:route>
-                        <fr:title text="Limites à la notion de complexité">Limites à la notion de complexité</fr:title>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>Dans la réalité, toutes les opérations élémentaires ne prennent pas nécessairement le même temps exactement. Avec un peu d'habitude, vous verrez qu'il est souvent plus pertinent de définir quelles vous être les opérations coûteuses et limitantes, et de se concentrer à compter ces opérations, plutôt que de compter absolument toutes les opérations. Cela va de paire avec le fait que l'on ne s'intéresse pas en général au compte exact des opérations, mais on souhaite en avoir un <fr:link href="/000U/" title="Un peu de mathématiques: Les ordres de grandeurs" uri="http://localhost/000U/" display-uri="000U" type="local">ordre de grandeur</fr:link></html:p>
-                      </fr:mainmatter>
-                    </fr:tree>
-                  </fr:mainmatter>
-                </fr:tree>
-                <fr:tree show-metadata="false">
-                  <fr:frontmatter>
-                    <fr:authors>
-                      <fr:author>
-                        <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                      </fr:author>
-                    </fr:authors>
-                    <fr:date>
-                      <fr:year>2025</fr:year>
-                      <fr:month>10</fr:month>
-                      <fr:day>8</fr:day>
-                    </fr:date>
-                    <fr:uri>http://localhost/000R/</fr:uri>
-                    <fr:display-uri>000R</fr:display-uri>
-                    <fr:route>/000R/</fr:route>
-                    <fr:title text="Terminaison et correction des algorithmes">Terminaison et correction des algorithmes</fr:title>
-                  </fr:frontmatter>
-                  <fr:mainmatter>
-                    <html:p>
-                      <html:img src="https://imgs.xkcd.com/comics/random_number.png" />
-                      <html:mark>TODO</html:mark>
-                    </html:p>
-                  </fr:mainmatter>
-                </fr:tree>
-              </fr:mainmatter>
-            </fr:tree>
-            <fr:tree show-metadata="false">
-              <fr:frontmatter>
-                <fr:authors>
-                  <fr:author>
-                    <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                  </fr:author>
-                </fr:authors>
-                <fr:date>
-                  <fr:year>2025</fr:year>
-                  <fr:month>10</fr:month>
-                  <fr:day>8</fr:day>
-                </fr:date>
-                <fr:uri>http://localhost/000S/</fr:uri>
-                <fr:display-uri>000S</fr:display-uri>
-                <fr:route>/000S/</fr:route>
-                <fr:title text="Premiers exemples: algorithmes itératifs, tableaux, et algorithmes de tri">Premiers exemples: algorithmes itératifs, tableaux, et algorithmes de tri</fr:title>
-              </fr:frontmatter>
-              <fr:mainmatter>
-                <html:p>Cette section introduit les premiers exemples d'algorithmes, et utilise</html:p>
-                <fr:tree show-metadata="false">
-                  <fr:frontmatter>
-                    <fr:authors>
-                      <fr:author>
-                        <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                      </fr:author>
-                    </fr:authors>
-                    <fr:date>
-                      <fr:year>2025</fr:year>
-                      <fr:month>10</fr:month>
-                      <fr:day>27</fr:day>
-                    </fr:date>
-                    <fr:uri>http://localhost/000T/</fr:uri>
-                    <fr:display-uri>000T</fr:display-uri>
-                    <fr:route>/000T/</fr:route>
-                    <fr:title text="On commence en douceur: boucles et conditionnelles">On commence en douceur: boucles et conditionnelles</fr:title>
-                  </fr:frontmatter>
-                  <fr:mainmatter>
-                    <html:p>Commençons avec les premiers exemples d'algorithmes que nous allons analyser.</html:p>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>10</fr:month>
-                          <fr:day>27</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/001G/</fr:uri>
-                        <fr:display-uri>001G</fr:display-uri>
-                        <fr:route>/001G/</fr:route>
-                        <fr:title text="Calcul de la somme de entiers positifs">Calcul de la somme de entiers positifs</fr:title>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>On va comparer deux algorithmes pour calculer la somme de deux entiers positifs</html:p>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>10</fr:month>
-                              <fr:day>27</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/001H/</fr:uri>
-                            <fr:display-uri>001H</fr:display-uri>
-                            <fr:route>/001H/</fr:route>
-                            <fr:title text="Calcul de la somme de deux entiers positifs (directement)">Calcul de la somme de deux entiers positifs (directement)</fr:title>
-                            <fr:taxon>Algorithme</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>
-                              <html:pre>
-                                <html:cpp>
-<![CDATA[// Entrées: Deux entiers x et y
-// Sortie: La somme des deux entrées
-int somme (int x , int y){
-  return x + y;
-}]]>
-</html:cpp>
-                              </html:pre>
-                            </html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>10</fr:month>
-                              <fr:day>27</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/001I/</fr:uri>
-                            <fr:display-uri>001I</fr:display-uri>
-                            <fr:route>/001I/</fr:route>
-                            <fr:title text="Calcul de la somme de deux entiers positifs (avec une boucle)">Calcul de la somme de deux entiers positifs (avec une boucle)</fr:title>
-                            <fr:taxon>Algorithme</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>
-                              <html:pre>
-                                <html:cpp>
-<![CDATA[// Entrées: Deux entiers x et y positifs
-// Sortie: La somme des deux entrées
-int somme (int x , int y){
-  while (y  > 0){
-    x = x + 1;
-    y = y - 1;
-  }
-  return x;
-}]]>
-</html:cpp>
-                              </html:pre>
-                            </html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                        <html:p>Lorsque les deux nombres donnés sont positifs, les deux algorithmes permettent effectivement de calculer la somme des deux nombres. Pour évaluer la complexité, on va compter le nombre d'additions effectué par chacuns des deux algorithmes. Le premier algorithme effectue une seule addition <html:code>x+y</html:code> pour renvoyer le résultat, il est donc en temps constant. Le second algorithme effectue deux additions par passage dans la boucle (<html:code>x = x + 1</html:code> et <html:code>y = y - 1</html:code>). A chaque passage dans la boucle, la variable <html:code>y</html:code> est décrémentée de <fr:tex display="inline"><![CDATA[1]]></fr:tex>, et on s'arrête lorsque l'on atteint <fr:tex display="inline"><![CDATA[0]]></fr:tex>. Il y a donc autant de passages dans la boucle que la valeur initiale de <html:code>y</html:code>. On dira que le second algorithme est en <fr:tex display="inline"><![CDATA[\mathcal {O}(y)]]></fr:tex>, ou encore linéaire en son second argument.</html:p>
-                      </fr:mainmatter>
-                    </fr:tree>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>10</fr:month>
-                          <fr:day>27</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/001K/</fr:uri>
-                        <fr:display-uri>001K</fr:display-uri>
-                        <fr:route>/001K/</fr:route>
-                        <fr:title text="Calcul du produit de deux entiers positifs">Calcul du produit de deux entiers positifs</fr:title>
-                        <fr:taxon>Exercice</fr:taxon>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>Comparer les deux algorithmes suivant pour calculer le produit de deux nombres entiers positifs, et évaluer leur complexité.</html:p>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>10</fr:month>
-                              <fr:day>27</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/001L/</fr:uri>
-                            <fr:display-uri>001L</fr:display-uri>
-                            <fr:route>/001L/</fr:route>
-                            <fr:title text="Calcul du produit de deux entiers positifs (directement)">Calcul du produit de deux entiers positifs (directement)</fr:title>
-                            <fr:taxon>Algorithme</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>
-                              <html:pre>
-                                <html:cpp><![CDATA[// Entrées: Deux entiers x et y
-// Sortie: Le produit des deux entrées
-int produit (int x , int y){
-  return x * y;
-}]]>
-</html:cpp>
-                              </html:pre>
-                            </html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>10</fr:month>
-                              <fr:day>27</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/001M/</fr:uri>
-                            <fr:display-uri>001M</fr:display-uri>
-                            <fr:route>/001M/</fr:route>
-                            <fr:title text="Calcul de la somme de deux entiers positifs (avec une boucle)">Calcul de la somme de deux entiers positifs (avec une boucle)</fr:title>
-                            <fr:taxon>Algorithme</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>
-                              <html:pre>
-                                <html:cpp><![CDATA[// Entrées: Deux entiers x et y positifs
-// Sortie: Le produit des deux entrées
-int produit (int x , int y){
-  int result;
-  while (y  > 0){
-    result = result + x;
-    y = y - 1;
-  }
-  return result;
-}]]>
-</html:cpp>
-                              </html:pre>
-                            </html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                      </fr:mainmatter>
-                    </fr:tree>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>10</fr:month>
-                          <fr:day>27</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/001N/</fr:uri>
-                        <fr:display-uri>001N</fr:display-uri>
-                        <fr:route>/001N/</fr:route>
-                        <fr:title text="Algorithme mystère (ou de l'importance de bien spécifier les algorithmes que l'on écrit)">Algorithme mystère (ou de l'importance de bien spécifier les algorithmes que l'on écrit)</fr:title>
-                        <fr:taxon>Exercice</fr:taxon>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>On considère l'algorithme suivant:</html:p>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>10</fr:month>
-                              <fr:day>27</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/001O/</fr:uri>
-                            <fr:display-uri>001O</fr:display-uri>
-                            <fr:route>/001O/</fr:route>
-                            <fr:title text="Mysère">Mysère</fr:title>
-                            <fr:taxon>Algorithme</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>
-                              <html:pre>
-                                <html:cpp>
-<![CDATA[// Entrées: Un entier n >= 1
-// Sortie: Un booléen mystère
-bool mystere (int n){
-  int i = 2;
-  bool r = true;
-  while (i < n && r){
-    if (n%i == 0) {
-      r = false;
-    }
-    i = i+1;
-  }
-  return r;
-}]]></html:cpp>
-                              </html:pre>
-                            </html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                        <html:p><html:ol><html:li>Que renvoie cet algorithme?</html:li>
-<html:li>Quelle est sa complexité?</html:li>
-<html:li>Comment l'améliorer, et quelle est la complexité resultante?</html:li></html:ol>
-Remarquez qu'il est beaucoup plus difficile de comprendre un algorithme lorsqu'on ne sais pas ce qu'il est censé faire, ni à quoi correspondent les variables mises en jeu. Cela illustre la remarque suivante</html:p>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>10</fr:month>
-                              <fr:day>27</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/001Y/</fr:uri>
-                            <fr:display-uri>001Y</fr:display-uri>
-                            <fr:route>/001Y/</fr:route>
-                            <fr:title text="Conventions de nommage">Conventions de nommage</fr:title>
-                            <fr:taxon>Remarque</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>Il est important de donner des noms raionnables aux variables, de manière à indiquer ce qu'elles sont censées représenter. Cela rend l'algorithme bien plus compréhensible.
-<html:img src="https://imgs.xkcd.com/comics/x.png" /></html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                      </fr:mainmatter>
-                    </fr:tree>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>10</fr:month>
-                          <fr:day>27</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/001P/</fr:uri>
-                        <fr:display-uri>001P</fr:display-uri>
-                        <fr:route>/001P/</fr:route>
-                        <fr:title text="Enumérations">Enumérations</fr:title>
-                        <fr:taxon>Recueil d'exercices</fr:taxon>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>Voici maintenant une collection d'exercices visant à énumérer tous les nombres satisfaisant certaines propriétés.</html:p>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>10</fr:month>
-                              <fr:day>27</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/001Q/</fr:uri>
-                            <fr:display-uri>001Q</fr:display-uri>
-                            <fr:route>/001Q/</fr:route>
-                            <fr:title text="Enumération des entiers pairs">Enumération des entiers pairs</fr:title>
-                            <fr:taxon>Exercice</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>
-                              <html:ol><html:li>Ecrire un algorithme prenant en entrée un entier <html:code>n</html:code> positif et qui affiche tous les entiers pairs de taille inférieur ou égale à <html:code>n</html:code></html:li>
-<html:li>Analyser la complexité de cet algorithme</html:li></html:ol>
-                            </html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>10</fr:month>
-                              <fr:day>27</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/001R/</fr:uri>
-                            <fr:display-uri>001R</fr:display-uri>
-                            <fr:route>/001R/</fr:route>
-                            <fr:title text="Enumération des carrés parfaits">Enumération des carrés parfaits</fr:title>
-                            <fr:taxon>Exercice</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>
-                              <html:ol><html:li>Ecrire un algorithme prenant en entrée un entier <html:code>n</html:code> positif et qui affiche tous les entiers carrés parfaits taille inférieur ou égale à <html:code>n</html:code></html:li>
-<html:li>Analyser la complexité de cet algorithme</html:li></html:ol>
-                            </html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>10</fr:month>
-                              <fr:day>27</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/001S/</fr:uri>
-                            <fr:display-uri>001S</fr:display-uri>
-                            <fr:route>/001S/</fr:route>
-                            <fr:title text="Enumération des nombres triangulaires">Enumération des nombres triangulaires</fr:title>
-                            <fr:taxon>Exercice</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p><html:strong>Rappel:</html:strong> Un nombre triangulaire est un nombre de la forme <fr:tex display="inline"><![CDATA[1+2+\ldots +n]]></fr:tex>
-<html:ol><html:li>Ecrire un algorithme prenant en entrée un entier <html:code>n</html:code> positif et qui affiche tous les nombres triangulaires de taille inférieur ou égale à <html:code>n</html:code></html:li>
-<html:li>Analyser la complexité de cet algorithme</html:li></html:ol></html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                      </fr:mainmatter>
-                    </fr:tree>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>10</fr:month>
-                          <fr:day>27</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/001T/</fr:uri>
-                        <fr:display-uri>001T</fr:display-uri>
-                        <fr:route>/001T/</fr:route>
-                        <fr:title text="Calcul de logarithme">Calcul de logarithme</fr:title>
-                        <fr:taxon>Exercice</fr:taxon>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>
-                          <html:ol><html:li>Ecrire un algorithme qui prend en entrée deux nombres entiers <fr:tex display="inline"><![CDATA[b,n]]></fr:tex> avec <fr:tex display="inline"><![CDATA[n > 1]]></fr:tex> et qui retourne la partie entière de <fr:tex display="inline"><![CDATA[\log _b(x)]]></fr:tex> à l'aide d'une boucle.</html:li>
-<html:strong>Indice:</html:strong> On rappelle que c'est le plus grand entier <fr:tex display="inline"><![CDATA[q]]></fr:tex> tel que <fr:tex display="inline"><![CDATA[b ^ q \leq  n]]></fr:tex>.
-<html:li>Quelle est la complexité de cet algorithme?</html:li></html:ol>
-                        </html:p>
-                      </fr:mainmatter>
-                    </fr:tree>
-                  </fr:mainmatter>
-                </fr:tree>
-                <fr:tree show-metadata="false">
-                  <fr:frontmatter>
-                    <fr:authors>
-                      <fr:author>
-                        <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                      </fr:author>
-                    </fr:authors>
-                    <fr:date>
-                      <fr:year>2025</fr:year>
-                      <fr:month>10</fr:month>
-                      <fr:day>27</fr:day>
-                    </fr:date>
-                    <fr:uri>http://localhost/001U/</fr:uri>
-                    <fr:display-uri>001U</fr:display-uri>
-                    <fr:route>/001U/</fr:route>
-                    <fr:title text="Tableaux">Tableaux</fr:title>
-                  </fr:frontmatter>
-                  <fr:mainmatter>
-                    <html:p>Les tableaux sont un <fr:link href="/000F/" title="Les types de données composés" uri="http://localhost/000F/" display-uri="000F" type="local">type de données composé</fr:link> permettant de représenter des ensembles ordonnées d'éléments, tous de même type. D'un point de vue des données représentées, ils ressemblent aux listes (<html:mark>TODO</html:mark>), mais ils diffèrent par le coût de des différentes opérations que l'on peut faire dessus. La remarque suivante <html:mark>TODO</html:mark> donne une comparaison détaillée entre les tableaux et les listes.</html:p>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>11</fr:month>
-                          <fr:day>1</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/0023/</fr:uri>
-                        <fr:display-uri>0023</fr:display-uri>
-                        <fr:route>/0023/</fr:route>
-                        <fr:title text="Les opérations de base sur les tableaux">Les opérations de base sur les tableaux</fr:title>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>Les tableaux sont des structures de données avec une taille statique, c'est-à-dire que lorsque l'on initialise un tableau, on doit à l'avance déclarer la taille que ce tableau aura, et celle ci ne changera jamais. Les tableaux permettent, en une seule opération d'accéder et de modifier une valeur placée en <fr:tex display="inline"><![CDATA[i^\textnormal {ème}]]></fr:tex> position pour tout entier <fr:tex display="inline"><![CDATA[i]]></fr:tex> inférieur à la taille du tableau.</html:p>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>11</fr:month>
-                              <fr:day>1</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/0024/</fr:uri>
-                            <fr:display-uri>0024</fr:display-uri>
-                            <fr:route>/0024/</fr:route>
-                            <fr:title text="A partir de où commence-t-on à compter">A partir de où commence-t-on à compter</fr:title>
-                            <fr:taxon>Remarque</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>En informatique, il est courrant de commencer à partir de <fr:tex display="inline"><![CDATA[0]]></fr:tex>, et donc, étant donné un tableau <fr:tex display="inline"><![CDATA[
-\begin {array}{|c|c|c|}
-\hline 
-42 & 6 & 7 \\
-\hline 
-\end {array}
-]]></fr:tex>, on dira que le nombre <fr:tex display="inline"><![CDATA[42]]></fr:tex> est en position <fr:tex display="inline"><![CDATA[0]]></fr:tex>, le nombre <fr:tex display="inline"><![CDATA[6]]></fr:tex> en position <fr:tex display="inline"><![CDATA[1]]></fr:tex>, et le nombre <fr:tex display="inline"><![CDATA[7]]></fr:tex> en position <fr:tex display="inline"><![CDATA[2]]></fr:tex>.</html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                      </fr:mainmatter>
-                    </fr:tree>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>11</fr:month>
-                          <fr:day>1</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/0022/</fr:uri>
-                        <fr:display-uri>0022</fr:display-uri>
-                        <fr:route>/0022/</fr:route>
-                        <fr:title text="Syntaxe pour manipuler les tableaux">Syntaxe pour manipuler les tableaux</fr:title>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>On utilisera la syntaxe de <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> pour manipuler les tableaux</html:p>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>11</fr:month>
-                              <fr:day>1</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/0025/</fr:uri>
-                            <fr:display-uri>0025</fr:display-uri>
-                            <fr:route>/0025/</fr:route>
-                            <fr:title text="Déclaration et initialisation">Déclaration et initialisation</fr:title>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>Pour initialiser un tableau, par exemple un tableau d'élements de type <html:code>int</html:code> de taille <fr:tex display="inline"><![CDATA[9]]></fr:tex> s'appelant <html:code>monTableau</html:code>, on utilisera la syntaxe suivante
-<html:pre><html:cpp><![CDATA[  int[9] monTableau;]]>
-</html:cpp></html:pre>
-Bien sur, on peut adapter cet exemple, en changeant le type <html:code>int</html:code> en un autre primitif, et en changeant la taille et le nom du tableau. On peut également initialiser un tableau en même qu'on le déclare. Par exemple, le code suivant déclare le tableau <html:code>monTableau</html:code>, et initialise sa valeur à <fr:tex display="inline"><![CDATA[
-\begin {array}{|c|c|c|c|c|c|c|c|c|}
-\hline 
-9 & 8 & 7 & 6 & 5 & 4 & 3 & 2 & 1\\
-\hline 
-\end {array}
-]]></fr:tex>
-<html:pre><html:cpp><![CDATA[   int[9] monTableau = {9,8,7,6,5,4,3,2,1};]]></html:cpp></html:pre></html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>11</fr:month>
-                              <fr:day>1</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/0026/</fr:uri>
-                            <fr:display-uri>0026</fr:display-uri>
-                            <fr:route>/0026/</fr:route>
-                            <fr:title text="Accès à une position et affectation">Accès à une position et affectation</fr:title>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>Une fois un tableau déclaré, on peut accéder aux valeur stockées dans ce tableau. Par exemple, si l'on a déclaré un tableau s'appelant <html:code>monTableau</html:code> de taille <fr:tex display="inline"><![CDATA[9]]></fr:tex>, on pourra accéder à la position <fr:tex display="inline"><![CDATA[2]]></fr:tex> de ce tableau en écrivant
-<html:pre><html:cpp>
-<![CDATA[monTableau[2]]]>
-</html:cpp></html:pre>
-On pourra aussi modifier la valeur de la position <fr:tex display="inline"><![CDATA[2]]></fr:tex> de ce tableau, pour par exemple lui affecter la valeur 1729 en écrivant
-<html:pre><html:cpp>
-<![CDATA[monTableau[2] = 1729;]]>
-</html:cpp></html:pre></html:p>
-                            <fr:tree show-metadata="false">
-                              <fr:frontmatter>
-                                <fr:authors>
-                                  <fr:author>
-                                    <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                                  </fr:author>
-                                </fr:authors>
-                                <fr:date>
-                                  <fr:year>2025</fr:year>
-                                  <fr:month>11</fr:month>
-                                  <fr:day>1</fr:day>
-                                </fr:date>
-                                <fr:uri>http://localhost/0027/</fr:uri>
-                                <fr:display-uri>0027</fr:display-uri>
-                                <fr:route>/0027/</fr:route>
-                                <fr:title text="Manipulations de tableaux">Manipulations de tableaux</fr:title>
-                                <fr:taxon>Exercice</fr:taxon>
-                              </fr:frontmatter>
-                              <fr:mainmatter>
-                                <html:p>
-                                  <html:ol><html:li>Ecrire un programme qui initialise un tableau s'appelant <html:code>monTableau</html:code> de taille <fr:tex display="inline"><![CDATA[5]]></fr:tex>, contenant initialement les valeurs <fr:tex display="inline"><![CDATA[
-\begin {array}{|c|c|c|c|c|}
-\hline 
-0&1&2&3&4\\
-\hline 
-\end {array}
-]]></fr:tex></html:li>
-<html:li>A l'aide d'une boucle, écrire une fonction <html:code>incrementeTout</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et tableau d'entier de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie une copie du tableau dans laquelle toutes les valeurs ont été incrémente de <fr:tex display="inline"><![CDATA[1]]></fr:tex>.</html:li>
-<html:li>On appelle la fonction <html:code>incrementeTout(5,monTableau)</html:code>, quel est le tableau renvoyé en résultat?</html:li></html:ol>
-                                </html:p>
-                              </fr:mainmatter>
-                            </fr:tree>
-                            <fr:tree show-metadata="false">
-                              <fr:frontmatter>
-                                <fr:authors>
-                                  <fr:author>
-                                    <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                                  </fr:author>
-                                </fr:authors>
-                                <fr:date>
-                                  <fr:year>2025</fr:year>
-                                  <fr:month>11</fr:month>
-                                  <fr:day>1</fr:day>
-                                </fr:date>
-                                <fr:uri>http://localhost/001W/</fr:uri>
-                                <fr:display-uri>001W</fr:display-uri>
-                                <fr:route>/001W/</fr:route>
-                                <fr:title text="Accès hors des bornes du tableau">Accès hors des bornes du tableau</fr:title>
-                                <fr:taxon>Remarque</fr:taxon>
-                              </fr:frontmatter>
-                              <fr:mainmatter>
-                                <html:p>Si l'on a déclaré un tableau <html:code>monTableau</html:code> de taille <fr:tex display="inline"><![CDATA[24]]></fr:tex>, l'on pourra accéder et affecter sans problème toutes les positions de <fr:tex display="inline"><![CDATA[0]]></fr:tex> à <fr:tex display="inline"><![CDATA[23]]></fr:tex> dans ce tableau. En revanche, on considerera qu'essayer d'accéder u d'affecter toute position supérieure ou égale à <fr:tex display="inline"><![CDATA[24]]></fr:tex> est une erreur (même si parfois le programme ne détecte pas cette erreur).</html:p>
-                              </fr:mainmatter>
-                            </fr:tree>
-                            <fr:tree show-metadata="false">
-                              <fr:frontmatter>
-                                <fr:authors>
-                                  <fr:author>
-                                    <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                                  </fr:author>
-                                </fr:authors>
-                                <fr:date>
-                                  <fr:year>2025</fr:year>
-                                  <fr:month>11</fr:month>
-                                  <fr:day>1</fr:day>
-                                </fr:date>
-                                <fr:uri>http://localhost/001X/</fr:uri>
-                                <fr:display-uri>001X</fr:display-uri>
-                                <fr:route>/001X/</fr:route>
-                                <fr:title text="Valeur non initialisée">Valeur non initialisée</fr:title>
-                                <fr:taxon>Remarque</fr:taxon>
-                              </fr:frontmatter>
-                              <fr:mainmatter>
-                                <html:p>On considérera qu'essayer d'accéder à une valeur avant qu'elle ait été initialisée est une erreur, même si en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> c'est accepté et cela renvoie une valeur par défaut associé au type de donnée du tableau. Par exemple, on considérera le code suivant comme incorrect pour ce cours, même s'il s'agit d'un code <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> valide
-<html:pre><html:cpp><![CDATA[int[8] monTableau;
-if(monTableau[4] == 5){ // On considère cette ligne comme étant une erreur, car monTableau[4] n'a jamais été affecté.
-  return 0;
-}
-return;]]>
-</html:cpp></html:pre></html:p>
-                              </fr:mainmatter>
-                            </fr:tree>
-                          </fr:mainmatter>
-                        </fr:tree>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>11</fr:month>
-                              <fr:day>1</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/0028/</fr:uri>
-                            <fr:display-uri>0028</fr:display-uri>
-                            <fr:route>/0028/</fr:route>
-                            <fr:title text="Matrices et tableaux multidimensionels">Matrices et tableaux multidimensionels</fr:title>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>On peut représenter des matrices, c'est à dire des tableaux à double-entrée, comme des tableaux de tableaux. Pour déclarer et initialiser la matrice
-<fr:tex display="block"><![CDATA[
-\begin {pmatrix}
-1&2&3&4 \\
-5&6&7&8 \\
-9&10&11&12
-\end {pmatrix}
-]]></fr:tex>
-on pourra écrire
-<html:pre><html:cpp><![CDATA[    int matrice[3][4] = {
-        {1, 2, 3, 4},
-        {5, 6, 7, 8},
-        {9, 10, 11, 12}
-    };]]></html:cpp></html:pre>
-Pour ensuite accéder à l'élément dans la ligne <fr:tex display="inline"><![CDATA[0]]></fr:tex> et la colone <fr:tex display="inline"><![CDATA[2]]></fr:tex>, on écrira
-<html:pre><html:cpp><![CDATA[    matrice[0][2] // Cette valeur est 3]]></html:cpp></html:pre>
-Et pareillement pour l'affectaction. On peut aussi généraliser ce principe aux tableaux à <fr:tex display="inline"><![CDATA[n]]></fr:tex> dimensions, que l'on peut voir comme des tableaux de tableaux de tableaux... La syntaxe est similaire à celle des matrices, avec plus de crochets.
-</html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                      </fr:mainmatter>
-                    </fr:tree>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>11</fr:month>
-                          <fr:day>1</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/0029/</fr:uri>
-                        <fr:display-uri>0029</fr:display-uri>
-                        <fr:route>/0029/</fr:route>
-                        <fr:title text="Algorithmes classiques sur les tableaux">Algorithmes classiques sur les tableaux</fr:title>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>L'objectif de cette section est de se familiariser avec les tableaux, grâce à plusieurs algorithmes classiques sur ces derniers. Beaucoup de ces algorithmes sont donnés en exercices.</html:p>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>11</fr:month>
-                              <fr:day>1</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/0030/</fr:uri>
-                            <fr:display-uri>0030</fr:display-uri>
-                            <fr:route>/0030/</fr:route>
-                            <fr:title text="Trouver le maximum dans un tableau d'entiers">Trouver le maximum dans un tableau d'entiers</fr:title>
-                            <fr:taxon>Algorithme</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p><html:pre><html:cpp>
-// Entrée : Un entier n &gt; 0 et un tableau d'entier tableau de taille n
-// Sortie : Un entier représentant le maximum contenu dans tableau
-int maximum (int n, int[] tableau){
-  int max = tableau [0];
-  // A la fin de la boucle i, max contient le maximum
-  // de tableau situé entre les indices 0 et i
-  for (int i = 1; i &lt; n; i++ ){
-    if (max &lt; tableau[i]){
-      max = tableau[i];
-    }
-  }
-  return max;
-}
-</html:cpp></html:pre>
-<html:strong>Complexité</html:strong>: Pour analyser la complexité de cet algorithme, on compte le nombre de comparaison. A chaque passage dans la boucle, on effectue exactement une comparaison (<html:code>max &lt; tableau[i]</html:code>), et on fait <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> passages dans la boucle. Cette fonction fera donc toujours exactement <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> comparaisons, ce qui donne une complexité en <fr:tex display="inline"><![CDATA[\mathcal {O}(n)]]></fr:tex> (<fr:link href="/0017/" title="Linéaire" uri="http://localhost/0017/" display-uri="0017" type="local">complexité linéaire</fr:link>).
-</html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>11</fr:month>
-                              <fr:day>1</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/0031/</fr:uri>
-                            <fr:display-uri>0031</fr:display-uri>
-                            <fr:route>/0031/</fr:route>
-                            <fr:title text="Minimum d'un tableau">Minimum d'un tableau</fr:title>
-                            <fr:taxon>Exercice</fr:taxon>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>
-                              <html:ol><html:li>Ecrire une fonction <html:code>minimum</html:code> qui prend en argument un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie le minimum de ce tableau</html:li>
-<html:li>Ecrire une fonction <html:code>minimumParmi</html:code> qui prend en argument deux entiers <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n]]></fr:tex> tels que <fr:tex display="inline"><![CDATA[k<n]]></fr:tex>, et un tableau de taille au moins <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie le minimum parmis tous les éléments de ce tableau situé entre les positions <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n-1]]></fr:tex>.</html:li>
-<html:li>Ecrire une fonction <html:code>indiceMinimum</html:code> qui prend en argument deux entiers <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n]]></fr:tex> tels que <fr:tex display="inline"><![CDATA[k<n]]></fr:tex>, et un tableau de taille au moins <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie la position à laquelle se situe minimum parmis tous les éléments de ce tableau situé entre les positions <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n-1]]></fr:tex>.</html:li>
-<html:li>Donner une estimation de la complexité de chacune de ces fonctions.</html:li></html:ol>
-                            </html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>11</fr:month>
-                              <fr:day>2</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/0032/</fr:uri>
-                            <fr:display-uri>0032</fr:display-uri>
-                            <fr:route>/0032/</fr:route>
-                            <fr:title text="Crible d'Erathostene">Crible d'Erathostene</fr:title>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>
-                              <html:mark>TODO</html:mark>
-                            </html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                        <fr:tree show-metadata="false">
-                          <fr:frontmatter>
-                            <fr:authors>
-                              <fr:author>
-                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                              </fr:author>
-                            </fr:authors>
-                            <fr:date>
-                              <fr:year>2025</fr:year>
-                              <fr:month>11</fr:month>
-                              <fr:day>2</fr:day>
-                            </fr:date>
-                            <fr:uri>http://localhost/003E/</fr:uri>
-                            <fr:display-uri>003E</fr:display-uri>
-                            <fr:route>/003E/</fr:route>
-                            <fr:title text="Vérifier si un tableau est trié">Vérifier si un tableau est trié</fr:title>
-                          </fr:frontmatter>
-                          <fr:mainmatter>
-                            <html:p>
-                              <html:mark>TODO</html:mark>
-                            </html:p>
-                          </fr:mainmatter>
-                        </fr:tree>
-                      </fr:mainmatter>
-                    </fr:tree>
-                    <fr:tree show-metadata="false">
-                      <fr:frontmatter>
-                        <fr:authors>
-                          <fr:author>
-                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                          </fr:author>
-                        </fr:authors>
-                        <fr:date>
-                          <fr:year>2025</fr:year>
-                          <fr:month>11</fr:month>
-                          <fr:day>2</fr:day>
-                        </fr:date>
-                        <fr:uri>http://localhost/003F/</fr:uri>
-                        <fr:display-uri>003F</fr:display-uri>
-                        <fr:route>/003F/</fr:route>
-                        <fr:title text="Représentation en mémoire des tableaux">Représentation en mémoire des tableaux</fr:title>
-                      </fr:frontmatter>
-                      <fr:mainmatter>
-                        <html:p>
-                          <html:mark>TODO</html:mark>
-                        </html:p>
-                      </fr:mainmatter>
-                    </fr:tree>
-                  </fr:mainmatter>
-                </fr:tree>
-                <fr:tree show-metadata="false">
-                  <fr:frontmatter>
-                    <fr:authors>
-                      <fr:author>
-                        <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-                      </fr:author>
-                    </fr:authors>
-                    <fr:date>
-                      <fr:year>2025</fr:year>
-                      <fr:month>11</fr:month>
-                      <fr:day>2</fr:day>
-                    </fr:date>
-                    <fr:uri>http://localhost/003G/</fr:uri>
-                    <fr:display-uri>003G</fr:display-uri>
-                    <fr:route>/003G/</fr:route>
-                    <fr:title text="Algorithmes de tri">Algorithmes de tri</fr:title>
-                  </fr:frontmatter>
-                  <fr:mainmatter>
-                    <html:p>
-                      <html:mark>TODO</html:mark>
-                    </html:p>
-                  </fr:mainmatter>
-                </fr:tree>
-              </fr:mainmatter>
-            </fr:tree>
-          </fr:mainmatter>
-        </fr:tree>
-        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
-          <fr:frontmatter>
-            <fr:authors>
-              <fr:contributor>
-                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-              </fr:contributor>
-            </fr:authors>
-            <fr:uri>http://localhost/index/</fr:uri>
-            <fr:display-uri>index</fr:display-uri>
-            <fr:route>/index/</fr:route>
-            <fr:title text="Cours d'algorithmique et complexité">Cours d'algorithmique et complexité</fr:title>
-          </fr:frontmatter>
-          <fr:mainmatter>
-            <html:p><html:strong>Structure du cours:</html:strong>
-Ce document est un cours d'algorithmique pour la deuxième année de prépa intégrée à l'école d'ingénieur Polytech Paris-Saclay. Il est conçu à l'aide de l'outil <fr:link href="https://www.forester-notes.org/index/index.xml" type="external">forester</fr:link>, et a une structure qui peut sembler atypique. Il est en effet constitué de nombreuses "notes atomiques" (c'est-à-dire des notes présentant chacune une seule idée), constituant l'ensemble des connaissances attendues. Le document que vous lisez regroupe toutes ces notes, qui servent à la fois de cours et de base de données de connaissances. Il est donc attendu que le lecteur puisse lire le cours en sautant d'une note à l'autre, en suivant les liens contenus dans ces dernières, lorsque cela lui semble pertinent ou nécessaire. Bien sûr, il est beaucoup plus simple de suivre cette démarche avec le document au format numérique. Par exemple, le dernier chapitre de ce document constitue une référence sur les notions importantes que nous allons étudier et utiliser tout au long du cours. Il n'a pas vocation à être lu de bout-en-bout, mais à servir de point d'ancrage auquel se référer tout au long de ce cours. Il ne faudra donc pas hésiter à sauter à ce chapitre au cours de la lecture autant que nécessaire.</html:p>
-            <html:p>
-              <html:strong>
-                <fr:link href="/001V/" title="Recueil des TD/TP" uri="http://localhost/001V/" display-uri="001V" type="local">La page des TD/TP</fr:link>
-              </html:strong>
-            </html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
                 <fr:authors>
@@ -4518,6 +3343,1179 @@ On cherche maintenant à généraliser ce résultat:
                         </fr:tree>
                       </fr:mainmatter>
                     </fr:tree>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:contributor>
+                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:contributor>
+            </fr:authors>
+            <fr:uri>http://localhost/index.sync-conflict-20251030-202800-I54U3RZ</fr:uri>
+            <fr:display-uri>index.sync-conflict-20251030-202800-I54U3RZ</fr:display-uri>
+            <fr:route>/index.sync-conflict-20251030-202800-I54U3RZ</fr:route>
+            <fr:title text="Cours d'algorithmique et complexité">Cours d'algorithmique et complexité</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>7</fr:day>
+                </fr:date>
+                <fr:uri>http://localhost/0001/</fr:uri>
+                <fr:display-uri>0001</fr:display-uri>
+                <fr:route>/0001/</fr:route>
+                <fr:title text="Rappels d'algorithmique et bases de la programmation">Rappels d'algorithmique et bases de la programmation</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Ce chapitre joue rôle multible. Tout d'abord il a pour but de rappeler les notions d'algorithmique vues dans les cours précédents et de faire un panorama global des sujets auxquels un cours d'algorithmique s'intéresse. Ensuite, il sert à établir les objectifs de ce cours, et exposer les "règles du jeu" en établissant les limites que nous étudierons dans ce cours.</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>7</fr:day>
+                    </fr:date>
+                    <fr:uri>http://localhost/0002/</fr:uri>
+                    <fr:display-uri>0002</fr:display-uri>
+                    <fr:route>/0002/</fr:route>
+                    <fr:title text="Qu'est-ce qu'un algorithme?">Qu'est-ce qu'un algorithme?</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Ce cours est consacré aux algorithmes. La question de définir les algorithmes, et d'étudier leurs limite dépasse les attendus de ce cours. Il est néanmoins intéressant de commencer par une brève discussion pour comprendre de quoi l'on parle.</html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>7</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/0003/</fr:uri>
+                        <fr:display-uri>0003</fr:display-uri>
+                        <fr:route>/0003/</fr:route>
+                        <fr:title text="Algorithme (Définition informelle)">Algorithme (Définition informelle)</fr:title>
+                        <fr:taxon>Définition</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>Un <html:em>algorithme</html:em> est une séquence d'opérations élémentaires à effectuer afin d'obtenir un résultat précis.</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>7</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/0004/</fr:uri>
+                        <fr:display-uri>0004</fr:display-uri>
+                        <fr:route>/0004/</fr:route>
+                        <fr:title text="Algorithmes et recettes de cuisine">Algorithmes et recettes de cuisine</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>Une analogie que l'on donne couramment est celle d'une recette de cuisine: La recette donne typiquement une série d'instruction que le cuisinier va suivra afin de réaliser son plat (Ex: Faire bouillir de l'eau, ajouter une pincée de sel, ajouter 500g de pates, laisser bouillir pendant 12 min, égouter les pates). Cette analogie nous permet aussi de comprendre ce que l'on entend par "opération élémentaire": un cuisinier débutant aura besoin de la recette pour faire cuire les pates, tandis qu'un cuisinier chevroné se contentera d'une seule étape: "faire cuire des pates".</html:p>
+                        <html:p>Contrairement à ce que l'analogie des recettes de cuisine laisse penser, on s'intéresse ici à des algorithmes permettant de réaliser la même opération sur différentes données. Par exemple, lorsque l'on parle d'algorithme pour trier un tableau, on voudra utilier le même algorithme pour trier le tableau
+<fr:tex display="inline"><![CDATA[
+\begin {array}{|c|c|c|c|}
+\hline 
+5 & 8 & 2 & 10 \\
+\hline 
+\end {array}
+]]></fr:tex>
+et le tableau
+<fr:tex display="inline"><![CDATA[
+\begin {array}{|c|c|c|c|}
+\hline 
+7 & 25 & 4 & 9 \\
+\hline 
+\end {array}
+]]></fr:tex>.
+On dit alors que le tableau est une <html:em>entrée</html:em> de l'algorithme.
+</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>7</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/0005/</fr:uri>
+                        <fr:display-uri>0005</fr:display-uri>
+                        <fr:route>/0005/</fr:route>
+                        <fr:title text="Les opérations élémentaires">Les opérations élémentaires</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>La définition informelle d'algorithme que l'on a donné a ses limites: on n'a pas défini ce que sont les opérations élémentaires. Donner une définition exacte est l'objet d'un cours de <fr:link href="https://fr.wikipedia.org/wiki/Théorie_de_la_calculabilité" type="external">théorie de la calculabilité</fr:link>. Pour notre usage, on se limitera à l'intuition que les opérations élémentaires sont les opérations qu'un ordinateur peut réaliser de manière très simple et très rapide, comme par exemple additionner deux nombres. On verra que selon les cas, on pourra prendre quelques libertés et considérer des opérations plus complexes comme élémentaire, tout en restant conscient du temps que ces dernière prennent.</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>7</fr:day>
+                    </fr:date>
+                    <fr:uri>http://localhost/0008/</fr:uri>
+                    <fr:display-uri>0008</fr:display-uri>
+                    <fr:route>/0008/</fr:route>
+                    <fr:title text="La complexité des algorithmes">La complexité des algorithmes</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>De manière générale, étant donné un algorithme on s'intéresse à savoir s'il va s'exécuter en pratique même lorsqu'on l'appelle sur des entrées de grande taille. Si l'algorithme que l'on a écrit est correct, la validité du résultat ne dépend pas de la taille de ses entrées, et donc, si l'algorithme est correct et qu'il renvoie un résultat, ce résultat sera correct, même sur des données de grande taille. En revanche, il est possible que l'on n'arrive pas à obtenir de résultat. Cela peut être dû à deux problèmes:
+<html:ol><html:li>L'algorithme prend trop de temps à s'exécuter: il faudrait attendre très longtemps pour obtenir un résultat: Si c'est plusieurs heures, on peut l'envisager. Si c'est plusieurs années, il est peut être encore possible de résoudre le problème en passant sur une machine plus puissante. Au delà de plusieurs siècles on n'a plus vraiment de solution, et dans les pire cas, il faudrait attendre plus longtemps que l'âge de l'univers!</html:li>
+<html:li>L'algorithme est trop gourmand en ressource: il est possible que l'algorithme remplisse complètement la mémoire vive de notre ordinateur, et est contraint de s'arrêter sans produire de résultat, faute de mémoire disponible. Dans les cas les plus bénins, on peut utiliser une machine plus puissante, mais dans les cas les plus extrêmes, l'aglorithme peut demander plus de RAM que tout ce qui a été produit depuis le début de l'humanité!</html:li></html:ol></html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>7</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/0006/</fr:uri>
+                        <fr:display-uri>0006</fr:display-uri>
+                        <fr:route>/0006/</fr:route>
+                        <fr:title text="Complexité en temps et en espace">Complexité en temps et en espace</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>La complexité en temps est l'évaluation quantitative du temps que va prendre un algorithme pour s'exécuter lorsque ses entrées deviennent très grandes, et la complexité en espace est l'évaluation quantitative de la mémoire dont un algorithme va avoir besoin pour s'exécuter lorsque ses entrées deviennent très grandes.</html:p>
+                        <html:p>Il est souvent possible de jongler avec ces deux paramètres. On se trouve régulièrement face à un choix, où quitte à utiliser plus de mémoire, l'on peut diminuer le temps d'exécution, ou inversement, l'on peut diminuer la consommation mémoire au prix d'un algorithme plus lent à s'exécuter. Il n'y a pas toujours de "bon choix", tout dépend des contraintes auxquelles on fait face (de quelle machine on dispose, de combien de temps on a).</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>7</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/0009/</fr:uri>
+                        <fr:display-uri>0009</fr:display-uri>
+                        <fr:route>/0009/</fr:route>
+                        <fr:title text="Complexité asymptotique">Complexité asymptotique</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>On parle en général de complexité "lorsque les entrées deviennent très grande", ce que l'on résume souvent par le mot <html:em>asymptotique</html:em>. Sur une machine moderne, et avec des petites entrées, la majorité des algorithmes s'exécutent très rapidement, et il n'y a pas beaucoup d'intérêt à évaluer la complexité. En revanche lorsque l'on répète les opérations un grand nombre de fois et que les entrées que l'on traite deviennent très grandes, des différences importantes peuvent se faire sentir, et c'est là que les paramètres peuvent devenir limitant.</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>7</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/000A/</fr:uri>
+                        <fr:display-uri>000A</fr:display-uri>
+                        <fr:route>/000A/</fr:route>
+                        <fr:title text="Complexité en temps">Complexité en temps</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>Dans ce cours, on s'intéresse principalement à la complexité en temps, même s'il est utile de garder en tête la notion complexité mémoire, et la possibilité de jongler entre les deux. Par la suite, lorsque l'on parle de complexité sans plus de précision, il s'agira toujours de complexité en temps.</html:p>
+                        <html:p>Il est très difficile de calculer exactement a priori combien de temps un algorithme va mettre pour s'exécuter suivant la taille de ses entrées. C'est pourquoi on utilise un proxy. C'est à dire que l'on va compter à la place  le nombre d'opérations élémentaires qu'un algorithme doit effectuer, et on va contenter de l'approximation que plus on doit effectuer d'opérations élémentaires, plus l'algorithme va prendre de temps à s'exécuter</html:p>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>10</fr:month>
+                              <fr:day>7</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/0007/</fr:uri>
+                            <fr:display-uri>0007</fr:display-uri>
+                            <fr:route>/0007/</fr:route>
+                            <fr:title text="Complexité d'un algorithme">Complexité d'un algorithme</fr:title>
+                            <fr:taxon>Définition</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>La <html:em>complexité</html:em> d'un algorithme est le nombre d'opérations élémentaire que cet algorithme doit réaliser en fonction de ses entrées.</html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>7</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/000B/</fr:uri>
+                        <fr:display-uri>000B</fr:display-uri>
+                        <fr:route>/000B/</fr:route>
+                        <fr:title text="Limites à la notion de complexité">Limites à la notion de complexité</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>Dans la réalité, toutes les opérations élémentaires ne prennent pas nécessairement le même temps exactement. Avec un peu d'habitude, vous verrez qu'il est souvent plus pertinent de définir quelles vous être les opérations coûteuses et limitantes, et de se concentrer à compter ces opérations, plutôt que de compter absolument toutes les opérations. Cela va de paire avec le fait que l'on ne s'intéresse pas en général au compte exact des opérations, mais on souhaite en avoir un <fr:link href="/000U/" title="Un peu de mathématiques: Les ordres de grandeurs" uri="http://localhost/000U/" display-uri="000U" type="local">ordre de grandeur</fr:link></html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>8</fr:day>
+                    </fr:date>
+                    <fr:uri>http://localhost/000R/</fr:uri>
+                    <fr:display-uri>000R</fr:display-uri>
+                    <fr:route>/000R/</fr:route>
+                    <fr:title text="Terminaison et correction des algorithmes">Terminaison et correction des algorithmes</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:img src="https://imgs.xkcd.com/comics/random_number.png" />
+                      <html:mark>TODO</html:mark>
+                    </html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>10</fr:month>
+                  <fr:day>8</fr:day>
+                </fr:date>
+                <fr:uri>http://localhost/000S/</fr:uri>
+                <fr:display-uri>000S</fr:display-uri>
+                <fr:route>/000S/</fr:route>
+                <fr:title text="Premiers exemples: algorithmes itératifs, tableaux, et algorithmes de tri">Premiers exemples: algorithmes itératifs, tableaux, et algorithmes de tri</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Cette section introduit les premiers exemples d'algorithmes, et utilise</html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>27</fr:day>
+                    </fr:date>
+                    <fr:uri>http://localhost/000T/</fr:uri>
+                    <fr:display-uri>000T</fr:display-uri>
+                    <fr:route>/000T/</fr:route>
+                    <fr:title text="On commence en douceur: boucles et conditionnelles">On commence en douceur: boucles et conditionnelles</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Commençons avec les premiers exemples d'algorithmes que nous allons analyser.</html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>27</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/001G/</fr:uri>
+                        <fr:display-uri>001G</fr:display-uri>
+                        <fr:route>/001G/</fr:route>
+                        <fr:title text="Calcul de la somme de entiers positifs">Calcul de la somme de entiers positifs</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>On va comparer deux algorithmes pour calculer la somme de deux entiers positifs</html:p>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>10</fr:month>
+                              <fr:day>27</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/001H/</fr:uri>
+                            <fr:display-uri>001H</fr:display-uri>
+                            <fr:route>/001H/</fr:route>
+                            <fr:title text="Calcul de la somme de deux entiers positifs (directement)">Calcul de la somme de deux entiers positifs (directement)</fr:title>
+                            <fr:taxon>Algorithme</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>
+                              <html:pre>
+                                <html:cpp>
+<![CDATA[// Entrées: Deux entiers x et y
+// Sortie: La somme des deux entrées
+int somme (int x , int y){
+  return x + y;
+}]]>
+</html:cpp>
+                              </html:pre>
+                            </html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>10</fr:month>
+                              <fr:day>27</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/001I/</fr:uri>
+                            <fr:display-uri>001I</fr:display-uri>
+                            <fr:route>/001I/</fr:route>
+                            <fr:title text="Calcul de la somme de deux entiers positifs (avec une boucle)">Calcul de la somme de deux entiers positifs (avec une boucle)</fr:title>
+                            <fr:taxon>Algorithme</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>
+                              <html:pre>
+                                <html:cpp>
+<![CDATA[// Entrées: Deux entiers x et y positifs
+// Sortie: La somme des deux entrées
+int somme (int x , int y){
+  while (y  > 0){
+    x = x + 1;
+    y = y - 1;
+  }
+  return x;
+}]]>
+</html:cpp>
+                              </html:pre>
+                            </html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <html:p>Lorsque les deux nombres donnés sont positifs, les deux algorithmes permettent effectivement de calculer la somme des deux nombres. Pour évaluer la complexité, on va compter le nombre d'additions effectué par chacuns des deux algorithmes. Le premier algorithme effectue une seule addition <html:code>x+y</html:code> pour renvoyer le résultat, il est donc en temps constant. Le second algorithme effectue deux additions par passage dans la boucle (<html:code>x = x + 1</html:code> et <html:code>y = y - 1</html:code>). A chaque passage dans la boucle, la variable <html:code>y</html:code> est décrémentée de <fr:tex display="inline"><![CDATA[1]]></fr:tex>, et on s'arrête lorsque l'on atteint <fr:tex display="inline"><![CDATA[0]]></fr:tex>. Il y a donc autant de passages dans la boucle que la valeur initiale de <html:code>y</html:code>. On dira que le second algorithme est en <fr:tex display="inline"><![CDATA[\mathcal {O}(y)]]></fr:tex>, ou encore linéaire en son second argument.</html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>27</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/001K/</fr:uri>
+                        <fr:display-uri>001K</fr:display-uri>
+                        <fr:route>/001K/</fr:route>
+                        <fr:title text="Calcul du produit de deux entiers positifs">Calcul du produit de deux entiers positifs</fr:title>
+                        <fr:taxon>Exercice</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>Comparer les deux algorithmes suivant pour calculer le produit de deux nombres entiers positifs, et évaluer leur complexité.</html:p>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>10</fr:month>
+                              <fr:day>27</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/001L/</fr:uri>
+                            <fr:display-uri>001L</fr:display-uri>
+                            <fr:route>/001L/</fr:route>
+                            <fr:title text="Calcul du produit de deux entiers positifs (directement)">Calcul du produit de deux entiers positifs (directement)</fr:title>
+                            <fr:taxon>Algorithme</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>
+                              <html:pre>
+                                <html:cpp><![CDATA[// Entrées: Deux entiers x et y
+// Sortie: Le produit des deux entrées
+int produit (int x , int y){
+  return x * y;
+}]]>
+</html:cpp>
+                              </html:pre>
+                            </html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>10</fr:month>
+                              <fr:day>27</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/001M/</fr:uri>
+                            <fr:display-uri>001M</fr:display-uri>
+                            <fr:route>/001M/</fr:route>
+                            <fr:title text="Calcul de la somme de deux entiers positifs (avec une boucle)">Calcul de la somme de deux entiers positifs (avec une boucle)</fr:title>
+                            <fr:taxon>Algorithme</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>
+                              <html:pre>
+                                <html:cpp><![CDATA[// Entrées: Deux entiers x et y positifs
+// Sortie: Le produit des deux entrées
+int produit (int x , int y){
+  int result;
+  while (y  > 0){
+    result = result + x;
+    y = y - 1;
+  }
+  return result;
+}]]>
+</html:cpp>
+                              </html:pre>
+                            </html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>27</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/001N/</fr:uri>
+                        <fr:display-uri>001N</fr:display-uri>
+                        <fr:route>/001N/</fr:route>
+                        <fr:title text="Algorithme mystère (ou de l'importance de bien spécifier les algorithmes que l'on écrit)">Algorithme mystère (ou de l'importance de bien spécifier les algorithmes que l'on écrit)</fr:title>
+                        <fr:taxon>Exercice</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>On considère l'algorithme suivant:</html:p>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>10</fr:month>
+                              <fr:day>27</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/001O/</fr:uri>
+                            <fr:display-uri>001O</fr:display-uri>
+                            <fr:route>/001O/</fr:route>
+                            <fr:title text="Mysère">Mysère</fr:title>
+                            <fr:taxon>Algorithme</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>
+                              <html:pre>
+                                <html:cpp>
+<![CDATA[// Entrées: Un entier n >= 1
+// Sortie: Un booléen mystère
+bool mystere (int n){
+  int i = 2;
+  bool r = true;
+  while (i < n && r){
+    if (n%i == 0) {
+      r = false;
+    }
+    i = i+1;
+  }
+  return r;
+}]]></html:cpp>
+                              </html:pre>
+                            </html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <html:p><html:ol><html:li>Que renvoie cet algorithme?</html:li>
+<html:li>Quelle est sa complexité?</html:li>
+<html:li>Comment l'améliorer, et quelle est la complexité resultante?</html:li></html:ol>
+Remarquez qu'il est beaucoup plus difficile de comprendre un algorithme lorsqu'on ne sais pas ce qu'il est censé faire, ni à quoi correspondent les variables mises en jeu. Cela illustre la remarque suivante</html:p>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>10</fr:month>
+                              <fr:day>27</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/001Y/</fr:uri>
+                            <fr:display-uri>001Y</fr:display-uri>
+                            <fr:route>/001Y/</fr:route>
+                            <fr:title text="Conventions de nommage">Conventions de nommage</fr:title>
+                            <fr:taxon>Remarque</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>Il est important de donner des noms raionnables aux variables, de manière à indiquer ce qu'elles sont censées représenter. Cela rend l'algorithme bien plus compréhensible.
+<html:img src="https://imgs.xkcd.com/comics/x.png" /></html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>27</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/001P/</fr:uri>
+                        <fr:display-uri>001P</fr:display-uri>
+                        <fr:route>/001P/</fr:route>
+                        <fr:title text="Enumérations">Enumérations</fr:title>
+                        <fr:taxon>Recueil d'exercices</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>Voici maintenant une collection d'exercices visant à énumérer tous les nombres satisfaisant certaines propriétés.</html:p>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>10</fr:month>
+                              <fr:day>27</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/001Q/</fr:uri>
+                            <fr:display-uri>001Q</fr:display-uri>
+                            <fr:route>/001Q/</fr:route>
+                            <fr:title text="Enumération des entiers pairs">Enumération des entiers pairs</fr:title>
+                            <fr:taxon>Exercice</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>
+                              <html:ol><html:li>Ecrire un algorithme prenant en entrée un entier <html:code>n</html:code> positif et qui affiche tous les entiers pairs de taille inférieur ou égale à <html:code>n</html:code></html:li>
+<html:li>Analyser la complexité de cet algorithme</html:li></html:ol>
+                            </html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>10</fr:month>
+                              <fr:day>27</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/001R/</fr:uri>
+                            <fr:display-uri>001R</fr:display-uri>
+                            <fr:route>/001R/</fr:route>
+                            <fr:title text="Enumération des carrés parfaits">Enumération des carrés parfaits</fr:title>
+                            <fr:taxon>Exercice</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>
+                              <html:ol><html:li>Ecrire un algorithme prenant en entrée un entier <html:code>n</html:code> positif et qui affiche tous les entiers carrés parfaits taille inférieur ou égale à <html:code>n</html:code></html:li>
+<html:li>Analyser la complexité de cet algorithme</html:li></html:ol>
+                            </html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>10</fr:month>
+                              <fr:day>27</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/001S/</fr:uri>
+                            <fr:display-uri>001S</fr:display-uri>
+                            <fr:route>/001S/</fr:route>
+                            <fr:title text="Enumération des nombres triangulaires">Enumération des nombres triangulaires</fr:title>
+                            <fr:taxon>Exercice</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p><html:strong>Rappel:</html:strong> Un nombre triangulaire est un nombre de la forme <fr:tex display="inline"><![CDATA[1+2+\ldots +n]]></fr:tex>
+<html:ol><html:li>Ecrire un algorithme prenant en entrée un entier <html:code>n</html:code> positif et qui affiche tous les nombres triangulaires de taille inférieur ou égale à <html:code>n</html:code></html:li>
+<html:li>Analyser la complexité de cet algorithme</html:li></html:ol></html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>10</fr:month>
+                          <fr:day>27</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/001T/</fr:uri>
+                        <fr:display-uri>001T</fr:display-uri>
+                        <fr:route>/001T/</fr:route>
+                        <fr:title text="Calcul de logarithme">Calcul de logarithme</fr:title>
+                        <fr:taxon>Exercice</fr:taxon>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>
+                          <html:ol><html:li>Ecrire un algorithme qui prend en entrée deux nombres entiers <fr:tex display="inline"><![CDATA[b,n]]></fr:tex> avec <fr:tex display="inline"><![CDATA[n > 1]]></fr:tex> et qui retourne la partie entière de <fr:tex display="inline"><![CDATA[\log _b(x)]]></fr:tex> à l'aide d'une boucle.</html:li>
+<html:strong>Indice:</html:strong> On rappelle que c'est le plus grand entier <fr:tex display="inline"><![CDATA[q]]></fr:tex> tel que <fr:tex display="inline"><![CDATA[b ^ q \leq  n]]></fr:tex>.
+<html:li>Quelle est la complexité de cet algorithme?</html:li></html:ol>
+                        </html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>10</fr:month>
+                      <fr:day>27</fr:day>
+                    </fr:date>
+                    <fr:uri>http://localhost/001U/</fr:uri>
+                    <fr:display-uri>001U</fr:display-uri>
+                    <fr:route>/001U/</fr:route>
+                    <fr:title text="Tableaux">Tableaux</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Les tableaux sont un <fr:link href="/000F/" title="Les types de données composés" uri="http://localhost/000F/" display-uri="000F" type="local">type de données composé</fr:link> permettant de représenter des ensembles ordonnées d'éléments, tous de même type. D'un point de vue des données représentées, ils ressemblent aux listes (<html:mark>TODO</html:mark>), mais ils diffèrent par le coût de des différentes opérations que l'on peut faire dessus. La remarque suivante <html:mark>TODO</html:mark> donne une comparaison détaillée entre les tableaux et les listes.</html:p>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>11</fr:month>
+                          <fr:day>1</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/0023/</fr:uri>
+                        <fr:display-uri>0023</fr:display-uri>
+                        <fr:route>/0023/</fr:route>
+                        <fr:title text="Les opérations de base sur les tableaux">Les opérations de base sur les tableaux</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>Les tableaux sont des structures de données avec une taille statique, c'est-à-dire que lorsque l'on initialise un tableau, on doit à l'avance déclarer la taille que ce tableau aura, et celle ci ne changera jamais. Les tableaux permettent, en une seule opération d'accéder et de modifier une valeur placée en <fr:tex display="inline"><![CDATA[i^\textnormal {ème}]]></fr:tex> position pour tout entier <fr:tex display="inline"><![CDATA[i]]></fr:tex> inférieur à la taille du tableau.</html:p>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>11</fr:month>
+                              <fr:day>1</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/0024/</fr:uri>
+                            <fr:display-uri>0024</fr:display-uri>
+                            <fr:route>/0024/</fr:route>
+                            <fr:title text="A partir de où commence-t-on à compter">A partir de où commence-t-on à compter</fr:title>
+                            <fr:taxon>Remarque</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>En informatique, il est courrant de commencer à partir de <fr:tex display="inline"><![CDATA[0]]></fr:tex>, et donc, étant donné un tableau <fr:tex display="inline"><![CDATA[
+\begin {array}{|c|c|c|}
+\hline 
+42 & 6 & 7 \\
+\hline 
+\end {array}
+]]></fr:tex>, on dira que le nombre <fr:tex display="inline"><![CDATA[42]]></fr:tex> est en position <fr:tex display="inline"><![CDATA[0]]></fr:tex>, le nombre <fr:tex display="inline"><![CDATA[6]]></fr:tex> en position <fr:tex display="inline"><![CDATA[1]]></fr:tex>, et le nombre <fr:tex display="inline"><![CDATA[7]]></fr:tex> en position <fr:tex display="inline"><![CDATA[2]]></fr:tex>.</html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>11</fr:month>
+                          <fr:day>1</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/0022/</fr:uri>
+                        <fr:display-uri>0022</fr:display-uri>
+                        <fr:route>/0022/</fr:route>
+                        <fr:title text="Syntaxe pour manipuler les tableaux">Syntaxe pour manipuler les tableaux</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>On utilisera la syntaxe de <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> pour manipuler les tableaux</html:p>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>11</fr:month>
+                              <fr:day>1</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/0025/</fr:uri>
+                            <fr:display-uri>0025</fr:display-uri>
+                            <fr:route>/0025/</fr:route>
+                            <fr:title text="Déclaration et initialisation">Déclaration et initialisation</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>Pour initialiser un tableau, par exemple un tableau d'élements de type <html:code>int</html:code> de taille <fr:tex display="inline"><![CDATA[9]]></fr:tex> s'appelant <html:code>monTableau</html:code>, on utilisera la syntaxe suivante
+<html:pre><html:cpp><![CDATA[  int[9] monTableau;]]>
+</html:cpp></html:pre>
+Bien sur, on peut adapter cet exemple, en changeant le type <html:code>int</html:code> en un autre primitif, et en changeant la taille et le nom du tableau. On peut également initialiser un tableau en même qu'on le déclare. Par exemple, le code suivant déclare le tableau <html:code>monTableau</html:code>, et initialise sa valeur à <fr:tex display="inline"><![CDATA[
+\begin {array}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+9 & 8 & 7 & 6 & 5 & 4 & 3 & 2 & 1\\
+\hline 
+\end {array}
+]]></fr:tex>
+<html:pre><html:cpp><![CDATA[   int[9] monTableau = {9,8,7,6,5,4,3,2,1};]]></html:cpp></html:pre></html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>11</fr:month>
+                              <fr:day>1</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/0026/</fr:uri>
+                            <fr:display-uri>0026</fr:display-uri>
+                            <fr:route>/0026/</fr:route>
+                            <fr:title text="Accès à une position et affectation">Accès à une position et affectation</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>Une fois un tableau déclaré, on peut accéder aux valeur stockées dans ce tableau. Par exemple, si l'on a déclaré un tableau s'appelant <html:code>monTableau</html:code> de taille <fr:tex display="inline"><![CDATA[9]]></fr:tex>, on pourra accéder à la position <fr:tex display="inline"><![CDATA[2]]></fr:tex> de ce tableau en écrivant
+<html:pre><html:cpp>
+<![CDATA[monTableau[2]]]>
+</html:cpp></html:pre>
+On pourra aussi modifier la valeur de la position <fr:tex display="inline"><![CDATA[2]]></fr:tex> de ce tableau, pour par exemple lui affecter la valeur 1729 en écrivant
+<html:pre><html:cpp>
+<![CDATA[monTableau[2] = 1729;]]>
+</html:cpp></html:pre></html:p>
+                            <fr:tree show-metadata="false">
+                              <fr:frontmatter>
+                                <fr:authors>
+                                  <fr:author>
+                                    <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                                  </fr:author>
+                                </fr:authors>
+                                <fr:date>
+                                  <fr:year>2025</fr:year>
+                                  <fr:month>11</fr:month>
+                                  <fr:day>1</fr:day>
+                                </fr:date>
+                                <fr:uri>http://localhost/0027/</fr:uri>
+                                <fr:display-uri>0027</fr:display-uri>
+                                <fr:route>/0027/</fr:route>
+                                <fr:title text="Manipulations de tableaux">Manipulations de tableaux</fr:title>
+                                <fr:taxon>Exercice</fr:taxon>
+                              </fr:frontmatter>
+                              <fr:mainmatter>
+                                <html:p>
+                                  <html:ol><html:li>Ecrire un programme qui initialise un tableau s'appelant <html:code>monTableau</html:code> de taille <fr:tex display="inline"><![CDATA[5]]></fr:tex>, contenant initialement les valeurs <fr:tex display="inline"><![CDATA[
+\begin {array}{|c|c|c|c|c|}
+\hline 
+0&1&2&3&4\\
+\hline 
+\end {array}
+]]></fr:tex></html:li>
+<html:li>A l'aide d'une boucle, écrire une fonction <html:code>incrementeTout</html:code> qui prend en entrée un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et tableau d'entier de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie une copie du tableau dans laquelle toutes les valeurs ont été incrémente de <fr:tex display="inline"><![CDATA[1]]></fr:tex>.</html:li>
+<html:li>On appelle la fonction <html:code>incrementeTout(5,monTableau)</html:code>, quel est le tableau renvoyé en résultat?</html:li></html:ol>
+                                </html:p>
+                              </fr:mainmatter>
+                            </fr:tree>
+                            <fr:tree show-metadata="false">
+                              <fr:frontmatter>
+                                <fr:authors>
+                                  <fr:author>
+                                    <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                                  </fr:author>
+                                </fr:authors>
+                                <fr:date>
+                                  <fr:year>2025</fr:year>
+                                  <fr:month>11</fr:month>
+                                  <fr:day>1</fr:day>
+                                </fr:date>
+                                <fr:uri>http://localhost/001W/</fr:uri>
+                                <fr:display-uri>001W</fr:display-uri>
+                                <fr:route>/001W/</fr:route>
+                                <fr:title text="Accès hors des bornes du tableau">Accès hors des bornes du tableau</fr:title>
+                                <fr:taxon>Remarque</fr:taxon>
+                              </fr:frontmatter>
+                              <fr:mainmatter>
+                                <html:p>Si l'on a déclaré un tableau <html:code>monTableau</html:code> de taille <fr:tex display="inline"><![CDATA[24]]></fr:tex>, l'on pourra accéder et affecter sans problème toutes les positions de <fr:tex display="inline"><![CDATA[0]]></fr:tex> à <fr:tex display="inline"><![CDATA[23]]></fr:tex> dans ce tableau. En revanche, on considerera qu'essayer d'accéder u d'affecter toute position supérieure ou égale à <fr:tex display="inline"><![CDATA[24]]></fr:tex> est une erreur (même si parfois le programme ne détecte pas cette erreur).</html:p>
+                              </fr:mainmatter>
+                            </fr:tree>
+                            <fr:tree show-metadata="false">
+                              <fr:frontmatter>
+                                <fr:authors>
+                                  <fr:author>
+                                    <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                                  </fr:author>
+                                </fr:authors>
+                                <fr:date>
+                                  <fr:year>2025</fr:year>
+                                  <fr:month>11</fr:month>
+                                  <fr:day>1</fr:day>
+                                </fr:date>
+                                <fr:uri>http://localhost/001X/</fr:uri>
+                                <fr:display-uri>001X</fr:display-uri>
+                                <fr:route>/001X/</fr:route>
+                                <fr:title text="Valeur non initialisée">Valeur non initialisée</fr:title>
+                                <fr:taxon>Remarque</fr:taxon>
+                              </fr:frontmatter>
+                              <fr:mainmatter>
+                                <html:p>On considérera qu'essayer d'accéder à une valeur avant qu'elle ait été initialisée est une erreur, même si en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> c'est accepté et cela renvoie une valeur par défaut associé au type de donnée du tableau. Par exemple, on considérera le code suivant comme incorrect pour ce cours, même s'il s'agit d'un code <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> valide
+<html:pre><html:cpp><![CDATA[int[8] monTableau;
+if(monTableau[4] == 5){ // On considère cette ligne comme étant une erreur, car monTableau[4] n'a jamais été affecté.
+  return 0;
+}
+return;]]>
+</html:cpp></html:pre></html:p>
+                              </fr:mainmatter>
+                            </fr:tree>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>11</fr:month>
+                              <fr:day>1</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/0028/</fr:uri>
+                            <fr:display-uri>0028</fr:display-uri>
+                            <fr:route>/0028/</fr:route>
+                            <fr:title text="Matrices et tableaux multidimensionels">Matrices et tableaux multidimensionels</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>On peut représenter des matrices, c'est à dire des tableaux à double-entrée, comme des tableaux de tableaux. Pour déclarer et initialiser la matrice
+<fr:tex display="block"><![CDATA[
+\begin {pmatrix}
+1&2&3&4 \\
+5&6&7&8 \\
+9&10&11&12
+\end {pmatrix}
+]]></fr:tex>
+on pourra écrire
+<html:pre><html:cpp><![CDATA[    int matrice[3][4] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };]]></html:cpp></html:pre>
+Pour ensuite accéder à l'élément dans la ligne <fr:tex display="inline"><![CDATA[0]]></fr:tex> et la colone <fr:tex display="inline"><![CDATA[2]]></fr:tex>, on écrira
+<html:pre><html:cpp><![CDATA[    matrice[0][2] // Cette valeur est 3]]></html:cpp></html:pre>
+Et pareillement pour l'affectaction. On peut aussi généraliser ce principe aux tableaux à <fr:tex display="inline"><![CDATA[n]]></fr:tex> dimensions, que l'on peut voir comme des tableaux de tableaux de tableaux... La syntaxe est similaire à celle des matrices, avec plus de crochets.
+</html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>11</fr:month>
+                          <fr:day>1</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/0029/</fr:uri>
+                        <fr:display-uri>0029</fr:display-uri>
+                        <fr:route>/0029/</fr:route>
+                        <fr:title text="Algorithmes classiques sur les tableaux">Algorithmes classiques sur les tableaux</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>L'objectif de cette section est de se familiariser avec les tableaux, grâce à plusieurs algorithmes classiques sur ces derniers. Beaucoup de ces algorithmes sont donnés en exercices.</html:p>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>11</fr:month>
+                              <fr:day>1</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/0030/</fr:uri>
+                            <fr:display-uri>0030</fr:display-uri>
+                            <fr:route>/0030/</fr:route>
+                            <fr:title text="Trouver le maximum dans un tableau d'entiers">Trouver le maximum dans un tableau d'entiers</fr:title>
+                            <fr:taxon>Algorithme</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p><html:pre><html:cpp>
+// Entrée : Un entier n &gt; 0 et un tableau d'entier tableau de taille n
+// Sortie : Un entier représentant le maximum contenu dans tableau
+int maximum (int n, int[] tableau){
+  int max = tableau [0];
+  // A la fin de la boucle i, max contient le maximum
+  // de tableau situé entre les indices 0 et i
+  for (int i = 1; i &lt; n; i++ ){
+    if (max &lt; tableau[i]){
+      max = tableau[i];
+    }
+  }
+  return max;
+}
+</html:cpp></html:pre>
+<html:strong>Complexité</html:strong>: Pour analyser la complexité de cet algorithme, on compte le nombre de comparaison. A chaque passage dans la boucle, on effectue exactement une comparaison (<html:code>max &lt; tableau[i]</html:code>), et on fait <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> passages dans la boucle. Cette fonction fera donc toujours exactement <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> comparaisons, ce qui donne une complexité en <fr:tex display="inline"><![CDATA[\mathcal {O}(n)]]></fr:tex> (<fr:link href="/0017/" title="Linéaire" uri="http://localhost/0017/" display-uri="0017" type="local">complexité linéaire</fr:link>).
+</html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>11</fr:month>
+                              <fr:day>1</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/0031/</fr:uri>
+                            <fr:display-uri>0031</fr:display-uri>
+                            <fr:route>/0031/</fr:route>
+                            <fr:title text="Minimum d'un tableau">Minimum d'un tableau</fr:title>
+                            <fr:taxon>Exercice</fr:taxon>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>
+                              <html:ol><html:li>Ecrire une fonction <html:code>minimum</html:code> qui prend en argument un entier <fr:tex display="inline"><![CDATA[n]]></fr:tex> et un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie le minimum de ce tableau</html:li>
+<html:li>Ecrire une fonction <html:code>minimumParmi</html:code> qui prend en argument deux entiers <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n]]></fr:tex> tels que <fr:tex display="inline"><![CDATA[k<n]]></fr:tex>, et un tableau de taille au moins <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie le minimum parmis tous les éléments de ce tableau situé entre les positions <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n-1]]></fr:tex>.</html:li>
+<html:li>Ecrire une fonction <html:code>indiceMinimum</html:code> qui prend en argument deux entiers <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n]]></fr:tex> tels que <fr:tex display="inline"><![CDATA[k<n]]></fr:tex>, et un tableau de taille au moins <fr:tex display="inline"><![CDATA[n]]></fr:tex>, et qui renvoie la position à laquelle se situe minimum parmis tous les éléments de ce tableau situé entre les positions <fr:tex display="inline"><![CDATA[k]]></fr:tex> et <fr:tex display="inline"><![CDATA[n-1]]></fr:tex>.</html:li>
+<html:li>Donner une estimation de la complexité de chacune de ces fonctions.</html:li></html:ol>
+                            </html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>11</fr:month>
+                              <fr:day>2</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/0032/</fr:uri>
+                            <fr:display-uri>0032</fr:display-uri>
+                            <fr:route>/0032/</fr:route>
+                            <fr:title text="Crible d'Erathostene">Crible d'Erathostene</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>
+                              <html:mark>TODO</html:mark>
+                            </html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                        <fr:tree show-metadata="false">
+                          <fr:frontmatter>
+                            <fr:authors>
+                              <fr:author>
+                                <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                              </fr:author>
+                            </fr:authors>
+                            <fr:date>
+                              <fr:year>2025</fr:year>
+                              <fr:month>11</fr:month>
+                              <fr:day>2</fr:day>
+                            </fr:date>
+                            <fr:uri>http://localhost/003E/</fr:uri>
+                            <fr:display-uri>003E</fr:display-uri>
+                            <fr:route>/003E/</fr:route>
+                            <fr:title text="Vérifier si un tableau est trié">Vérifier si un tableau est trié</fr:title>
+                          </fr:frontmatter>
+                          <fr:mainmatter>
+                            <html:p>
+                              <html:mark>TODO</html:mark>
+                            </html:p>
+                          </fr:mainmatter>
+                        </fr:tree>
+                      </fr:mainmatter>
+                    </fr:tree>
+                    <fr:tree show-metadata="false">
+                      <fr:frontmatter>
+                        <fr:authors>
+                          <fr:author>
+                            <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                          </fr:author>
+                        </fr:authors>
+                        <fr:date>
+                          <fr:year>2025</fr:year>
+                          <fr:month>11</fr:month>
+                          <fr:day>2</fr:day>
+                        </fr:date>
+                        <fr:uri>http://localhost/003F/</fr:uri>
+                        <fr:display-uri>003F</fr:display-uri>
+                        <fr:route>/003F/</fr:route>
+                        <fr:title text="Représentation en mémoire des tableaux">Représentation en mémoire des tableaux</fr:title>
+                      </fr:frontmatter>
+                      <fr:mainmatter>
+                        <html:p>
+                          <html:mark>TODO</html:mark>
+                        </html:p>
+                      </fr:mainmatter>
+                    </fr:tree>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/thibautbenjamin/" title="Thibaut Benjamin" uri="http://localhost/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>2</fr:day>
+                    </fr:date>
+                    <fr:uri>http://localhost/003G/</fr:uri>
+                    <fr:display-uri>003G</fr:display-uri>
+                    <fr:route>/003G/</fr:route>
+                    <fr:title text="Algorithmes de tri">Algorithmes de tri</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+                      <html:mark>TODO</html:mark>
+                    </html:p>
                   </fr:mainmatter>
                 </fr:tree>
               </fr:mainmatter>
