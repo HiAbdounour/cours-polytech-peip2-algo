@@ -10,10 +10,6 @@
     <html xmlns="http://www.w3.org/1999/xhtml" data-base-url="{/f:tree/@base-url}">
       <head>
         <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css"/>
         <link rel="stylesheet" href="{/f:tree/@base-url}style.css" />
         <link rel="stylesheet" href="{/f:tree/@base-url}katex.min.css" />
         <script type="text/javascript">
@@ -29,22 +25,6 @@
         </title>
       </head>
       <body>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-        <script>
-          Prism.plugins.NormalizeWhitespace.setDefaults({
-	  "remove-trailing": true,
-	  "remove-indent": true,
-	  "left-trim": true,
-	  "right-trim": true,
-          });
-        </script>
         <ninja-keys placeholder="Start typing a note title or ID"></ninja-keys>
         <xsl:if test="not(/f:tree[@root = 'true'])">
           <header class="header">

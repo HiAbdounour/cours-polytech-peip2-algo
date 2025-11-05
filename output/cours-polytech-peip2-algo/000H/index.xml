@@ -39,10 +39,30 @@
       </fr:frontmatter>
       <fr:mainmatter>
         <html:p>Le code suivant définit une fonction <html:code>majuscule</html:code> prenant une caractère et retournant un caractère
-<html:pre><html:cpp><![CDATA[char majuscule (char caractère){
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[char majuscule (char caractère){
   /* Le code de la fonction est ici */
   return caractère
-}]]></html:cpp></html:pre></html:p>
+}]]></html:code></html:pre></html:p>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false">
@@ -194,13 +214,73 @@ Le reste de cette section présente les caractéristiques du sous-ensemble de <f
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>Les variables permettent de stocker des valeur que l'on a besoin de manipuler lors de l'exécution de l'aglorithme. Elles sont déclarées en étant précédées de leur type de donnée comme dans l'exemple suivant
-<html:pre><html:cpp>
-<![CDATA[int x;]]></html:cpp></html:pre>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+<![CDATA[int x;]]></html:code></html:pre>
 Pour affecter une valeur à une variable on utilisera le symbole <html:code>=</html:code>. Ainsi, l'extrait de code suivant déclare une variable <html:code>x</html:code> de type <html:code>int</html:code> et lui affecte la valeur <html:code>5</html:code>
-<html:pre><html:cpp><![CDATA[int x;
-x = 5;]]></html:cpp></html:pre>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[int x;
+x = 5;]]></html:code></html:pre>
 On pourra abréger ce code en 1 seule ligne, en echaînant la déclaration et l'affectation, comme suit
-<html:pre><html:cpp><![CDATA[int x = 5;]]></html:cpp></html:pre>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[int x = 5;]]></html:code></html:pre>
 On considérera qu'essayer d'accéder à une valeur qui a été déclarée mais à laquelle aucune valeur n'a été affectée est une erreur, même si <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> ne lève pas d'erreur et renvoie une valeur.</html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
@@ -266,10 +346,30 @@ On considérera qu'essayer d'accéder à une valeur qui a été déclarée mais 
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>Le code suivant définit une fonction <html:code>majuscule</html:code> prenant une caractère et retournant un caractère
-<html:pre><html:cpp><![CDATA[char majuscule (char caractère){
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[char majuscule (char caractère){
   /* Le code de la fonction est ici */
   return caractère
-}]]></html:cpp></html:pre></html:p>
+}]]></html:code></html:pre></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
@@ -320,10 +420,50 @@ On considérera qu'essayer d'accéder à une valeur qui a été déclarée mais 
 <html:li>Une variable, dont le type a été déclaré</html:li>
 <html:li>Un appel de fonction</html:li></html:ul></html:p>
                 <html:p>Pour comparer des valeurs de base, l'on utilise l'opérateur <html:code>==</html:code>, qui renvoie le booléen <html:code>true</html:code> si les deux valeurs sont égales, et <html:code>false</html:code> si les deux valeurs sont différentes. Ceci est illustré ci-dessous
-<html:pre><html:cpp><![CDATA[int x = 5;
-x == 5 // cette comparaison est vraie]]></html:cpp></html:pre>
-<html:pre><html:cpp><![CDATA[int x = 6;
-x == 5 // cette comparaison est fausse]]></html:cpp></html:pre></html:p>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[int x = 5;
+x == 5 // cette comparaison est vraie]]></html:code></html:pre>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[int x = 6;
+x == 5 // cette comparaison est fausse]]></html:code></html:pre></html:p>
                 <fr:tree show-metadata="false">
                   <fr:frontmatter>
                     <fr:authors>
@@ -409,17 +549,57 @@ x == 5 // cette comparaison est fausse]]></html:cpp></html:pre></html:p>
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>Les branchements conditionnels <html:code>if-then-else</html:code> (en français: <html:code>si</html:code>, <html:code>alors</html:code> et <html:code>sinon</html:code>) permettent comme leur nom l'indique de tester une valeur booléenne (appelée <html:em>condition</html:em>), et de basculer sur une branche ou l'autre du code suivant que la condition est vraie ou fausse. La syntaxe pour utiliser ce genre de branchement conditionnel est la suivante:
-<html:pre><html:cpp>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[ if (condition) {
   // branche 1
 } else {
   // branche 2
-}]]></html:cpp></html:pre>
+}]]></html:code></html:pre>
 Ici, <html:code>condition</html:code> est une <fr:link href="/cours-polytech-peip2-algo/000I/" title="Valeurs de base et comparaison" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000I/" display-uri="000I" type="local">valeur booléenne</fr:link>. Si cette valeur est <html:code>true</html:code>, alors le code présent dans la branche 1 est exécuté, et sinon, le code présent dans la branche 2 est exécuté. Notons que l'on peut également ommettre la seconde branche, et écrire simplement:
-<html:pre><html:cpp>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[ if (condition) {
   // branche 1
-}]]></html:cpp></html:pre>
+}]]></html:code></html:pre>
 Dans ce cas, si la valeur <html:code>condition</html:code> est <html:code>true</html:code>, alors le code présent dans la branche 1 est exécuté, et sinon, l'on continue à exécuter le programme sans passer par une seconde branche.</html:p>
                     <fr:tree show-metadata="false">
                       <fr:frontmatter>
@@ -440,14 +620,34 @@ Dans ce cas, si la valeur <html:code>condition</html:code> est <html:code>true</
                       </fr:frontmatter>
                       <fr:mainmatter>
                         <html:p>Dans le cas où l'on veut imbriquer des branchements conditionnels, on pourra utiliser l'opérateur <html:code>else if</html:code>:
-<html:pre><html:cpp>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[ if (condition1) {
   // branche 1
 } else if (condition2) {
   // branche 2
 } else {
   // branche 3
-}]]></html:cpp></html:pre></html:p>
+}]]></html:code></html:pre></html:p>
                       </fr:mainmatter>
                     </fr:tree>
                     <fr:tree show-metadata="false">
@@ -470,17 +670,57 @@ Dans ce cas, si la valeur <html:code>condition</html:code> est <html:code>true</
                       </fr:frontmatter>
                       <fr:mainmatter>
                         <html:p>Notons que si <html:code>x</html:code> est une variable booléenne, il est fréquent de voir des élèves écrire la condition suivante:
-<html:pre><html:cpp>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[ if (x == true) {
   // branche
 }]]>
-</html:cpp></html:pre>
+</html:code></html:pre>
 La condition <html:code>x == true</html:code> est une valeur booléenne qui vaut <html:code>true</html:code> lorsque <html:code>x</html:code> vaut <html:code>true</html:code>, et qui vaut <html:code>false</html:code> lorsque <html:code>x</html:code> vaut <html:code>false</html:code>. Autrement dit, la valeur booléenne <html:code>x == true</html:code> est égale à la valeur booléenne <html:code>x</html:code>. Pour cette raison on privilégiera plutôt le code équivalent:
-<html:pre><html:cpp>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[ if (x) {
   // branche
 }]]>
-</html:cpp></html:pre></html:p>
+</html:code></html:pre></html:p>
                       </fr:mainmatter>
                     </fr:tree>
                   </fr:mainmatter>
@@ -504,7 +744,27 @@ La condition <html:code>x == true</html:code> est une valeur booléenne qui vaut
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>Lorsque l'on veut faire un branchement avec plus que deux branches, on pourra utiliser un branchement <html:code>switch-case</html:code>, qui évite d'enchaîner pleins de <fr:link href="/cours-polytech-peip2-algo/000K/" title="Les branchements conditionnels if-then-else" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000K/" display-uri="000K" type="local">branchements <html:code>if-then-else</html:code></fr:link>. Par exemple, si <html:code>x</html:code> est une variable de type <html:code>int</html:code>, on pourra écrire:
-<html:pre><html:cpp>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[ switch (x) {
   case 0:
     // branche 1
@@ -517,9 +777,29 @@ La condition <html:code>x == true</html:code> est une valeur booléenne qui vaut
     break;
   default:
     // branche 4
-}]]></html:cpp></html:pre>
+}]]></html:code></html:pre>
 plutôt que:
-<html:pre><html:cpp>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[ if (x == 0) {
   // branche 1
 } else if (x == 1){
@@ -528,7 +808,7 @@ plutôt que:
   // branche 3
 } else {
   // branche 4
-}]]></html:cpp></html:pre>
+}]]></html:code></html:pre>
 On donne ici un exemple avec 4 branches, mais l'on peut utiliser un branchement <html:code>switch-case</html:code> avec un nombre de branches arbitraire</html:p>
                   </fr:mainmatter>
                 </fr:tree>
@@ -574,19 +854,59 @@ On donne ici un exemple avec 4 branches, mais l'on peut utiliser un branchement 
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>Les boucles <html:code>for</html:code> permettent de répéter les intructions contenues dans le corps de la boucle un nombre certain nombre de fois. Pour ce faire, on définit une variable intermédiaire qui sert de compteur, et que l'on va incrémenter jusqu'à la valeur désirée. La syntaxe pour utiliser une boucle <html:code>for</html:code> est la suivante
-<html:pre><html:cpp>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[ for(int i = 1; i <= 8; i++){
   // corps de la boucle
-}]]></html:cpp></html:pre>
+}]]></html:code></html:pre>
 Dans cet exemple, les intructions contenues dans le corps de la boucles sont répétées 8 fois. Décomposons rapidement les différents éléments de la boucle:
 <html:ul><html:li>le code <html:code>int i = 1</html:code> déclare une variable <html:code>i</html:code> de type <html:code>int</html:code> et lui affecte la valeur <html:code>1</html:code></html:li>
 <html:li>le code <html:code>i &lt;= 8</html:code> indique que l'on va passer dans la boucle tant que la condition <html:code>i &lt;= 8</html:code> est vraie</html:li>
 <html:li>le code <html:code>i++</html:code> donne une instruction à effectuer à la fin de chacun des passages dans la boucle, ici on incrémente la variable <html:code>i</html:code> de <html:code>1</html:code> (le code <html:code>i++</html:code> est équivalent à <html:code>i = i+1</html:code>)</html:li></html:ul>
 Notons que dans le corps de la boucle, l'on a accès à la variable <html:code>i</html:code>, et l'on voit sa valeur changer au fil des passages dans la boucle. C'est pourquoi on sera ammené parfois à commencer à compter à partir d'un nombre différent de 1, ou par exemple de 3 en 3. Par exemple, la boucle suivante fait le même nombre d'itérations que la boucle précédente, mais donne des valeurs de la variable <html:code>i</html:code> différentes dans le corps de la boucle pour chacun des passages:
-<html:pre><html:cpp>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[ for(int i = 5; i <= 32; i = i+3){
   // corps de la boucle
-}]]></html:cpp></html:pre></html:p>
+}]]></html:code></html:pre></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
@@ -608,11 +928,31 @@ Notons que dans le corps de la boucle, l'on a accès à la variable <html:code>i
                   </fr:frontmatter>
                   <fr:mainmatter>
                     <html:p>Les boucles <html:code>while</html:code> permettent de répéter les instructions contenues dans le corps de la boucle tant qu'une condition booléenne est vraie. On l'utilise avec la syntaxe suivante:
-<html:pre><html:cpp>
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[while (condition) {
   // corps de la boucle
 }]]>
-</html:cpp></html:pre>
+</html:code></html:pre>
 Notons qu'il n'y a pas de garantie que la boucle s'arrête. Pour que la boucle s'arrête, il faut que le corps de la boucle modifie la condition de manière à la rendre fausse à un moment.</html:p>
                   </fr:mainmatter>
                 </fr:tree>

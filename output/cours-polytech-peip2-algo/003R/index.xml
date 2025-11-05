@@ -19,9 +19,26 @@
     <fr:taxon>Example</fr:taxon>
   </fr:frontmatter>
   <fr:mainmatter>
-    <html:p>
-      <html:pre>
-        <html:cpp>
+    <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[void echanger (int x, int y){
   int z = x;
   x = y;
@@ -36,9 +53,7 @@ int main (){
   // a = 0, b = 1
   return 0;
 }]]>
-</html:cpp>
-      </html:pre>
-    </html:p>
+</html:code></html:pre></html:p>
     <html:p><html:strong>Illustration</html:strong>: <html:mark>TODO</html:mark></html:p>
   </fr:mainmatter>
   <fr:backmatter>
@@ -93,9 +108,26 @@ int main (){
                 <fr:taxon>Example</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter>
-                <html:p>
-                  <html:pre>
-                    <html:cpp>
+                <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[void echanger (int x, int y){
   int z = x;
   x = y;
@@ -110,9 +142,7 @@ int main (){
   // a = 0, b = 1
   return 0;
 }]]>
-</html:cpp>
-                  </html:pre>
-                </html:p>
+</html:code></html:pre></html:p>
                 <html:p><html:strong>Illustration</html:strong>: <html:mark>TODO</html:mark></html:p>
               </fr:mainmatter>
             </fr:tree>

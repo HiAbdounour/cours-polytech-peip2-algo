@@ -39,16 +39,31 @@
         <fr:taxon>Algorithme</fr:taxon>
       </fr:frontmatter>
       <fr:mainmatter>
-        <html:p>
-          <html:pre>
-            <html:cpp><![CDATA[// Entrées: Deux entiers x et y
+        <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[// Entrées: Deux entiers x et y
 // Sortie: Le produit des deux entrées
 int produit (int x , int y){
   return x * y;
 }]]>
-</html:cpp>
-          </html:pre>
-        </html:p>
+</html:code></html:pre></html:p>
       </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false">
@@ -70,9 +85,26 @@ int produit (int x , int y){
         <fr:taxon>Algorithme</fr:taxon>
       </fr:frontmatter>
       <fr:mainmatter>
-        <html:p>
-          <html:pre>
-            <html:cpp><![CDATA[// Entrées: Deux entiers x et y positifs
+        <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[// Entrées: Deux entiers x et y positifs
 // Sortie: Le produit des deux entrées
 int produit (int x , int y){
   int result;
@@ -82,9 +114,7 @@ int produit (int x , int y){
   }
   return result;
 }]]>
-</html:cpp>
-          </html:pre>
-        </html:p>
+</html:code></html:pre></html:p>
       </fr:mainmatter>
     </fr:tree>
   </fr:mainmatter>
@@ -160,16 +190,31 @@ int produit (int x , int y){
                     <fr:taxon>Algorithme</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>
-                      <html:pre>
-                        <html:cpp><![CDATA[// Entrées: Deux entiers x et y
+                    <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[// Entrées: Deux entiers x et y
 // Sortie: Le produit des deux entrées
 int produit (int x , int y){
   return x * y;
 }]]>
-</html:cpp>
-                      </html:pre>
-                    </html:p>
+</html:code></html:pre></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
@@ -191,9 +236,26 @@ int produit (int x , int y){
                     <fr:taxon>Algorithme</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>
-                      <html:pre>
-                        <html:cpp><![CDATA[// Entrées: Deux entiers x et y positifs
+                    <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[// Entrées: Deux entiers x et y positifs
 // Sortie: Le produit des deux entrées
 int produit (int x , int y){
   int result;
@@ -203,9 +265,7 @@ int produit (int x , int y){
   }
   return result;
 }]]>
-</html:cpp>
-                      </html:pre>
-                    </html:p>
+</html:code></html:pre></html:p>
                   </fr:mainmatter>
                 </fr:tree>
               </fr:mainmatter>
@@ -249,9 +309,26 @@ int produit (int x , int y){
                     <fr:taxon>Algorithme</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>
-                      <html:pre>
-                        <html:cpp>
+                    <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[// Entrées: Un entier n >= 1
 // Sortie: Un booléen mystère
 bool mystere (int n){
@@ -264,9 +341,7 @@ bool mystere (int n){
     i = i+1;
   }
   return r;
-}]]></html:cpp>
-                      </html:pre>
-                    </html:p>
+}]]></html:code></html:pre></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p><html:ol><html:li>Que renvoie cet algorithme?</html:li>
@@ -511,17 +586,32 @@ Remarquez qu'il est beaucoup plus difficile de comprendre un algorithme lorsqu'o
                     <fr:taxon>Algorithme</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>
-                      <html:pre>
-                        <html:cpp>
+                    <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[// Entrées: Deux entiers x et y
 // Sortie: La somme des deux entrées
 int somme (int x , int y){
   return x + y;
 }]]>
-</html:cpp>
-                      </html:pre>
-                    </html:p>
+</html:code></html:pre></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
@@ -543,9 +633,26 @@ int somme (int x , int y){
                     <fr:taxon>Algorithme</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>
-                      <html:pre>
-                        <html:cpp>
+                    <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[// Entrées: Deux entiers x et y positifs
 // Sortie: La somme des deux entrées
 int somme (int x , int y){
@@ -555,9 +662,7 @@ int somme (int x , int y){
   }
   return x;
 }]]>
-</html:cpp>
-                      </html:pre>
-                    </html:p>
+</html:code></html:pre></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p>Lorsque les deux nombres donnés sont positifs, les deux algorithmes permettent effectivement de calculer la somme des deux nombres. Pour évaluer la complexité, on va compter le nombre d'additions effectué par chacuns des deux algorithmes. Le premier algorithme effectue une seule addition <html:code>x+y</html:code> pour renvoyer le résultat, il est donc en temps constant. Le second algorithme effectue deux additions par passage dans la boucle (<html:code>x = x + 1</html:code> et <html:code>y = y - 1</html:code>). A chaque passage dans la boucle, la variable <html:code>y</html:code> est décrémentée de <fr:tex display="inline"><![CDATA[1]]></fr:tex>, et on s'arrête lorsque l'on atteint <fr:tex display="inline"><![CDATA[0]]></fr:tex>. Il y a donc autant de passages dans la boucle que la valeur initiale de <html:code>y</html:code>. On dira que le second algorithme est en <fr:tex display="inline"><![CDATA[\mathcal {O}(y)]]></fr:tex>, ou encore linéaire en son second argument.</html:p>
@@ -602,16 +707,31 @@ int somme (int x , int y){
                     <fr:taxon>Algorithme</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>
-                      <html:pre>
-                        <html:cpp><![CDATA[// Entrées: Deux entiers x et y
+                    <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[// Entrées: Deux entiers x et y
 // Sortie: Le produit des deux entrées
 int produit (int x , int y){
   return x * y;
 }]]>
-</html:cpp>
-                      </html:pre>
-                    </html:p>
+</html:code></html:pre></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <fr:tree show-metadata="false">
@@ -633,9 +753,26 @@ int produit (int x , int y){
                     <fr:taxon>Algorithme</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>
-                      <html:pre>
-                        <html:cpp><![CDATA[// Entrées: Deux entiers x et y positifs
+                    <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[// Entrées: Deux entiers x et y positifs
 // Sortie: Le produit des deux entrées
 int produit (int x , int y){
   int result;
@@ -645,9 +782,7 @@ int produit (int x , int y){
   }
   return result;
 }]]>
-</html:cpp>
-                      </html:pre>
-                    </html:p>
+</html:code></html:pre></html:p>
                   </fr:mainmatter>
                 </fr:tree>
               </fr:mainmatter>
@@ -691,9 +826,26 @@ int produit (int x , int y){
                     <fr:taxon>Algorithme</fr:taxon>
                   </fr:frontmatter>
                   <fr:mainmatter>
-                    <html:p>
-                      <html:pre>
-                        <html:cpp>
+                    <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[// Entrées: Un entier n >= 1
 // Sortie: Un booléen mystère
 bool mystere (int n){
@@ -706,9 +858,7 @@ bool mystere (int n){
     i = i+1;
   }
   return r;
-}]]></html:cpp>
-                      </html:pre>
-                    </html:p>
+}]]></html:code></html:pre></html:p>
                   </fr:mainmatter>
                 </fr:tree>
                 <html:p><html:ol><html:li>Que renvoie cet algorithme?</html:li>

@@ -74,7 +74,26 @@
                 <fr:taxon>Algorithme</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter>
-                <html:p><html:pre><html:cpp>
+                <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 // Entrée : Un entier n &gt; 0 et un tableau d'entier tableau de taille n
 // Sortie : Un entier représentant le maximum contenu dans tableau
 int maximum (int n, int[] tableau){
@@ -88,7 +107,7 @@ int maximum (int n, int[] tableau){
   }
   return max;
 }
-</html:cpp></html:pre>
+</html:code></html:pre>
 <html:strong>Complexité</html:strong>: Pour analyser la complexité de cet algorithme, on compte le nombre de comparaison. A chaque passage dans la boucle, on effectue exactement une comparaison (<html:code>max &lt; tableau[i]</html:code>), et on fait <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> passages dans la boucle. Cette fonction fera donc toujours exactement <fr:tex display="inline"><![CDATA[n-1]]></fr:tex> comparaisons, ce qui donne une complexité en <fr:tex display="inline"><![CDATA[\mathcal {O}(n)]]></fr:tex> (<fr:link href="/cours-polytech-peip2-algo/0017/" title="Linéaire" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0017/" display-uri="0017" type="local">complexité linéaire</fr:link>).
 </html:p>
               </fr:mainmatter>

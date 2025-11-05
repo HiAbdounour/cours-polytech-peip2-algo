@@ -46,6 +46,94 @@
               <fr:month>10</fr:month>
               <fr:day>7</fr:day>
             </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000H.sync-conflict-20251104-211313-I54U3RZ</fr:uri>
+            <fr:display-uri>000H.sync-conflict-20251104-211313-I54U3RZ</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/000H.sync-conflict-20251104-211313-I54U3RZ</fr:route>
+            <fr:title text="Fonctions, méthodes, procédures">Fonctions, méthodes, procédures</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>On pourra définir des algorithmes auxilliaires permettant de nous aider à résoudre un problème concret. L'on écrira ces algorithmes sous forme de fonctions (que l'on appellera aussi sans distinction méthodes ou procédures). On commencera toujours la définition d'une fonction en indiquant son type de retour, son nom, ainsi que ses arguments avec leur type. Si une fonction ne renvoie pas d'argument, on remplacera le type de retour par le mot-clé <html:code>void</html:code>. Pour indiquer la valeur qu'une fonction renvoie, on utilisera le mot clé <html:code>return</html:code></html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003I/</fr:uri>
+                <fr:display-uri>003I</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003I/</fr:route>
+                <fr:title text="Une fonction">Une fonction</fr:title>
+                <fr:taxon>Exemple</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Le code suivant définit une fonction <html:code>majuscule</html:code> prenant une caractère et retournant un caractère
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[char majuscule (char caractère){
+  /* Le code de la fonction est ici */
+  return caractère
+}]]></html:code></html:pre></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003H/</fr:uri>
+                <fr:display-uri>003H</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/003H/</fr:route>
+                <fr:title text="Passage par valeur et passage par référence">Passage par valeur et passage par référence</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Par défaut, les appels de fonction en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource> se font en <fr:link href="/cours-polytech-peip2-algo/003O/" title="Passage par valeur" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003O/" display-uri="003O" type="local">passage par valeur</fr:link>, mais il est également possible de les déclarer en <fr:link href="/cours-polytech-peip2-algo/003P/" title="Passage par référence" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003P/" display-uri="003P" type="local">passage par référence</fr:link>. La valeur des <fr:link href="/cours-polytech-peip2-algo/000F/" title="Les types de données composés" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000F/" display-uri="000F" type="local">type de donné composé</fr:link> auxquels on s'intéresse est son adresse. Donc passer un argument d'un type composé à une fonction ressemble à un passage par référence.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>10</fr:month>
+              <fr:day>7</fr:day>
+            </fr:date>
             <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/000H/</fr:uri>
             <fr:display-uri>000H</fr:display-uri>
             <fr:route>/cours-polytech-peip2-algo/000H/</fr:route>
@@ -73,10 +161,30 @@
               </fr:frontmatter>
               <fr:mainmatter>
                 <html:p>Le code suivant définit une fonction <html:code>majuscule</html:code> prenant une caractère et retournant un caractère
-<html:pre><html:cpp><![CDATA[char majuscule (char caractère){
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[char majuscule (char caractère){
   /* Le code de la fonction est ici */
   return caractère
-}]]></html:cpp></html:pre></html:p>
+}]]></html:code></html:pre></html:p>
               </fr:mainmatter>
             </fr:tree>
             <fr:tree show-metadata="false">
@@ -155,9 +263,26 @@
                 <fr:taxon>Exemple</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter>
-                <html:p>
-                  <html:pre>
-                    <html:cpp>
+                <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[void echanger (int &x, int &y){
   int z = x;
   x = y;
@@ -172,9 +297,7 @@ int main (){
   // a = 1, b = 0
   return 0;
 }]]>
-</html:cpp>
-                  </html:pre>
-                </html:p>
+</html:code></html:pre></html:p>
               </fr:mainmatter>
             </fr:tree>
           </fr:mainmatter>
@@ -217,9 +340,26 @@ int main (){
                 <fr:taxon>Example</fr:taxon>
               </fr:frontmatter>
               <fr:mainmatter>
-                <html:p>
-                  <html:pre>
-                    <html:cpp>
+                <html:p><html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
 <![CDATA[void echanger (int x, int y){
   int z = x;
   x = y;
@@ -234,9 +374,7 @@ int main (){
   // a = 0, b = 1
   return 0;
 }]]>
-</html:cpp>
-                  </html:pre>
-                </html:p>
+</html:code></html:pre></html:p>
                 <html:p><html:strong>Illustration</html:strong>: <html:mark>TODO</html:mark></html:p>
               </fr:mainmatter>
             </fr:tree>
