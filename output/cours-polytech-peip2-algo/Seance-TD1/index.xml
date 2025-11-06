@@ -426,18 +426,19 @@ Remarquez qu'il est beaucoup plus difficile de comprendre un algorithme lorsqu'o
             </fr:authors>
             <fr:date>
               <fr:year>2025</fr:year>
-              <fr:month>10</fr:month>
-              <fr:day>27</fr:day>
+              <fr:month>11</fr:month>
+              <fr:day>5</fr:day>
             </fr:date>
-            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001V/</fr:uri>
-            <fr:display-uri>001V</fr:display-uri>
-            <fr:route>/cours-polytech-peip2-algo/001V/</fr:route>
-            <fr:title text="Recueil des TD/TP">Recueil des TD/TP</fr:title>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003Y/</fr:uri>
+            <fr:display-uri>003Y</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/003Y/</fr:route>
+            <fr:title text="Liste des TD">Liste des TD</fr:title>
           </fr:frontmatter>
           <fr:mainmatter>
-            <html:p><html:ul><html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD1/" title="TD 1" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD1/" display-uri="Seance-TD1" type="local">TD 1</fr:link></html:li>
+            <html:p>
+              <html:ul><html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD1/" title="TD 1" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD1/" display-uri="Seance-TD1" type="local">TD 1</fr:link></html:li>
 <html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TD2/" title="TD 2" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TD2/" display-uri="Seance-TD2" type="local">TD 2</fr:link></html:li></html:ul>
-<html:ul><html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP1/" title="TP 1 : Tri par sélection et tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP1/" display-uri="Seance-TP1" type="local">TP 1</fr:link></html:li></html:ul></html:p>
+            </html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>

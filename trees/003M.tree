@@ -1,11 +1,9 @@
-\title{Slides}
+\title{Les diapositives de cours}
 \author{thibautbenjamin}
 \date{2025-11-04T12:56:02Z}
+\import{basemacros}
 
+\p{Cette page recense les diapositives de cours.}
 
-\<html:reveal>{
-\<html:slides>{
-\<html:section>{Slide 1}
-\<html:section>{Slide 2}
-}
-}
+\p{\strong{\asset-link{2025/slides/1/main.pdf}{Amphi 1}}: Introduction et rappels de \Cpp}
+\p{\strong{\asset-link{2025/slides/2/main.pdf}{Amphi 2}}: Les bases de la complexité et premiers algorithmes de tri}

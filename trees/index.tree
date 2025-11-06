@@ -1,7 +1,10 @@
 \title{Cours d'algorithmique et complexité}
+\author{thibautbenjamin}
+\import{basemacros}
 
 \transclude{003K}
 
+
 \p{\strong{[La page du cours](Cours)}}
 \p{\strong{[La page des TD/TP](001V)}}
-\p{\strong{[Les slides de cours](003M)}}
+\p{\strong{[La page des slides de cours](003M)}}

@@ -1,0 +1,595 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{listingsutf8}
+
+\usetheme{metropolis}
+
+\usepackage{macros}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\setbeamertemplate{itemize item}{{\usebeamercolor[fg]{alerted
+      text}{${\scriptstyle \blacktriangleright}$}}}
+
+
+\usepackage{xpatch}
+\makeatletter
+\newlength{\my@beamer@itemsepi}\setlength{\my@beamer@itemsepi}{3ex}
+\newlength{\my@beamer@itemsepii}\setlength{\my@beamer@itemsepii}{1.5ex}
+\newlength{\my@beamer@itemsepiii}\setlength{\my@beamer@itemsepiii}{1.5ex}
+\newcommand{\my@beamer@setsep}{%
+  \ifnum\@itemdepth=1\relax
+    \setlength\itemsep{\my@beamer@itemsepi}
+  \else
+    \ifnum\@itemdepth=2\relax
+      \setlength\itemsep{\my@beamer@itemsepii}
+    \else
+      \ifnum\@itemdepth=3\relax
+        \setlength\itemsep{\my@beamer@itemsepiii}
+      \fi\fi\fi}
+\xpatchcmd{\itemize}
+{\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\xpatchcmd{\beamer@enum@}
+{\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\newcommand\setlistsep[3]{%
+  \setlength{\my@beamer@itemsepi}{#1}%
+  \setlength{\my@beamer@itemsepii}{#2}%
+  \setlength{\my@beamer@itemsepiii}{#3}%
+}
+\makeatother
+
+\setlistsep{6.5ex}{2ex}{2ex}
+
+%%%
+\definecolor{lbcolor}{rgb}{0.1,0.1,0.1}
+\definecolor{commentcolor}{rgb}{0.4,0.4,0.4}
+\definecolor{keywordcolor}{HTML}{531ab6}
+\definecolor{stringcolor}{HTML}{005f5f}
+
+\lstset{
+  basicstyle=\small\ttfamily\color{black},
+  commentstyle=\rmfamily\color{commentcolor},
+  keywordstyle=\bfseries\color{keywordcolor},
+  showspaces=false,
+  showstringspaces=false,
+  stringstyle=\color{stringcolor},
+  tabsize=2,
+}
+
+\newtcblisting{slidelisting}{
+      arc=5mm,
+      top=0mm,
+      bottom=0mm,
+      left=0mm,
+      right=0mm,
+      boxrule=1pt,
+      listing only,
+      listing options={language=C++},
+      width=\textwidth
+    }
+    %%%
+    \newtcbinputlisting{\slideinputlisting}[2][0]{
+      listing file = #2,
+      size = small,
+      arc=5mm,
+      top=0mm,
+      bottom=0mm,
+      left=0mm,
+      right=0mm,
+      boxrule=1pt,
+      listing only,
+      listing options={language=C++, firstline=#1},
+      width=\textwidth
+}
+
+\newcommand{\codeslide}[2][4]{
+  \slideinputlisting[#1]{#2}
+  \onslide<2>
+  \slideinputlisting[0]{#2.res}}
+
+\title{Algorithmique et complexité}
+\subtitle{Polytech Paris-Saclay, PEIP 2, Informatique 3}
+\author{Thibaut Benjamin}
+\date{7 Novembre 2025}
+\institute{Amphi 1}
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{\'Equipe d'enseignement}
+
+  \begin{itemize}
+  \item Amphi
+
+    \textbf{Thibaut Benjamin}
+    \href{mailto:thibaut.benjamin@universite-paris-saclay.fr}
+    {\texttt{thibaut.benjamin@universite-paris-saclay.fr}}
+
+  \item TD/TP
+
+    \textbf{Thibaut Benjamin}
+
+    \textbf{Melissa Larbi}
+
+    \textbf{Ali Sahili}
+
+    \textbf{Julien Rauch}
+  \end{itemize}
+
+  \alert{Nous sommes là pour vous, n'hésitez pas à venir vers nous lorsque vous
+    avez des questions.}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Objectif du cours}
+
+  \begin{itemize}
+  \item Renforcer les compétences en programmation \Cpp
+  \item Comprendre les bases théoriques le la complexité des algorithmes
+  \item Développer une connaissance des algorithmes classique
+  \item Apprendre à analyser la complexité d'un algorithme
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Organisation du cours}
+
+  \begin{itemize}
+  \item 4 Cours en Amphis
+  \item 4 Séances de TD
+  \item 4 Séances de TP
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{\'Evaluations}
+
+  \begin{itemize}
+  \item Examen de 2h Vendredi 5 Décembre
+
+    \alert{\textbf{Tous documents papiers autorisés}}
+
+  \item 1 Séance de mini-contrôle noté en TD
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ressource en ligne}
+
+  Une adresse à ajouter à vos favoris! (cours, TD, TP, etc...)
+
+  \url{https://thibautbenjamin.github.io/cours-polytech-peip2-algo}
+
+  \vspace{1.5cm}
+  \onslide<2->
+  \alert{\textbf{Si vous le souhaitez, contribuez au document de cours!}}
+
+  Venez me voir si vous ne savez pas comment vous y prendre.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Séance du jour}
+
+  \begin{itemize}
+  \item Comprendre ce que la complexité d'un algorithme représente
+  \item Réviser les bases de la programmation en \Cpp
+  \item Aborder la notion de tableau en \Cpp
+  \end{itemize}
+
+\end{frame}
+
+\section{La complexité des algorithmes}
+
+\begin{frame}
+  \frametitle{Qu'est-ce qu'un algorithme?}
+
+  \begin{definition}
+    Un algorithme est une séquence d'intstructions \alert{élémentaires}
+    permettant de réaliser une tache.
+  \end{definition}
+
+  \vspace{1cm}
+
+  Pour ce cours, un algorithme est un programme en \Cpp
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Un exemple: Les algorithme de tri}
+
+  \begin{itemize}
+  \item On dispose d'un paquet de données que l'on peut comparer entre elles
+    pour savoir si laquelle est la plus grande.
+  \item On souhaite trier ces données par ordre croissant
+  \item De nombreux algorithmes pour faire cela (voir le prochain amphi)
+  \item Une visualisation utile:
+    \url{https://mszula.github.io/visual-sorting/}
+  \end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Visualisation des algorithmes de tri}
+  \begin{itemize}
+      \item rendez-vous sur:
+        \url{https://mszula.github.io/visual-sorting/}
+
+      \item regardez les tris suivants
+        \begin{itemize}
+        \item Tri par sélection (selection sort)
+        \item Tri par insertion (insertion sort)
+        \item Tri à bulles (bubble sort)
+        \item Tri fusion (merge sort)
+        \item Tri rapide (quicksort)
+        \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Qu'est-ce que la complexité d'un algorithme?}
+
+  \begin{definition}
+    La complexité d'un algorithme est le nombre d'opérations que cet algorithme
+    effectue en fonction de la taille de ses entrées.
+  \end{definition}
+
+  \vspace{1cm}
+  \alert{\textbf{Temps d'exécution}}: De manière générale, plus un algorithme a
+  une complexité élevée, et plus il mettra de temps à s'exécuter.
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Complexité asymptotique}
+  \begin{itemize}
+  \item Sur des entrées de petites tailles, avec un ordinateur moderne, les
+    algorithmes s'exécuteront tous très rapidement, peu importe leur complexité.
+  \item C'est pourquoi on regarde la complexité quand les entrées deviennent
+    très grandes\footnote{En mathématiques, on dit que leur taille tend vers
+      l'infini}. On parle de \alert{complexité asymptotique}.
+  \item On cherchera en général à calculer une \alert{approximation} de la
+    complexité.
+
+    \alert{Si les entrées doublent de taille, est-ce qu'on va devoir attendre
+      quelques secondes de plus, ou quelques années de plus?}
+  \end{itemize}
+
+\end{frame}
+
+
+\section{Rappels de \texorpdfstring{\Cpp}{C++}}
+
+\begin{frame}[fragile]
+  \frametitle{Les fichiers \texorpdfstring{\Cpp}{C++}}
+
+  \codeslide[0]{code/example1.cpp}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Déclaration et affectation des variables}
+
+\codeslide{code/example2.cpp}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Exemple: échange de la valeur}
+
+  \codeslide{code/example3.cpp}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Les types de données}
+
+  \begin{itemize}
+  \item \lstinline{int} : Les nombres entiers positifs ou
+    négatifs\footnote{Techniquement, compris entre deux bornes}
+  \item \lstinline{char} : Les caractères
+  \item \lstinline{bool} : Les booléens, c'est à dire \lstinline{true} ou \lstinline{false}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Définir des fonctions}
+
+\codeslide{code/example4.cpp}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Passage par valeurs}
+
+  \codeslide{code/example5.cpp}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Passage par valeurs : Explication}
+
+  \begin{tikzpicture}
+\node (E) at (0,0) {echanger({\color{blue}{int x}}, {\color{green}{int y}})};
+\draw (-.5,-.5) node[rectangle, draw=blue, thick] (vx) {\alt<4->{0}{\phantom{0}}};
+\draw (-.9,-.5) node (x) {x\textsubscript{e}};
+\draw (.8,-.5) node[rectangle, draw=green, thick] (vy) {\alt<4->{1}{\phantom{0}}};
+\draw (.4,-.5) node (x) {y\textsubscript{e}};
+\draw (-1.5,-1) node (start) {\{};
+\draw (-.9,-2) node (z) {z\textsubscript{e}};
+\draw (-.5,-2) node[rectangle, draw=blue, thick]  {\alt<5->{0}{\phantom{0}}};
+\draw (-.1,-2) node {;};
+\draw (.4,-2) node {x\textsubscript{e}};
+\draw (.8, -2) node[rectangle, draw=green, thick] {\alt<5->{1}{\phantom{0}}};
+\draw (1.2,-2) node {;};
+\draw (1.6,-2) node {y\textsubscript{e}};
+\draw (2, -2) node[rectangle, draw=blue, thick] {\alt<5->{0}{\phantom{0}}};
+\draw (2.4,-2) node {;};
+\draw (-1.5,-3) node (start) {\}};
+
+\onslide<2->
+\node (M) at (7,0) {main()};
+\draw (6.5, -.5) node {\{};
+\draw (7,-1) node {x};
+\draw (7.4,-1) node[rectangle, draw=black, thick] {0};
+\draw (7.8,-1) node {;};
+\draw (8.2,-1) node {y};
+\draw (8.6,-1) node[rectangle, draw=black, thick] {1};
+\draw (9,-1) node {;};
+\draw (8,-2) node (call) {echanger(x,y);};
+\draw (8,-3) node {return 0;};
+\draw (6.5,-3.5) node {\}};
+
+\onslide<3->
+\draw[->, thick] (call) -- (E) node[midway, above] {x\textsubscript{e}=0, y\textsubscript{e}=1};
+
+\end{tikzpicture}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Passage par référence}
+
+  \codeslide{code/example6.cpp}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les conditions}
+  \codeslide{code/example7.cpp}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les boucles}
+
+  \codeslide{code/example8.cpp}
+\end{frame}
+
+
+\section{Les tableaux}
+
+\begin{frame}
+  \frametitle{Les tableaux: une structure de donnée}
+
+  \begin{itemize}
+  \item Les structures de données permettent de stocker des données de manière
+    organisée. Il est important de choisir une structure de donnée adaptée aux
+    opérations que l'on va avoir besoin de réaliser.
+
+  \item Les tableaux permettent de stocker une collection ordonnée d'objets de
+    même type.
+
+  \item \textbf{Exemple}: un tableau d'\lstinline{int}:
+    \begin{tabular}{|c|c|c|c|c|}
+      \multicolumn{1}{c}{\footnotesize 0}
+      & \multicolumn{1}{c}{\footnotesize 1}
+      & \multicolumn{1}{c}{\footnotesize 2}
+      & \multicolumn{1}{c}{\footnotesize 3}
+      & \multicolumn{1}{c}{\footnotesize 4} \\
+      \hline
+      10 & -7 & 42 & 0 & 10 \\
+      \hline
+    \end{tabular}
+
+    \textbf{\alert{Attention}}: On commence à compter les positions à partir de
+    0.
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Avec les tableaux on doit}
+  \begin{itemize}
+  \item Garder la même taille tout au long du programme.
+  \item Déclarer la taille du tableau au moment de l'initialisation.
+  \item A la place de changer de taille, il faut déclarer un nouveau tableau
+    avec la nouvelle taille et copier toutes le valeur de l'ancien tableau dans
+    le nouveau.
+
+    \alert{\textbf{Déconseillé}!}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Avec les tableaux on peut}
+  \begin{itemize}
+  \item Accéder à un élément stocké à n'importe quelle position dans le tableau.
+  \item Changer la valeur contenue à n'importe quelle position dans le tableau.
+  \item\alert{\textbf{Attention!}} Dans le tableau signifie dans les bornes du
+    tableau. Si un tableau est de longueur \(n\), cela veut dire n'importe
+    quelle position entre \(0\) et \(n-1\).
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Déclarer un tableau en \texorpdfstring{\Cpp}{C++}}
+  \slideinputlisting[4]{code/example9.cpp}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Initialisation d'un tableau}
+  \slideinputlisting[4]{code/example10.cpp}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Accès aux éléments d'un tableau}
+  \codeslide{code/example11.cpp}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Modification des éléments d'un tableau}
+  \codeslide[10]{code/example12.cpp}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Passer un tableau en argument d'une fonction}
+
+  \codeslide[10]{code/example13.cpp}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Passer un tableau en argument d'une fonction : Explications}
+
+  \alert{La valeur d'un tableau est l'adresse de la zone en mémoire contenant ce
+    tableau}
+
+
+  \begin{tikzpicture}
+\node (E) at (0,0) {echangerPrems(int a[])};
+\draw (-.9,-.5) node (a) {a\textsubscript{e}};
+\draw (-1.5,-1) node (start) {\{};
+\draw (1.8,-2) node (z) {int z = a[0]; a[0] = a[1]; a[1] = z;};
+\draw (-1.5,-3) node (start) {\}};
+
+\onslide<1-3>
+\draw (-.5,-.5) node[rectangle, draw=black, thick] (vx) {\phantom{0}};
+
+\onslide<2->
+\node (M) at (7,0) {main()};
+\draw (6.5, -.5) node {\{};
+\draw (7,-1) node {a};
+\draw (7.4,-1) node[rectangle, draw=red, thick] (va) {\#};
+\draw (7.8,-1) node {;};
+\draw (8,-2) node (call) {echangerPrems(a);};
+\draw (8,-3) node {return 0;};
+\draw (6.5,-3.5) node {\}};
+
+\node (tab) at (4,2) {
+\(\begin{array}{|c|c|c|c|}
+  \hline
+  \alt<5->{1}{0} & \alt<5->{0}{1} & 2 & 3 \\
+  \hline
+\end{array}\)
+};
+
+\draw[->,thick,red] (va) -- (tab);
+
+\onslide<3->
+\draw[->, thick, dashed] (call) -- (E) node[midway, above] {a\textsubscript{e}=\#};
+
+\onslide<4->
+\draw (-.5,-.5) node[rectangle, draw=red, thick] (vx) {\#};
+\draw[->,thick,red] (vx) -- (tab);
+\end{tikzpicture}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Quand utiliser les tableaux}
+  \begin{itemize}
+  \item Il existe d'autres structures de données en \Cpp pour reprérenter des
+    collections ordonnées d'éléments.
+    \begin{itemize}
+    \item Les listes
+    \item Les vecteurs
+    \end{itemize}
+  \item Ces structures permettent de faire d'autres opérations de manière
+    primitive.
+
+    \alert{Par exemple, dans une liste il est facile d'ajouter un élément, mais
+      accéder au élément en dernière position coute cher.}
+  \item Il faut donc choisir la bonne structure en fonction des opérations que
+    l'on veut faire dessus. On choisira les tableaux lorsqu'on a une
+    \alert{taille fixe} et qu'on veut accéder rapidement à \alert{n'importe
+      quelle} position.
+  \end{itemize}
+
+\end{frame}
+
+
+\section{Récapitulatif}
+\begin{frame}
+  \frametitle{Algorithmes et complexité}
+
+  Un algorithme est un programme, sa complexité est le nombre d'opération qu'il
+  fait, plus la complexité d'un algorithme est élevée, plus il prendra de temps
+  à s'exécuter.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{La programmation en \texorpdfstring{\Cpp}{C++}}
+
+  \begin{itemize}
+  \item Variables, conditions et boucles
+  \item Appels de fonction et passage par valeur
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les tableaux en \texorpdfstring{\Cpp}{C++}}
+
+  \begin{itemize}
+  \item Permettent de stocker des collections ordonnées de nombres.
+  \item Modifiés en place lorsqu'ils sont passés comme arguments aux fonctions.
+  \item Taille fixe et accès à n'importe quelle position très rapide.
+  \end{itemize}
+
+\end{frame}
+
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:

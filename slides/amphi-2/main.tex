@@ -1,0 +1,513 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{listingsutf8}
+
+\usetheme{metropolis}
+
+\usepackage{macros}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\setbeamertemplate{itemize item}{{\usebeamercolor[fg]{alerted
+      text}{${\scriptstyle \blacktriangleright}$}}}
+
+
+\usepackage{xpatch}
+\makeatletter
+\newlength{\my@beamer@itemsepi}\setlength{\my@beamer@itemsepi}{3ex}
+\newlength{\my@beamer@itemsepii}\setlength{\my@beamer@itemsepii}{1.5ex}
+\newlength{\my@beamer@itemsepiii}\setlength{\my@beamer@itemsepiii}{1.5ex}
+\newcommand{\my@beamer@setsep}{%
+  \ifnum\@itemdepth=1\relax
+    \setlength\itemsep{\my@beamer@itemsepi}
+  \else
+    \ifnum\@itemdepth=2\relax
+      \setlength\itemsep{\my@beamer@itemsepii}
+    \else
+      \ifnum\@itemdepth=3\relax
+        \setlength\itemsep{\my@beamer@itemsepiii}
+      \fi\fi\fi}
+\xpatchcmd{\itemize}
+{\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\xpatchcmd{\beamer@enum@}
+{\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\newcommand\setlistsep[3]{%
+  \setlength{\my@beamer@itemsepi}{#1}%
+  \setlength{\my@beamer@itemsepii}{#2}%
+  \setlength{\my@beamer@itemsepiii}{#3}%
+}
+\makeatother
+
+\setlistsep{6.5ex}{2ex}{2ex}
+
+%%%
+\definecolor{lbcolor}{rgb}{0.1,0.1,0.1}
+\definecolor{commentcolor}{rgb}{0.4,0.4,0.4}
+\definecolor{keywordcolor}{HTML}{531ab6}
+\definecolor{stringcolor}{HTML}{005f5f}
+
+\lstset{
+  basicstyle=\small\ttfamily\color{black},
+  commentstyle=\rmfamily\color{commentcolor},
+  keywordstyle=\bfseries\color{keywordcolor},
+  showspaces=false,
+  showstringspaces=false,
+  stringstyle=\color{stringcolor},
+  tabsize=2,
+}
+
+\newtcblisting{slidelisting}{
+      arc=5mm,
+      top=0mm,
+      bottom=0mm,
+      left=0mm,
+      right=0mm,
+      boxrule=1pt,
+      listing only,
+      listing options={language=C++},
+      width=\textwidth
+    }
+    %%%
+    \newtcbinputlisting{\slideinputlisting}[2][0]{
+      listing file = #2,
+      size = small,
+      arc=5mm,
+      top=0mm,
+      bottom=0mm,
+      left=0mm,
+      right=0mm,
+      boxrule=1pt,
+      listing only,
+      listing options={language=C++, firstline=#1},
+      width=\textwidth
+}
+
+\newcommand{\codeslide}[2][4]{
+  \slideinputlisting[#1]{#2}
+  \onslide<2>
+  \slideinputlisting[0]{#2.res}}
+
+\title{Algorithmique et complexité}
+\subtitle{Polytech Paris-Saclay, PEIP 2, Informatique 3}
+\author{Thibaut Benjamin}
+\date{7 Novembre 2025}
+\institute{Amphi 2}
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Séance du jour}
+
+  \begin{itemize}
+  \item Les outils pour mesurer la complexité
+  \item Quantifier la complexité des algorithmes de tri
+  \end{itemize}
+
+\end{frame}
+
+\section{Introduction à la mesure de complexité}
+
+\begin{frame}[fragile]
+  \frametitle{Ce que l'on cherche à faire}
+
+  \begin{itemize}
+  \item Etant donné un algorithme, on veut savoir s'il va s'exécuter rapidement
+    ou pas.
+  \item On veut en particulier regarder comment la vitesse évolue sur des
+    données de \alert{très grande taille}.
+  \item On cheche un \alert{ordre de grandeur}, pas un calcul exact.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{La complexité: un moyen détourné}
+
+  \begin{itemize}
+  \item La complexité est un \alert{proxy} pour la vitesse d'exécution
+
+    \alert{\textbf{Intuition}: Plus un algorithme va effectuer d'opérations
+    élementaires, et plus il va prendre du temps.}
+
+  \item C'est un modèle simplifié!
+
+    \alert{En pratique toutes les \og opérations élémentaires\fg{} ne prennent
+      pas le même temps, l'OS peut interrompre un programme pour faire autre
+      chose en attendant \ldots}
+
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{La complexité asymptotique en action}
+
+  \begin{itemize}
+  \item On reprend les algorithmes de tri
+
+    \alert{\url{https://mszula.github.io/visual-sorting}}
+  \item Fixer le delay à 1.6 ms, et on lance les algorithmes suivants avec 100,
+    200 puis 300 éléments.
+    \begin{itemize}
+    \item Tri par sélection
+    \item Tri fusion
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Comment quantifier la différence de comportement entre ces deux
+    algorithmes?}
+
+  \begin{itemize}
+  \item Définition de la le complexité comme une fonction mathématique: \(T(n) =
+    \text{nombre d'opération que l'algorithme fait en donnant des entrées de
+      taille } n\).
+
+  \item \textbf{\alert{Idée importante}}: comparer le nombre d'opérations avec
+    des fonction mathématiques connues.
+
+
+  \end{itemize}
+\end{frame}
+
+
+\section{Les fonctions mathématiques et leur croissance}
+\begin{frame}
+  \frametitle{Objectif}
+  Cette section a pour but de rappeler le comportement des fonctions
+  mathématiques usuelles.
+
+  \begin{itemize}
+  \item Les fonctions linéaires
+  \item La fonction carré
+  \item La fonction exponentielle en base 2
+  \item La fonction logarithme en base 2
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les fonctions linéaires}
+    \begin{definition}
+      Une fonction linéaire est une fonction donnée par la formule \(f(x) = ax\).
+    \end{definition}
+    \vspace{.5cm}
+
+  \begin{itemize}
+  \item Elles préservent les rapports \(\frac{f(x)}{f(y)} = \frac{x}{y}\)
+  \item Si un programme a une complexité linéaire, en doublant la taille de ses
+    entrées, on double le temps d'exécution.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{La fonction carré}
+    \begin{definition}
+      La fonction carré est donnée par la formule \(f(x) = x^{2}\).
+    \end{definition}
+    \vspace{.5cm}
+
+  \begin{itemize}
+  \item Si un programme a comme complexité la fonction carré, à chaque fois que
+    ses entrées doublent de taille, le temps d'exécution est multiplié par
+    \(4\).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{La fonction exponentielle en base 2}
+    \begin{definition}
+      La exponentielle en base \(2\) est donnée par la formule \(f(x) = 2^{x}\).
+    \end{definition}
+    \vspace{.5cm}
+
+  \begin{itemize}
+  \item Si un programme a comme complexité la fonction carré, à chaque fois que
+    la taille des entrées augmente de \(1\), le temps d'exécution double.
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{La fonction logarithme en base 2}
+    \begin{definition}
+      La fonction \(\log\) (logarithme en base \(2\)) est la solution de
+      l'équation \(2^{\log(x)} = x\).
+    \end{definition}
+    \vspace{.5cm}
+
+  \begin{itemize}
+  \item Si un programme a comme complexité logarithmique, à chaque fois que la
+    taille des entrées double, le temps d'exécution augmente de 1.
+  \end{itemize}
+
+\end{frame}
+
+\section{Le comportement asymptotique des fonctions}
+\begin{frame}
+  \frametitle{La notation \texorpdfstring{\(\mathcal{O}\)}{grand O}}
+
+  \begin{definition}
+    Etant donné deux fonctions \(f,g\), on écrit \(f(x) = \mathcal{O}(g(x))\)
+    (prononcer \og grand O\fg{}), si il existe une constante \(M > 0\), et un rang
+    \(x_{0}\) tels que
+    pour tout \(x \ge x_{0}\), \(f(x) \le M\times g(x)\).
+  \end{definition}
+
+  \vspace{.5cm}
+  C'est la bonne notion \og \(f\) grandit au plus aussi vite que \(g\), en
+  ordre de grandeur\fg{}.
+
+  \vspace{.5cm}
+  \textbf{\alert{Attention}} Il est tout à fait possible que \(f(x) =
+  \mathcal{O}(g(x))\) et que pourtant  \(f(x) > g(x)\). Mais la fonction \(f\)
+  ne peut pas grossir significativement plus vite que \(g\).
+\end{frame}
+
+\begin{frame}
+  \frametitle{La notation \texorpdfstring{\(\Omega\)}{grand Omega}}
+
+  \begin{definition}
+    Etant donné deux fonctions \(f,g\), on écrit \(f(x) = \Omega(g(x))\)
+    (prononcer \og grand Omega\fg{}), si il existe une constante \(m > 0\), et un rang
+    \(x_{0}\) tels que
+    pour tout \(x \ge x_{0}\), \(f(x) \ge M\times g(x)\).
+  \end{definition}
+
+  \vspace{.5cm}
+  C'est la bonne notion \og \(f\) grandit au moins aussi vite que \(g\), en
+  ordre de grandeur\fg{}.
+
+  \vspace{.5cm}
+  C'est moins utile en pratique: C'est plus intéressant de savoir qu'une
+  fonction ne va pas prendre plus qu'un temps donné, plutôt que de savoir
+  qu'elle va prendre au moins un temps donné.
+\end{frame}
+
+\begin{frame}
+  \frametitle{La notation \texorpdfstring{\(\Theta\)}{grand Theta}}
+
+  \begin{definition}
+    Etant donné deux fonctions \(f,g\), on écrit \(f(x) = \Theta(g(x))\)
+    (prononcer \og grand Theta\fg{}), si on a à la fois \(f(x) =
+    \mathcal{O}(g(x))\) et \(f(x) = \Omega(g(x))\).
+  \end{definition}
+
+  \vspace{.5cm} C'est la bonne notion \og \(f\) et \(g\) grandissent de manière
+  à peu près similaire\fg{}.
+
+  \vspace{.5cm} \textbf{\alert{Attention}}: il est tout à fait possible que
+  \(f(x) = \Theta(g(x))\) et que les valeurs de \(f(x)\) et de \(g(x)\) soient
+  très différentes. La seule contrainte c'est qu'elles grandissent à peu près au
+  même rythme.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les ordres de grandeurs de complexité}
+  \begin{itemize}
+  \item On classifie les programmes selon leur \alert{classe de complexité}
+  \item On dit qu'un programme a une complexité
+    \begin{itemize}
+    \item linéaire si elle est en \(\Theta(n)\).
+    \item quadratique si elle est en \(\Theta(n^{2})\)
+    \item exponentielle si elle est en \(\Theta(2^{n})\)
+    \item logarithmique si elle est en \(\Theta(\log(n))\)
+    \item en temps constant si elle est en \(\Theta(1)\)
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Le tri par sélection et sa complexité}
+
+\begin{frame}
+  \frametitle{Les algorithmes de tri en \texorpdfstring{\Cpp}{C++}}
+
+  \begin{itemize}
+  \item On va étudier les algorithmes de tri sur les tableau
+  \item L'entrée sera toujours un tableau
+  \item La sortie sera un tableau contenant les mêmes éléments, mais trié par
+    ordre croissant.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tri par sélection : Présentation}
+  \begin{itemize}
+  \item On commence par trouver le minimum du tableau, et on
+    échange sa position avec la première case du tableau.
+
+  \item Ensuite, on trouve le minimum dans le reste du tableau et on échange sa
+    position avec la deuxième case du tableau.
+
+  \item On continue comme cela, jusqu'à avoir trié tout le tableau.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tri par sélection : Complexité de la recherche de minimum}
+  \alert{Pour calculer la complexité, on compte le nombre de comparaisons.}
+
+  \begin{itemize}
+  \item Trouver le minimum parmis \(k\) cases d'un tableau, il faut parcourir
+    toutes ces cases les comparer avec un minimum courant \(\to (k-1)\)
+    comparaisons.
+
+  \item On va calculer un ordre de grandeur, on peut donc ignorer le \(-1\) qui
+    est négligeable devant \(k\).
+
+  \item Pour trouver le minimum parmis \(k\) cases d'un tableau, on effectue
+    \(\Theta(k)\) opérations.
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tri par sélection : Analyse de complexité}
+
+  \begin{itemize}
+  \item Partant d'un tableau de taille \(n\), on fait les opérations suivantes
+    \begin{itemize}
+    \item Minimum du tableau \(\to \Theta (n)\)
+    \item Minimum parmi les \(n-1\) cases restantes \(\to \Theta (n-1)\)
+    \item Minimum parmi les \(n-1\) cases restantes \(\to \Theta(n-2)\)
+    \item[] \(\vdots\)
+    \item Minimum parmi la seul case restante \(\to \Theta(1)\)
+    \end{itemize}
+
+  \item \alert{\textbf{Total}}: \(\Theta(1+\ldots+n) = \Theta(\frac{n(n+1)}{2})
+    = \Theta(n^{2})\).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tri par sélection : Vérification expérimentale}
+  \begin{itemize}
+  \item Retourner sur \alert{\url{https://mszula.github.io/visual-sorting}}
+  \item Mesurer le temps que met le tri par sélection avec 200.
+  \item Prédire le temps espéré avec 400 entrées, et le mesurer.
+  \end{itemize}
+\end{frame}
+
+\section{Le tri par insertion et sa complexité}
+\begin{frame}
+  \frametitle{Tri par insertion : Présentation}
+  \begin{itemize}
+  \item On commence par trier les deux premières cases du tableau.
+
+  \item On insère la troisième case à la bonne place pour que les trois
+    premières cases du tableau soient triées.
+
+  \item On insère la quatrième case à la bonne place pour que les quatres
+    premières cases du tableau soient triées.
+
+  \item On continue comme cela jusqu'à ce que tout le tableau soit trié.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tri par insertion : Complexité de l'insertion}
+  \alert{On va compter le nombre de comparaisons et d'affectations!}
+  \begin{itemize}
+  \item Pour insérer une case à une position donnée dans un tableau, il faut
+    réaffecter toutes les positions qui se trouvent après.
+
+  \item Dans le pire des cas (insertion en première position), on est donc forcé
+    de parcourir tout le tableau pour décaler toutes les cases du tableau.
+
+  \item L'insertion dans un tableau fait donc \(\mathcal{O}(n)\) affectations,
+    où \(n\) est la taille du tableau.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tri par insertion : Complexité de la recherche}
+  \begin{itemize}
+  \item Pour trouver la position à laquelle on doit insérer, on parcourt le
+    tableau jusqu'à trouver la bonne position.
+
+  \item Dans le pire des cas (in faut insérer en dernière position), on parcourt
+    donc tout le tableau
+
+  \item La rechreche de la position dans un tableau fait donc \(\mathcal{O}(n)\)
+    comparaisons, où \(n\) est la taille du tableau.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tri par insertion : Complexité globale}
+  \begin{itemize}
+  \item Mettons tout cela ensemble
+    \begin{itemize}
+    \item A la première étape, la recherche et l'insertion coûtent
+      \(\mathcal{O}(1)\) comparaisons et \(\mathcal{O}(1)\) affectations.
+
+    \item A la seconde étape, la recherche et l'insertion coûtent
+      \(\mathcal{O}(2)\) comparaisons et \(\mathcal{O}(2)\) affectations.
+
+    \item[] \(\vdots\)
+    \item Jusqu'à la dernière étape (étape \(n\)), où elle fait
+      \(\mathcal{O}(n)\) comparaisons et \(\mathcal{O}(n)\) affectations.
+
+    \end{itemize}
+
+  \item Au global, cela fait
+    \(\mathcal{O}(1+\ldots+n) = \mathcal{O}(n^{2})\) comparaisons et
+    \(\mathcal{O}(1+\ldots+n) = \mathcal{O}(n^{2})\) affectations.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tri par insertion : Optimisation}
+  \begin{itemize}
+  \item Il est possible de réduire le nombre de comparaisons en changeant
+    l'algorithme de recherche de position.
+
+  \item On peut par exemple utiliser une \alert{rechreche dichotomique}, qui a
+    une complexité logarithmique.
+
+  \item Le nombre total de comparaisons \(\mathcal{O}(n\log(n))\). La complexité
+    globale reste quadratique dans le pire des cas, à cause des
+    \(\mathcal{O}(n^{2})\) affectations.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tri par insertion : Vérification expérimentale}
+  \begin{itemize}
+  \item Retourne sur \alert{\url{https://mszula.github.io/visual-sorting}}
+  \item Mesurer le temps que met le tri par sélection avec 200.
+  \item Prédire le temps espéré avec 400 entrées, et le mesurer.
+  \end{itemize}
+\end{frame}
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:

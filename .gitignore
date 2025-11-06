@@ -4,3 +4,17 @@
 *.o
 *.out
 /build/
+*/auto/
+/slides/amphi-1/auto/
+*.aux
+*.log
+*.el
+*.listing
+*.fdb_latexmk
+*.toc
+*.snm
+*.gz
+*.fls
+*.nav
+*.vrb
+*.rip

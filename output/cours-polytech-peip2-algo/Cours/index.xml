@@ -3458,9 +3458,9 @@ On cherche maintenant à généraliser ce résultat:
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>
-              <fr:contributor>
+              <fr:author>
                 <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-              </fr:contributor>
+              </fr:author>
             </fr:authors>
             <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/index/</fr:uri>
             <fr:display-uri>index</fr:display-uri>
@@ -3523,7 +3523,7 @@ Ce document est un cours d'algorithmique pour la deuxième année de prépa int�
             </html:p>
             <html:p>
               <html:strong>
-                <fr:link href="/cours-polytech-peip2-algo/003M/" title="Slides" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003M/" display-uri="003M" type="local">Les slides de cours</fr:link>
+                <fr:link href="/cours-polytech-peip2-algo/003M/" title="Les diapositives de cours" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003M/" display-uri="003M" type="local">La page des slides de cours</fr:link>
               </html:strong>
             </html:p>
           </fr:mainmatter>

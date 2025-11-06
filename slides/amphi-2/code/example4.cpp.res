@@ -1,0 +1,1 @@
+30 Celsius = 86 Fahrenheit

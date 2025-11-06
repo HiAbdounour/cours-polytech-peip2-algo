@@ -1,8 +1,14 @@
 \title{Basic macros}
 
 \def\mark[body]{\<html:mark>{\body}}
+
 \def\Cpp{\tex{\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}}{\CC}}
+
 \def\O{#{\mathcal{O}}}
+
+\def\asset-link[file][text]{\<html:span>[class]{link local}{\<html:a>[href]{\route-asset{assets/\file}}{\text}}}
+
+
 \def\cppdisplay[body]{
         \<html:link>[rel]{stylesheet}[href]{https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css}
         \<html:link>[rel]{stylesheet}[href]{https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css}

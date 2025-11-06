@@ -15,15 +15,12 @@
     <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003M/</fr:uri>
     <fr:display-uri>003M</fr:display-uri>
     <fr:route>/cours-polytech-peip2-algo/003M/</fr:route>
-    <fr:title text="Slides">Slides</fr:title>
+    <fr:title text="Les diapositives de cours">Les diapositives de cours</fr:title>
   </fr:frontmatter>
   <fr:mainmatter>
-    <html:reveal>
-<html:slides>
-<html:section>Slide 1</html:section>
-<html:section>Slide 2</html:section>
-</html:slides>
-</html:reveal>
+    <html:p>Cette page recense les diapositives de cours.</html:p>
+    <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmieidqupiubmozwhz2d7sbpwj245yfnpsuorg7eazyh4d7qcmj6hje.pdf">Amphi 1</html:a></html:span></html:strong>: Introduction et rappels de <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource></html:p>
+    <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmicjpxidbzbt344glt4ezog2bxuws45nfjzlgkvnzmfqnapwhlshei.pdf">Amphi 2</html:a></html:span></html:strong>: Les bases de la complexité et premiers algorithmes de tri</html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
@@ -49,9 +46,9 @@
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>
-              <fr:contributor>
+              <fr:author>
                 <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
-              </fr:contributor>
+              </fr:author>
             </fr:authors>
             <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/index/</fr:uri>
             <fr:display-uri>index</fr:display-uri>
@@ -114,7 +111,7 @@ Ce document est un cours d'algorithmique pour la deuxième année de prépa int�
             </html:p>
             <html:p>
               <html:strong>
-                <fr:link href="/cours-polytech-peip2-algo/003M/" title="Slides" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003M/" display-uri="003M" type="local">Les slides de cours</fr:link>
+                <fr:link href="/cours-polytech-peip2-algo/003M/" title="Les diapositives de cours" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/003M/" display-uri="003M" type="local">La page des slides de cours</fr:link>
               </html:strong>
             </html:p>
           </fr:mainmatter>
