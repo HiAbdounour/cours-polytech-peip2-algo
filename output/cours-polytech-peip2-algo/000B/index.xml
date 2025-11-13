@@ -893,6 +893,34 @@ On cherche maintenant à généraliser ce résultat:
                     </html:p>
                   </fr:mainmatter>
                 </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>13</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004G/</fr:uri>
+                    <fr:display-uri>004G</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/004G/</fr:route>
+                    <fr:title text="Vitesse de croîssance des fonctions usuelles">Vitesse de croîssance des fonctions usuelles</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>Il est important d'avoir une bonne idée de la vitesse de croissance des différents ordre de grandeurs. La liste suivante les donne donc, en partant du plus lent au plus rapide:
+<html:ul><html:li><fr:link href="/cours-polytech-peip2-algo/001J/" title="Constant" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001J/" display-uri="001J" type="local">Constant</fr:link>: Les fonctions constantes ne croîssent pas du tout, difficile de faire plus lent.</html:li>
+<html:li><fr:link href="/cours-polytech-peip2-algo/0019/" title="Logarithmique" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0019/" display-uri="0019" type="local">Logarithmique</fr:link>: La fonction logarithmique croît très lentement, sans pour autant tendre vers une valeur finie.</html:li>
+<html:li><fr:link href="/cours-polytech-peip2-algo/0017/" title="Linéaire" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0017/" display-uri="0017" type="local">Linéaire</fr:link>: Les fonctions linéaires peuvent commencer à poser problème.</html:li>
+<html:li><fr:tex display="inline"><![CDATA[n\log (n)]]></fr:tex>: C'est une complexité que l'on rencontre souvent, plus élevée que les fonctions linéaires.</html:li>
+<html:li><fr:link href="/cours-polytech-peip2-algo/0018/" title="Quadratique" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0018/" display-uri="0018" type="local">Quadratique</fr:link>: En général à partir de là, le programme pose problème.</html:li>
+<html:li><fr:tex display="inline"><![CDATA[n^3]]></fr:tex>: Plus on augmente l'exposant, plus ca croît vite.</html:li>
+<html:li><fr:link href="/cours-polytech-peip2-algo/001A/" title="Exponentielle" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001A/" display-uri="001A" type="local">Exponentielle</fr:link> : Plus rapide que toutes les fonctions puissance.</html:li></html:ul></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
               </fr:mainmatter>
             </fr:tree>
           </fr:mainmatter>

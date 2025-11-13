@@ -1,0 +1,16 @@
+\title{Vitesse de croîssance des fonctions usuelles}
+\author{thibautbenjamin}
+\date{2025-11-13T15:49:48Z}
+\import{basemacros}
+
+\p{Il est important d'avoir une bonne idée de la vitesse de croissance des différents ordre de grandeurs. La liste suivante les donne donc, en partant du plus lent au plus rapide:
+\ul{
+\li{[Constant](001J): Les fonctions constantes ne croîssent pas du tout, difficile de faire plus lent.}
+\li{[Logarithmique](0019): La fonction logarithmique croît très lentement, sans pour autant tendre vers une valeur finie.}
+\li{[Linéaire](0017): Les fonctions linéaires peuvent commencer à poser problème.}
+\li{#{n\log(n)}: C'est une complexité que l'on rencontre souvent, plus élevée que les fonctions linéaires.}
+\li{[Quadratique](0018): En général à partir de là, le programme pose problème.}
+\li{#{n^3}: Plus on augmente l'exposant, plus ca croît vite.}
+\li{[Exponentielle](001A) : Plus rapide que toutes les fonctions puissance.}
+}
+}
