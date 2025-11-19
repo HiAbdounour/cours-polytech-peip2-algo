@@ -21,6 +21,7 @@
     <html:p>Cette page recense les diapositives de cours.</html:p>
     <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmieidqupiubmozwhz2d7sbpwj245yfnpsuorg7eazyh4d7qcmj6hje.pdf">Amphi 1</html:a></html:span></html:strong>: Introduction et rappels de <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource></html:p>
     <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmicjpxidbzbt344glt4ezog2bxuws45nfjzlgkvnzmfqnapwhlshei.pdf">Amphi 2</html:a></html:span></html:strong>: Les bases de la complexité et premiers algorithmes de tri</html:p>
+    <html:p><html:strong><html:span class="link local"><html:a href="/cours-polytech-peip2-algo/bafkrmieiplol6gqokyyrtebd3df2a4dubnqzogcabvbwh5blmvbs6qk3vq.pdf">Amphi 3</html:a></html:span></html:strong>: Récursivité et complexité des fonctions récursives</html:p>
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">

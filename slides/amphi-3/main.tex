@@ -1,0 +1,559 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{listingsutf8}
+
+\usetheme{metropolis}
+
+\usepackage{macros}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\setbeamertemplate{itemize item}{{\usebeamercolor[fg]{alerted
+      text}{${\scriptstyle \blacktriangleright}$}}}
+
+
+\usepackage{xpatch}
+\makeatletter
+\newlength{\my@beamer@itemsepi}\setlength{\my@beamer@itemsepi}{3ex}
+\newlength{\my@beamer@itemsepii}\setlength{\my@beamer@itemsepii}{1.5ex}
+\newlength{\my@beamer@itemsepiii}\setlength{\my@beamer@itemsepiii}{1.5ex}
+\newcommand{\my@beamer@setsep}{%
+  \ifnum\@itemdepth=1\relax
+    \setlength\itemsep{\my@beamer@itemsepi}
+  \else
+    \ifnum\@itemdepth=2\relax
+      \setlength\itemsep{\my@beamer@itemsepii}
+    \else
+      \ifnum\@itemdepth=3\relax
+        \setlength\itemsep{\my@beamer@itemsepiii}
+      \fi\fi\fi}
+\xpatchcmd{\itemize}
+{\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\xpatchcmd{\beamer@enum@}
+{\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\newcommand\setlistsep[3]{%
+  \setlength{\my@beamer@itemsepi}{#1}%
+  \setlength{\my@beamer@itemsepii}{#2}%
+  \setlength{\my@beamer@itemsepiii}{#3}%
+}
+\makeatother
+
+\setlistsep{6.5ex}{2ex}{2ex}
+
+%%%
+\definecolor{lbcolor}{rgb}{0.1,0.1,0.1}
+\definecolor{commentcolor}{rgb}{0.4,0.4,0.4}
+\definecolor{keywordcolor}{HTML}{531ab6}
+\definecolor{stringcolor}{HTML}{005f5f}
+
+\lstset{
+  basicstyle=\small\ttfamily\color{black},
+  commentstyle=\rmfamily\color{commentcolor},
+  keywordstyle=\bfseries\color{keywordcolor},
+  showspaces=false,
+  showstringspaces=false,
+  stringstyle=\color{stringcolor},
+  tabsize=2,
+}
+
+\newtcblisting{slidelisting}{
+      arc=5mm,
+      top=0mm,
+      bottom=0mm,
+      left=0mm,
+      right=0mm,
+      boxrule=1pt,
+      listing only,
+      listing options={language=C++},
+      width=\textwidth
+    }
+    \NewTCBInputListing{\slideinputlisting}{ O{0} O{9999999} m }{
+      listing file = #3,
+      size = small,
+      arc=5mm,
+      top=0mm,
+      bottom=0mm,
+      left=0mm,
+      right=0mm,
+      boxrule=1pt,
+      listing only,
+      listing options={language=C++, firstline=#1, lastline=#2},
+      width=\textwidth
+}
+
+
+\NewDocumentCommand{\codeslide}{ O{4} O{9999999} m}{
+  \slideinputlisting[#1][#2]{#3}
+  \onslide<2>
+  \slideinputlisting[0]{#3.res}}
+
+
+\title{Algorithmique et complexité}
+\subtitle{Polytech Paris-Saclay, PEIP 2, Informatique 3}
+\author{Thibaut Benjamin}
+\date{19 Novembre 2025}
+\institute{Amphi 3}
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Séance du jour}
+
+  \begin{itemize}
+  \item Rappel sur les calculs de complexité
+  \item Récursivité
+  \item Complexité des fonctions récursives
+  \end{itemize}
+
+\end{frame}
+
+\section{Rappel sur les calculs de complexité}
+
+\begin{frame}[fragile]
+  \frametitle{Premier exemple}
+
+  \slideinputlisting[4]{code/example1.cpp}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Analyse de complexité}
+  \begin{itemize}
+  \item<+-> Les opérations d'initialisations sont négligeables par rapport à
+    celles de la boucle.
+
+  \item<+-> A chaque passage dans la boucle, on fait entre \(2\) et \(4\)
+    opérations \(\to \Theta(1)\).
+
+  \item<+-> On fait \(n\) passages dans la boucle \(\to \Theta(n)\)
+
+  \item<+-> Total: \(\Theta(1)\times \Theta(n) = \Theta(n)\)
+
+    \alert{Attention, c'est un abus de notation!}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Deuxième exemple}
+
+  \slideinputlisting[4]{code/example2.cpp}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Analyse de complexité}
+  \begin{itemize}
+  \item<+-> Les opérations d'initialisations sont négligeables par rapport à
+    celles des boucles.
+
+  \item<+-> A chaque passage dans la boucle interne, on fait \(1\) opérations
+    \(\to \Theta(1)\).
+
+  \item<+-> On fait \(m\) passages dans la boucle \(\to \Theta(m)\), ce qui fait
+    \(\Theta(1)\times \Theta(m) = \Theta(m)\) à chaque passage dans la boucle
+    externe.
+
+  \item<+-> On fait \(n\) passages dans la boucle externe \(\to \Theta(n)\), ce
+    qui fait un total de \(\Theta(m)\times \Theta(n) = \Theta(m\times n).\)
+
+    \alert{Attention, c'est un abus de notation!}
+  \end{itemize}
+\end{frame}
+
+\section{La récursivité}
+
+\begin{frame}
+  \frametitle{Situation typique}
+
+  La récursivité est utile dans la situation suivante:
+
+  \begin{itemize}
+  \item On cherche à obtenir résoudre un problème sur une entrée de taille \(n\)
+  \item A partir de la réponse à ce même problème sur une entrée plus petite taille, on
+    cherche sait résoudre le problème de taille \(n\)
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Un exemple}
+
+  \begin{itemize}
+  \item On cherche à calculer la valeur de la factorielle \(n! = 1\times 2\times
+    \ldots \times n.\)
+  \item A on sait calculer cette valeur en fonction d'une factorielle plus petite:
+    \[
+      n! = (n-1)! \times n
+    \]
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Stratégie des fonctions récursives}
+  On applique la formule, et pour calculer le résultat sur le plus petit
+  sous-problème, on appelle la fonction que l'on définit.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exemple: la fonction factorielle}
+  \[
+    n! = (n-1)! \times n
+  \]
+
+  \slideinputlisting[4][7]{code/example3.cpp}
+
+  \onslide<2->
+  \textbf{\alert{Cette fonction n'est pas tout à fait correcte}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pile d'appels récursifs}
+  \begin{tabular}{l}
+    \lstinline|factorielle(3)| \\
+    \onslide<2-> \qquad \rotatebox{180}{\(\Lsh\)} \lstinline|factorielle(2)*3| \\
+    \onslide<3-> \qquad \qquad \rotatebox{180}{\(\Lsh\)} \lstinline|factorielle(1) * 2|\\
+    \onslide<4-> \qquad \qquad \qquad \rotatebox{180}{\(\Lsh\)}
+    \lstinline|factorielle(0) * 1|\\
+    \onslide<5-> \qquad \qquad \qquad \qquad \rotatebox{180}{\(\Lsh\)}
+    \lstinline|factorielle(-1) * 0|\\
+    \onslide<6-> \qquad \qquad \qquad \qquad \qquad \rotatebox{180}{\(\Lsh\)}
+    \lstinline|factorielle(-2) * -1|\\
+    \onslide<7-> \qquad \qquad \qquad \qquad \qquad \qquad \(\vdots\) \\
+  \end{tabular}
+
+  \onslide<8->
+  \alert{La fonction ne s'arrête jamais}
+
+  (Et en plus dans cet exemple le calcul devient faux à l'appel de
+  \lstinline|factorielle(0)|).
+\end{frame}
+
+\begin{frame}
+  \frametitle{Stratégie (corrigée) des fonctions récursives}
+  La fonction s'appelle elle-même pour donner les résultat sur des plus petits
+  sous-problèmes, jusqu'à tomber sur un cas simple appelé cas de base, pour
+  lequel on donne le résultat directement.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exemple: la fonction factorielle}
+  \[
+    n! = (n-1)! \times n
+  \]
+
+  \codeslide[4][11]{code/example4.cpp}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pile d'appels récursifs}
+  \begin{tabular}{l}
+    \lstinline|factorielle(3)| \\
+    \onslide<2-> \qquad \rotatebox{180}{\(\Lsh\)} \lstinline|factorielle(2)*3| \\
+    \onslide<3-> \qquad \qquad \rotatebox{180}{\(\Lsh\)} \lstinline|factorielle(1) * 2|\\
+    \onslide<4-> \qquad \qquad \qquad \rotatebox{180}{\(\Lsh\)}
+    \lstinline|factorielle(0) * 1|\\
+    \onslide<5-> \qquad \qquad \qquad \lstinline|1| \rotatebox{180}{\(\Rsh\)}
+    \\
+    \onslide<6-> \qquad \qquad \lstinline|2| \rotatebox{180}{\(\Rsh\)}
+    \\
+    \onslide<7-> \qquad  \lstinline|6| \rotatebox{180}{\(\Rsh\)} \\
+  \end{tabular}
+
+  \onslide<8->
+  \alert{On a bien calculé \(3! = 6\)}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Analyse de complexité}
+
+  \begin{itemize}
+  \item On note \(T(n)\) la complexité de la fonction \lstinline|factorielle(n)|
+  \item On a \(T(0) = 1\)
+  \item On a une relation de récurrence \(T(n) = T(n)+2\)
+  \item En résolvant la récurrence (formule pour les suites arithmétiques):
+    \(T(n) = 2\times n + 1\)
+
+    \alert{Complexité \(\Theta(n)\)}
+  \end{itemize}
+
+\end{frame}
+\section{Le tri par insertion revisité avec la récursion}
+\begin{frame}
+  \frametitle{Rappel}
+  \alert{\url{https://mszula.github.io/visual-sorting/?algorithm=insertion-sort}}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Stratégie récursive du tri par insertion}
+  \begin{itemize}
+  \item On veut trier les \(n\) premières cases du tableau
+  \item On commence par trier les \(n-1\) premières cases du tableau
+  \item On obtient le résultat en insérant la \(n\)\textsuperscript{e} case du
+    tableau au bon endroit et en décalant
+
+    \alert{on suppose que l'on a déjà la fonction
+      \lstinline|inserer(int n, int tab[])| que vous avez écrit lors du TP 1.}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tri par insertion: version récursive}
+
+  \slideinputlisting[4]{code/example5.cpp}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Analyse de complexité}
+
+  \begin{itemize}
+  \item On rappelle que la fonction \lstinline|inserer(int n, int tab[])| est en
+    \(\mathcal{O} (n)\).
+  \item On dénote \(T(n)\) le nombre d'opérations fait par le tri par insertion.
+  \item Cela définit une suite récurrente
+    \[
+      \begin{cases}
+        T(0) = 1 \\
+        T(n) = T(n-1) + \mathcal{O}(n)
+      \end{cases}
+    \]
+  \item Résoudre cette suite donne \(T(n) = \mathcal{O}(1+2+\ldots +(n+1)) =
+    \mathcal{O}(\frac{(n+1)(n+2)}{2})\)
+
+    \alert{\(\to \mathcal{O}(n^{2})\)}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Contributions à la complexité}
+
+  \begin{itemize}
+  \item Dans le tri par insertion, on déduit un tableau trié de taille \(n\) en
+    faisant un appel récursif sur un tableau de taille \(n-1\).
+  \item \'A chaque appel récursif, la taille du tableau en entrée décroît de
+    \(1\), ce n'est pas très rapide. \(\to \mathcal{O}(n)\) appels récursifs.
+  \item Pour assembler les solutions des appels récursifs en une solution
+    globale, on fait \(\mathcal{O}(n)\) opérations
+  \item D'où une complexité en
+    \(\mathcal{O}(n) \times \mathcal{O}(n) = \mathcal{O}(n^{2})\).
+  \end{itemize}
+
+\end{frame}
+
+
+\section{Diviser pour régner: Le tri fusion}
+
+\begin{frame}
+  \frametitle{Rappel}
+  \alert{\url{https://mszula.github.io/visual-sorting/?algorithm=merge-sort}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Principe du tri fusion}
+
+  \begin{itemize}
+  \item Idée clé: Pour trier un tableau, on sépare le tableau en 2 moitié, que
+    l'on trie.
+  \item On reconstitue le tableau trié en faisant une fusion des deux
+    sous-tableaux triés.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{La fusion}
+
+  \begin{itemize}
+  \item On a un tableau \(t\) séparé en \(2\) sous-tableau trié, on veut les fusionner
+    pour que le tableau global soit trié.
+  \item On maintient deux positions \(i\) la première moitié et \(j\) dans la
+    seconde moitié.
+    \begin{itemize}
+    \item Si \(t[i] < t[j]\), alors l'élément \(t[i]\) est à sa bonne place, on
+      incrémente donc \(i\).
+    \item Sinon, il faut insérer \(t[j]\) en position \(j\) et donc décaler tous
+      éléments contenus dans les positions \(i,\ldots j-1\). On incrémente
+      ensuite \(i\) et \(j\).
+    \end{itemize}
+  \item On continue ainsi jusqu'à ce que l'un des deux tableaux ait été parcouru
+    entièrement.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Complexité de la fusion}
+
+  \begin{itemize}
+  \item Dans le pire des cas, toute la deuxième moitié du tableau contient des
+    éléments plus grands que tout ceux de la première moitié du tableau.
+  \item Dans ce cas, on fera à chaque étape \(1\) comparaison, et un décalage de
+    \(\frac{n}{2}\) éléments, soit \(\mathcal{O}(n)\) opérations
+  \item On fait en tout une étape par élément du deuxième tableau, soit
+    \(\mathcal{O}(n)\) étapes
+  \item Soit une complexité totale de \(\mathcal{O}(n^{2})\)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Algorithme de tri fusion}
+    On part d'un tableau que l'on cherche à trié
+
+    \begin{itemize}
+    \item Cas de base: si le tableau est de longueur \(1\), il est déjà trié
+    \item Sinon, on sépare le tableau en deux moitié et on fait les opérations
+      suivantes:
+      \begin{itemize}
+      \item On appelle récursivement le tri fusion sur chacune des deux moitiés
+      \item On fusionne le résultat
+      \end{itemize}
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Analyse de complexité}
+    Soit \(T(n)\) la complexité du tri fusion sur un tableau de longueur \(n\)
+
+    \begin{itemize}
+    \item Cas de base: \(T(1) = 1\)
+    \item Formule de récurrence:
+      \begin{itemize}
+      \item On appelle récursivement le tri fusion sur chacune des deux moitiés
+        \(\to 2T(\frac{n}{2})\)
+      \item On fusionne le résultat \(\to \mathcal{O}(n^{2})\)
+      \end{itemize}
+      \alert{\(T(n) = 2T(\frac{n}{2})+\mathcal{O}(n^{2})\)}
+
+    \item Complexité totale: \(\mathcal{O}(n^{2}\log(n))\)
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Contributions à la complexité}
+
+    \begin{itemize}
+    \item Cette fois-ci, à chaque appel récursif, la taille des entrées est
+      divisée par \(2\), ce qui fait \(\mathcal{O}(\log(n))\) appels récursifs
+    \item Mais pour assembler la solution à partir des appels récursifs, on paye
+      un coût de \(\mathcal{O}(n^{2})\)
+    \item On a réussi à réduire la contribution liée au nombre d'appels
+      récursifs, mais au prix d'un coût d'assemblage plus élevé \(\to\) au
+      global, cet algorithme est plus lent que le précédent
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{La fusion améliorée}
+
+    \begin{itemize}
+    \item On peut améliorer la complexité de la fusion, en utilisant plus
+      d'espace mémoire! Etant donné un tableau \(t\) composé de deux
+      sous-tableaux triés, on commence par créer un tableau \(t'\) de même
+      taille. On maintient les positions \(i\) dans la première moitié et \(j\)
+      dans la deuxième moitié du tableau.
+
+    \item A chaque étape , on fait les opérations suivantes
+      \begin{itemize}
+      \item si \(t[i]<t[j]\) on copie \(t[i]\) dans \(t'[i+j]\) et on incrémente \(i\)
+      \item sinon on copie \(t[j]\) dans \(t'[i+j]\) et on incrémente \(j\)
+      \end{itemize}
+
+    \item On répète jusqu'à avoir parcouru une des moitiés en entier, et alors
+      on rempli \(t'\) avec ce qui reste de l'autre moitié, puis on copie \(t'\)
+      dans \(t\).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Complexité de la fusion améliorée}
+
+    \begin{itemize}
+    \item Dans une première phase, on parcourt le tableau \(t\) en entier pour
+      construire \(t'\). A chaque étape on fait \(3\) opérations.
+      \(\to \Theta(n)\).
+
+    \item Dans la deuxième phase, on copie le tableau \(t'\) dans le tableau,
+      pour cela, il faut parcourir le tableau entier et faire une opération par
+      étape. \(\to \Theta(n)\).
+
+    \item Résultat: \(\Theta(n)\).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Complexité du tri fusion avec fusion améliorée}
+    Soit \(T(n)\) la complexité du tri fusion sur un tableau de longueur \(n\)
+
+    \begin{itemize}
+    \item Cas de base: \(T(1) = 1\)
+    \item Formule de récurrence:
+      \begin{itemize}
+      \item On appelle récursivement le tri fusion sur chacune des deux moitiés
+        \(\to 2T(\frac{n}{2})\)
+      \item On fusionne le résultat \(\to \mathcal{O}(n)\)
+      \end{itemize}
+      \alert{\(T(n) = 2T(\frac{n}{2})+\mathcal{O}(n)\)}
+
+    \item Complexité totale: \(\mathcal{O}(n\log(n))\)
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Contributions à la complexité}
+
+    \begin{itemize}
+    \item Chaque appel récursif divise la taille des entrées par \(2\), ce qui
+      fait \(\mathcal{O}(\log n)\) appels récursifs.
+    \item Pour reconstituer la solution au problème initial a partir du résultat
+      des appels récursifs, on fait \(\mathcal{O}(n)\) opérations
+    \item D'où la complexité en \(\mathcal{O}(n\log(n))\). C'est le mieux que
+      l'on puisse faire pour un algorithme qui procède avec des comparaisons.
+    \end{itemize}
+
+\end{frame}
+
+
+\section{Conclusion}
+\begin{frame}
+  \frametitle{Résumé de la séance}
+  \begin{itemize}
+  \item Complexité des boucles: \(\Theta(\text{nb d'itérations} \times
+    \text{complexité du corps})\)
+  \item Fonction récursive = fonction qui s'appelle elle-même avec des plus
+    petites entrées.
+  \item La complexité d'une fonction récursive est obtenue en résolvant une
+    récurrence.
+  \item Contributions à la complexité d'une fonction récursive: nombre d'appels
+    récursifs, et coût d'assemblage de la solution globale.
+  \end{itemize}
+\end{frame}
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
