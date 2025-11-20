@@ -1,0 +1,14 @@
+\title{La fonction de fusion linéaire}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2025-11-20T13:49:27Z}
+
+\p{On va écrire la fonction de fusion de complexité linéaire, qui est la plus simple à écrire et utilise un tableau annexe. Cette fonction prend en entrée un tableau et trois indices \code{i}, \code{j} et \code{k}. Les indices \code{i} et \code{j} déterminent les bornes de la partie du tableau sur laquelle on fait la fusion, et l'indice \code{k} détermine la séparation entre les deux sous-tableaux.
+\ol{
+\li{Cette fonction est appelée dans la fonction \code{triFusionRec} après chacun des deux appels récursifs sur les deux sous-tableaux. Quelles sont les conditions que l'entrée de la fonction de fusion va toujours vérifier? (Dans cette question, on attend un description, il ne s'agit pas de vérifier par le code que les conditions sont vérifiées)}
+\li{Ecrire la fonction de fusion, en définissant un tableau annexe que l'on va construire au fur et à mesure, et dont on va ensuite recopier le contenu dans notre tableau original.}
+\li{Tester l'algorithme \code{triFusion} pour vérifier que l'on fait bien le tri.}
+\li{Mesurer le temps pris par l'algorithme sur #{5} tableaux [remplis aléatoirement](0044) dont les tailles vont de #{100} à #{10000}. Tracer la courbe correspondante.}
+}
+}

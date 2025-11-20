@@ -1,0 +1,13 @@
+\title{Le tri fusion}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2025-11-20T13:03:55Z}
+
+\p{L'objectif de cet exercice est d'implémenter le tri fusion, un algorithme de tri [récursif](004R), qui atteint la meilleure complexité théorique pour un algorithme de tri.}
+\transclude{004T}
+\transclude{004U}
+\transclude{004V}
+\transclude{004W}
+\transclude{004X}
+\transclude{004Y}

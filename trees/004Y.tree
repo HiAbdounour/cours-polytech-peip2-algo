@@ -1,0 +1,16 @@
+\title{Comparaison expérimentale des deux versions du tri fusion}
+\author{thibautbenjamin}
+\taxon{Exercice (optionnel)}
+\import{basemacros}
+\date{2025-11-20T13:58:51Z}
+
+
+\p{L'objectif est de comparer les deux versions du tri fusion expérimentalement. Pour cela, on va mesurer le temps pris par chacune des deux versions de la fusion, en faisant varier la taille (prendre #{5} tailles comprises entre #{100} et #{10000}) dans les conditions suivantes:
+\ol{
+\li{Des tableaux [générés aléatoirement](0044).}
+\li{Des tableaux déjà triés dans l'ordre croissant.}
+\li{Des tableaux presque triés (pour les obtenir, partir d'un tableau trié, et effectuer #{k} transpositions aléatoires, #{k} étant la taille du tableau divisée par #{10}).}
+\li{Des tableaux triés dans l'ordre décroissant.}
+}
+
+}

@@ -1,0 +1,22 @@
+\title{La récursion associée au tri fusion}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2025-11-20T13:36:58Z}
+
+\p{Dans un premier temps, on se concentre sur la structure récursive du tri fusion. Pour cela, on va prendre comme fonction de fusion une fonction vide:
+\cppdisplay{
+\startverb
+void fusion (int tab[], int i, int j, int k){
+}
+\stopverb
+}
+Bien sûr, si l'on ne complète pas la fonction de fusion de manière adéquate, notre algorithme récursif ne va pas trier le tableau. Cependant, cela va nous permettre de bien comprendre la structure de la récursion.
+\ol{
+\li{Ecrire un algorithme \code{triFusionRec} qui prend en entrée un tableau et deux indices, et qui effectue le tri fusion, en appelant la fausse fonction de fusion (donc qui pour l'instant ne trie pas le tableau, mais met en place le principe récursif du tri fusion).}
+\li{Ecrire une fonction \code{triFusion} qui prend en entrée un entier \code{n} et un tableau de taille \code{n} et qui appelle \code{triFusionRec} avec les bons indices pour parcourir l'ensemble du tableau.}
+\li{Tester la fonction \code{triFusion} sur quelques exemples. Que fait elle?.}
+\li{Ajouter une ligne d'affichage (avec \code{cout}) à votre fonction \code{triFusionRec} de manière à suivre les appels récursifs et leurs arguments.}
+\li{Compter expérimentalement le nombre d'appels récursifs à \code{triFusionRec} suivant les entrées, et en déduire une relation entre les entrées et le nombre d'appels récursifs.}
+}
+}

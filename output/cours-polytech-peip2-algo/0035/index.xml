@@ -212,9 +212,7 @@
             <fr:taxon>Logiciel</fr:taxon>
           </fr:frontmatter>
           <fr:mainmatter>
-            <html:p>
-              <html:mark>TODO</html:mark>
-            </html:p>
+            <html:p>Le logiciel sound of sorting est un logiciel permettant de visualiser l'exécution de différents algorithmes de tris. Il en existe une version en ligne (appelée visual sorting) disponible à <fr:link href="https://mszula.github.io/visual-sorting" type="external">l'adresse suivante</fr:link></html:p>
           </fr:mainmatter>
         </fr:tree>
       </fr:mainmatter>

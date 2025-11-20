@@ -4,4 +4,4 @@
 \date{2025-11-02T10:22:33Z}
 \import{basemacros}
 
-\p{\mark{TODO}}
+\p{Le logiciel sound of sorting est un logiciel permettant de visualiser l'exécution de différents algorithmes de tris. Il en existe une version en ligne (appelée visual sorting) disponible à [l'adresse suivante](https://mszula.github.io/visual-sorting)}

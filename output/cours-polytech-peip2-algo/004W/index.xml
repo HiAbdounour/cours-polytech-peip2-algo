@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+  <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>20</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004W/</fr:uri>
+    <fr:display-uri>004W</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/004W/</fr:route>
+    <fr:title text="La fonction de fusion linéaire">La fonction de fusion linéaire</fr:title>
+    <fr:taxon>Exercice</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>On va écrire la fonction de fusion de complexité linéaire, qui est la plus simple à écrire et utilise un tableau annexe. Cette fonction prend en entrée un tableau et trois indices <html:code>i</html:code>, <html:code>j</html:code> et <html:code>k</html:code>. Les indices <html:code>i</html:code> et <html:code>j</html:code> déterminent les bornes de la partie du tableau sur laquelle on fait la fusion, et l'indice <html:code>k</html:code> détermine la séparation entre les deux sous-tableaux.
+<html:ol><html:li>Cette fonction est appelée dans la fonction <html:code>triFusionRec</html:code> après chacun des deux appels récursifs sur les deux sous-tableaux. Quelles sont les conditions que l'entrée de la fonction de fusion va toujours vérifier? (Dans cette question, on attend un description, il ne s'agit pas de vérifier par le code que les conditions sont vérifiées)</html:li>
+<html:li>Ecrire la fonction de fusion, en définissant un tableau annexe que l'on va construire au fur et à mesure, et dont on va ensuite recopier le contenu dans notre tableau original.</html:li>
+<html:li>Tester l'algorithme <html:code>triFusion</html:code> pour vérifier que l'on fait bien le tri.</html:li>
+<html:li>Mesurer le temps pris par l'algorithme sur <fr:tex display="inline"><![CDATA[5]]></fr:tex> tableaux <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">remplis aléatoirement</fr:link> dont les tailles vont de <fr:tex display="inline"><![CDATA[100]]></fr:tex> à <fr:tex display="inline"><![CDATA[10000]]></fr:tex>. Tracer la courbe correspondante.</html:li></html:ol></html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="References">References</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004S/</fr:uri>
+            <fr:display-uri>004S</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/004S/</fr:route>
+            <fr:title text="Le tri fusion">Le tri fusion</fr:title>
+            <fr:taxon>Exercice</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>L'objectif de cet exercice est d'implémenter le tri fusion, un algorithme de tri <fr:link href="/cours-polytech-peip2-algo/004R/" title="La récursivité" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004R/" display-uri="004R" type="local">récursif</fr:link>, qui atteint la meilleure complexité théorique pour un algorithme de tri.</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004T/</fr:uri>
+                <fr:display-uri>004T</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/004T/</fr:route>
+                <fr:title text="Principe du tri fusion">Principe du tri fusion</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Le tri fusion est un algorithme de tri récursif qui repose sur le principe de diviser pour régner. Afin de gagner en efficacité, le principe est de faire beaucoup diminuer la taille du tableau que l'on cherche à trier à chaque appel récursif. Pour cela, on commence par reformuler le problème du tri, en disant qu'étant donné un tableau, on va chercher à trier tous les éléments dont la position est dans l'intervalle <fr:tex display="inline"><![CDATA[[i,...,j-1]]]></fr:tex>. C'est un problème plus général qui nous donne bien une réponse à notre problème initial: pour trier un tableau de longueur <fr:tex display="inline"><![CDATA[n]]></fr:tex> tout entier, il suffit en effet de trier tous les éléments dont la position est dans l'intervalle <fr:tex display="inline"><![CDATA[[0,...,n-1]]]></fr:tex>, puisque ce sont tous les éléments. Pour effectuer le tri fusion, on trie tous les élément du tableau dont la position est dans l'intervalle <fr:tex display="inline"><![CDATA[[i,...,j-1]]]></fr:tex> comme suit:
+<html:ul><html:li><html:strong>Cas de base:</html:strong> Si l'intervalle <fr:tex display="inline"><![CDATA[[i,...,j-1]]]></fr:tex> est de longueur <fr:tex display="inline"><![CDATA[1]]></fr:tex>, il s'agit de trier un seul élément. Comme un élément unique est toujours trié, il n'y a rien à faire.</html:li>
+<html:li><html:strong>Cas récursif:</html:strong> Sinon on divise l'intervalle <fr:tex display="inline"><![CDATA[[i,\ldots ,j-1]]]></fr:tex> en deux sous intervalles de même longueur (ou de longueur aussi proche que possible). Cela nous donne l'indice <fr:tex display="inline"><![CDATA[k\in [i,\ldots ,j-1]]]></fr:tex>, et on appelle récursivement le tri fusion pour les intervalles <fr:tex display="inline"><![CDATA[[i,\ldots ,k-1]]]></fr:tex> et <fr:tex display="inline"><![CDATA[k,\ldots ,j-1]]></fr:tex> du tableau. On obtient ainsi deux sous tableau triés, et on appelle ensuite une fonction de fusion qui calcule un tableau trié à partir de ces deux sous-tableaux.</html:li></html:ul></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004U/</fr:uri>
+                <fr:display-uri>004U</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/004U/</fr:route>
+                <fr:title text="Illustrations du tri fusion">Illustrations du tri fusion</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Les animations suivantes peuvent aider à comprendre le tri par sélection. La première est tirée de la page wikipedia, la seconde a été réalisée à l'aide du logiciel <fr:link href="/cours-polytech-peip2-algo/0036/" title="Sound of sorting" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0036/" display-uri="0036" type="local">sound of sorting</fr:link> <html:mark>TODO</html:mark></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004V/</fr:uri>
+                <fr:display-uri>004V</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/004V/</fr:route>
+                <fr:title text="La récursion associée au tri fusion">La récursion associée au tri fusion</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Dans un premier temps, on se concentre sur la structure récursive du tri fusion. Pour cela, on va prendre comme fonction de fusion une fonction vide:
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+<![CDATA[void fusion (int tab[], int i, int j, int k){
+}]]>
+</html:code></html:pre>
+Bien sûr, si l'on ne complète pas la fonction de fusion de manière adéquate, notre algorithme récursif ne va pas trier le tableau. Cependant, cela va nous permettre de bien comprendre la structure de la récursion.
+<html:ol><html:li>Ecrire un algorithme <html:code>triFusionRec</html:code> qui prend en entrée un tableau et deux indices, et qui effectue le tri fusion, en appelant la fausse fonction de fusion (donc qui pour l'instant ne trie pas le tableau, mais met en place le principe récursif du tri fusion).</html:li>
+<html:li>Ecrire une fonction <html:code>triFusion</html:code> qui prend en entrée un entier <html:code>n</html:code> et un tableau de taille <html:code>n</html:code> et qui appelle <html:code>triFusionRec</html:code> avec les bons indices pour parcourir l'ensemble du tableau.</html:li>
+<html:li>Tester la fonction <html:code>triFusion</html:code> sur quelques exemples. Que fait elle?.</html:li>
+<html:li>Ajouter une ligne d'affichage (avec <html:code>cout</html:code>) à votre fonction <html:code>triFusionRec</html:code> de manière à suivre les appels récursifs et leurs arguments.</html:li>
+<html:li>Compter expérimentalement le nombre d'appels récursifs à <html:code>triFusionRec</html:code> suivant les entrées, et en déduire une relation entre les entrées et le nombre d'appels récursifs.</html:li></html:ol></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004W/</fr:uri>
+                <fr:display-uri>004W</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/004W/</fr:route>
+                <fr:title text="La fonction de fusion linéaire">La fonction de fusion linéaire</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>On va écrire la fonction de fusion de complexité linéaire, qui est la plus simple à écrire et utilise un tableau annexe. Cette fonction prend en entrée un tableau et trois indices <html:code>i</html:code>, <html:code>j</html:code> et <html:code>k</html:code>. Les indices <html:code>i</html:code> et <html:code>j</html:code> déterminent les bornes de la partie du tableau sur laquelle on fait la fusion, et l'indice <html:code>k</html:code> détermine la séparation entre les deux sous-tableaux.
+<html:ol><html:li>Cette fonction est appelée dans la fonction <html:code>triFusionRec</html:code> après chacun des deux appels récursifs sur les deux sous-tableaux. Quelles sont les conditions que l'entrée de la fonction de fusion va toujours vérifier? (Dans cette question, on attend un description, il ne s'agit pas de vérifier par le code que les conditions sont vérifiées)</html:li>
+<html:li>Ecrire la fonction de fusion, en définissant un tableau annexe que l'on va construire au fur et à mesure, et dont on va ensuite recopier le contenu dans notre tableau original.</html:li>
+<html:li>Tester l'algorithme <html:code>triFusion</html:code> pour vérifier que l'on fait bien le tri.</html:li>
+<html:li>Mesurer le temps pris par l'algorithme sur <fr:tex display="inline"><![CDATA[5]]></fr:tex> tableaux <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">remplis aléatoirement</fr:link> dont les tailles vont de <fr:tex display="inline"><![CDATA[100]]></fr:tex> à <fr:tex display="inline"><![CDATA[10000]]></fr:tex>. Tracer la courbe correspondante.</html:li></html:ol></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004X/</fr:uri>
+                <fr:display-uri>004X</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/004X/</fr:route>
+                <fr:title text="La fonction de fusion quadratique">La fonction de fusion quadratique</fr:title>
+                <fr:taxon>Exercice (optionnel)</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>On va écrire la fonction de fusion qui procède en place, c'est à dire sans utiliser de tableau annexe, et dont la complexité est quadratique.
+<html:ol><html:li>Ecrire la fonction <html:code>deplacer</html:code> qui prend en entrée un tableau et deux positions <html:code>i</html:code> et <html:code>j</html:code> et qui insère l'élément en position <html:code>j</html:code> dans la position <html:code>i</html:code>, et décale tous les éléments dans les positions entre <html:code>i</html:code> et <html:code>j-1</html:code> de <fr:tex display="inline"><![CDATA[1]]></fr:tex> de manière à ne perdre aucun élément.</html:li>
+<html:li>Ecrire la fonction de fusion, qui effectue la fusion du tableau en place.</html:li></html:ol></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>20</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004Y/</fr:uri>
+                <fr:display-uri>004Y</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/004Y/</fr:route>
+                <fr:title text="Comparaison expérimentale des deux versions du tri fusion">Comparaison expérimentale des deux versions du tri fusion</fr:title>
+                <fr:taxon>Exercice (optionnel)</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>L'objectif est de comparer les deux versions du tri fusion expérimentalement. Pour cela, on va mesurer le temps pris par chacune des deux versions de la fusion, en faisant varier la taille (prendre <fr:tex display="inline"><![CDATA[5]]></fr:tex> tailles comprises entre <fr:tex display="inline"><![CDATA[100]]></fr:tex> et <fr:tex display="inline"><![CDATA[10000]]></fr:tex>) dans les conditions suivantes:
+<html:ol><html:li>Des tableaux <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générés aléatoirement</fr:link>.</html:li>
+<html:li>Des tableaux déjà triés dans l'ordre croissant.</html:li>
+<html:li>Des tableaux presque triés (pour les obtenir, partir d'un tableau trié, et effectuer <fr:tex display="inline"><![CDATA[k]]></fr:tex> transpositions aléatoires, <fr:tex display="inline"><![CDATA[k]]></fr:tex> étant la taille du tableau divisée par <fr:tex display="inline"><![CDATA[10]]></fr:tex>).</html:li>
+<html:li>Des tableaux triés dans l'ordre décroissant.</html:li></html:ol></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Backlinks">Backlinks</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Related">Related</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>12</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/</fr:uri>
+            <fr:display-uri>0044</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0044/</fr:route>
+            <fr:title text="Remplir un tableau avec des valeurs aléatoires">Remplir un tableau avec des valeurs aléatoires</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>
+Pour remplir un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex> avec des valeurs générées aléatoirement, on utilisera le code suivant. Notez que pour utiliser ce code, il faut recopier la ligne <html:code>#include&lt;cstdlib&gt;</html:code> dans la partie entête de vôtre fichier.
+
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[#include <cstdlib>
+
+void generateur_tableau (int n, int tab[]){
+  for (int i = 0; i < n; i++){
+    tab[i] = rand();
+  }
+ }]]></html:code></html:pre></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Contributions">Contributions</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:backmatter>
+</fr:tree>

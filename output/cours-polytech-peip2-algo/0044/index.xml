@@ -276,6 +276,58 @@ cout << "la fonction f a pris " << duree.count() << " ms";]]></html:code></html:
             <fr:date>
               <fr:year>2025</fr:year>
               <fr:month>11</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004Y/</fr:uri>
+            <fr:display-uri>004Y</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/004Y/</fr:route>
+            <fr:title text="Comparaison expérimentale des deux versions du tri fusion">Comparaison expérimentale des deux versions du tri fusion</fr:title>
+            <fr:taxon>Exercice (optionnel)</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>L'objectif est de comparer les deux versions du tri fusion expérimentalement. Pour cela, on va mesurer le temps pris par chacune des deux versions de la fusion, en faisant varier la taille (prendre <fr:tex display="inline"><![CDATA[5]]></fr:tex> tailles comprises entre <fr:tex display="inline"><![CDATA[100]]></fr:tex> et <fr:tex display="inline"><![CDATA[10000]]></fr:tex>) dans les conditions suivantes:
+<html:ol><html:li>Des tableaux <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">générés aléatoirement</fr:link>.</html:li>
+<html:li>Des tableaux déjà triés dans l'ordre croissant.</html:li>
+<html:li>Des tableaux presque triés (pour les obtenir, partir d'un tableau trié, et effectuer <fr:tex display="inline"><![CDATA[k]]></fr:tex> transpositions aléatoires, <fr:tex display="inline"><![CDATA[k]]></fr:tex> étant la taille du tableau divisée par <fr:tex display="inline"><![CDATA[10]]></fr:tex>).</html:li>
+<html:li>Des tableaux triés dans l'ordre décroissant.</html:li></html:ol></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>20</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004W/</fr:uri>
+            <fr:display-uri>004W</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/004W/</fr:route>
+            <fr:title text="La fonction de fusion linéaire">La fonction de fusion linéaire</fr:title>
+            <fr:taxon>Exercice</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>On va écrire la fonction de fusion de complexité linéaire, qui est la plus simple à écrire et utilise un tableau annexe. Cette fonction prend en entrée un tableau et trois indices <html:code>i</html:code>, <html:code>j</html:code> et <html:code>k</html:code>. Les indices <html:code>i</html:code> et <html:code>j</html:code> déterminent les bornes de la partie du tableau sur laquelle on fait la fusion, et l'indice <html:code>k</html:code> détermine la séparation entre les deux sous-tableaux.
+<html:ol><html:li>Cette fonction est appelée dans la fonction <html:code>triFusionRec</html:code> après chacun des deux appels récursifs sur les deux sous-tableaux. Quelles sont les conditions que l'entrée de la fonction de fusion va toujours vérifier? (Dans cette question, on attend un description, il ne s'agit pas de vérifier par le code que les conditions sont vérifiées)</html:li>
+<html:li>Ecrire la fonction de fusion, en définissant un tableau annexe que l'on va construire au fur et à mesure, et dont on va ensuite recopier le contenu dans notre tableau original.</html:li>
+<html:li>Tester l'algorithme <html:code>triFusion</html:code> pour vérifier que l'on fait bien le tri.</html:li>
+<html:li>Mesurer le temps pris par l'algorithme sur <fr:tex display="inline"><![CDATA[5]]></fr:tex> tableaux <fr:link href="/cours-polytech-peip2-algo/0044/" title="Remplir un tableau avec des valeurs aléatoires" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/" display-uri="0044" type="local">remplis aléatoirement</fr:link> dont les tailles vont de <fr:tex display="inline"><![CDATA[100]]></fr:tex> à <fr:tex display="inline"><![CDATA[10000]]></fr:tex>. Tracer la courbe correspondante.</html:li></html:ol></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
               <fr:day>12</fr:day>
             </fr:date>
             <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0043/</fr:uri>

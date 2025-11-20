@@ -1212,6 +1212,7 @@ int maximum (int n, int tableau[]){
 ]]></fr:resource-source></fr:resource></html:p>
               </fr:mainmatter>
             </fr:tree>
+            <html:p>Au moment de la déclaration, le système réserve une zone de la bonne taille, constitué de cases contigues en mémoire. Cela permet de rapidement accéder à n'importe laquelle des cases du tableau. En effet, connaissant la valeur de <html:code>a</html:code>, pointant vers l'adresse mémoire correspondant au début du tableau, accéder à une autre positioin dans le tableau se fait grâce à un simple décalage, une opération arithmétique. Cela justifie que les tableaux ont un accès en <fr:link href="/cours-polytech-peip2-algo/001J/" title="Constant" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001J/" display-uri="001J" type="local">temps constant</fr:link>.</html:p>
             <fr:tree show-metadata="false">
               <fr:frontmatter>
                 <fr:authors>
@@ -3436,6 +3437,7 @@ int maximum (int n, int tableau[]){
 ]]></fr:resource-source></fr:resource></html:p>
                           </fr:mainmatter>
                         </fr:tree>
+                        <html:p>Au moment de la déclaration, le système réserve une zone de la bonne taille, constitué de cases contigues en mémoire. Cela permet de rapidement accéder à n'importe laquelle des cases du tableau. En effet, connaissant la valeur de <html:code>a</html:code>, pointant vers l'adresse mémoire correspondant au début du tableau, accéder à une autre positioin dans le tableau se fait grâce à un simple décalage, une opération arithmétique. Cela justifie que les tableaux ont un accès en <fr:link href="/cours-polytech-peip2-algo/001J/" title="Constant" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/001J/" display-uri="001J" type="local">temps constant</fr:link>.</html:p>
                         <fr:tree show-metadata="false">
                           <fr:frontmatter>
                             <fr:authors>

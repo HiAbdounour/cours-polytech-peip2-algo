@@ -1,0 +1,12 @@
+\title{La fonction de fusion quadratique}
+\author{thibautbenjamin}
+\taxon{Exercice (optionnel)}
+\import{basemacros}
+\date{2025-11-20T13:58:46Z}
+
+\p{On va écrire la fonction de fusion qui procède en place, c'est à dire sans utiliser de tableau annexe, et dont la complexité est quadratique.
+\ol{
+\li{Ecrire la fonction \code{deplacer} qui prend en entrée un tableau et deux positions \code{i} et \code{j} et qui insère l'élément en position \code{j} dans la position \code{i}, et décale tous les éléments dans les positions entre \code{i} et \code{j-1} de #{1} de manière à ne perdre aucun élément.}
+\li{Ecrire la fonction de fusion, qui effectue la fusion du tableau en place.}
+}
+}

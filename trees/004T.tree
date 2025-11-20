@@ -1,0 +1,10 @@
+\title{Principe du tri fusion}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2025-11-20T13:14:14Z}
+
+\p{Le tri fusion est un algorithme de tri récursif qui repose sur le principe de diviser pour régner. Afin de gagner en efficacité, le principe est de faire beaucoup diminuer la taille du tableau que l'on cherche à trier à chaque appel récursif. Pour cela, on commence par reformuler le problème du tri, en disant qu'étant donné un tableau, on va chercher à trier tous les éléments dont la position est dans l'intervalle #{[i,...,j-1]}. C'est un problème plus général qui nous donne bien une réponse à notre problème initial: pour trier un tableau de longueur #{n} tout entier, il suffit en effet de trier tous les éléments dont la position est dans l'intervalle #{[0,...,n-1]}, puisque ce sont tous les éléments. Pour effectuer le tri fusion, on trie tous les élément du tableau dont la position est dans l'intervalle #{[i,...,j-1]} comme suit:
+\ul{
+\li{\strong{Cas de base:} Si l'intervalle #{[i,...,j-1]} est de longueur #{1}, il s'agit de trier un seul élément. Comme un élément unique est toujours trié, il n'y a rien à faire.}
+\li{\strong{Cas récursif:} Sinon on divise l'intervalle #{[i,\ldots,j-1]} en deux sous intervalles de même longueur (ou de longueur aussi proche que possible). Cela nous donne l'indice #{k\in[i,\ldots,j-1]}, et on appelle récursivement le tri fusion pour les intervalles #{[i,\ldots,k-1]} et #{k,\ldots,j-1} du tableau. On obtient ainsi deux sous tableau triés, et on appelle ensuite une fonction de fusion qui calcule un tableau trié à partir de ces deux sous-tableaux.}}
+}
