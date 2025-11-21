@@ -1,0 +1,27 @@
+\title{Manipulation des grands entiers}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2025-11-21T13:38:03Z}
+
+\p{Pour manipuler des entiers qui dépassent la taille maximale des entiers que l'on représenter normalement en \Cpp, on utilisera la bibliothèque externe GMP. Pour se faire, on ajoutera en début de fichier la ligne
+\cppdisplay{
+\startverb
+#include<gmpxx.h>
+\stopverb
+}
+Cela nous donnera accès au type de donnée \code{mpz_class} que l'on utilisera pour représenter des nombres pouvant devenir arbitrairement grands. On pourra ensuite utiliser les opérateurs habituels pour manipuler ces nombres, sans risquer d'avoir des résultats faussés par un dépassement arithmétique
+\cppdisplay{
+\startverb
+mpz_class a, b, c;
+a = 123456789101112;
+b = 123456789101113;
+c = a * b;
+\stopverb
+}
+Pour que les programmes qui utilisent cette bibliothèque compilent, on indiquera au compilateur qu'il doit aller chercher les bibliothèques idoines, en ajoutant les arguments \code{-lgmpxx -lgmp}. Par exemple pour compiler un programme, on écrira
+\pre{\code{
+\startverb
+g++ -lgmpxx -lgmp monProgramme.cpp -o monProgramme.o
+\stopverb}
+}
+}

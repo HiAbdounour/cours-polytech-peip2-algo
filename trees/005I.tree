@@ -1,0 +1,7 @@
+\title{Implémentation naïve des suites de Fibonacci}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2025-11-21T13:47:23Z}
+
+\p{Pour cette exercice, il ne sera pas la peine d'utiliser de grands entiers.}

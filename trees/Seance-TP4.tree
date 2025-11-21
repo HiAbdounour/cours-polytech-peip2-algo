@@ -1,0 +1,18 @@
+\title{TP 4: La course de Fibonacci}
+\author{thibautbenjamin}
+\import{basemacros}
+\date{2025-11-21T12:38:21Z}
+
+\p{L'objectif de ce TP est de calculer les nombres de la suite de Fibonacci le plus rapidement possible. Ce TP est en grande partie inspiré par la [vidéo suivante](https://www.youtube.com/watch?v=KzT9I1d-LlQ), qui présente des méthodes de calcul de plus en plus avancées. La suite de Fibonacci est une suite de nombres définie par la relation de récurrence suivante:
+##{
+\begin{cases}
+F(0) &= 0 \\
+F(1) &= 1 \\
+F(n) &= F(n-1)+F(n-2)
+\end{cases}
+}
+Contrairement à ce dont vous pouvez avoir l'habitude, la suite de Fibonacci a deux cas de base. Cela est du au fait que le relation de récurrence qui la définit fait appel à la fois à #{F(n-1)} et à #{F(n-2)}.
+}
+\transclude{Rappel}
+\transclude{005H}
+\transclude{005I}

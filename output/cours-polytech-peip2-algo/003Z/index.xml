@@ -21,7 +21,8 @@
     <html:p>
       <html:ul><html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP1/" title="TP 1 : Tri par sélection et tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP1/" display-uri="Seance-TP1" type="local">TP 1</fr:link></html:li>
 <html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP2/" title="TP2 : Algorithmes de recherche de sous-chaîne" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP2/" display-uri="Seance-TP2" type="local">TP 2</fr:link></html:li>
-<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP3/" title="TP 3: Les algorithmes de tris récursifs" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP3/" display-uri="Seance-TP3" type="local">TP 3</fr:link></html:li></html:ul>
+<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP3/" title="TP 3: Les algorithmes de tris récursifs" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP3/" display-uri="Seance-TP3" type="local">TP 3</fr:link></html:li>
+<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP4/" title="TP 4: La course de Fibonacci" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP4/" display-uri="Seance-TP4" type="local">TP 4</fr:link></html:li></html:ul>
     </html:p>
   </fr:mainmatter>
   <fr:backmatter>
@@ -102,7 +103,8 @@
                 <html:p>
                   <html:ul><html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP1/" title="TP 1 : Tri par sélection et tri par insertion" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP1/" display-uri="Seance-TP1" type="local">TP 1</fr:link></html:li>
 <html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP2/" title="TP2 : Algorithmes de recherche de sous-chaîne" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP2/" display-uri="Seance-TP2" type="local">TP 2</fr:link></html:li>
-<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP3/" title="TP 3: Les algorithmes de tris récursifs" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP3/" display-uri="Seance-TP3" type="local">TP 3</fr:link></html:li></html:ul>
+<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP3/" title="TP 3: Les algorithmes de tris récursifs" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP3/" display-uri="Seance-TP3" type="local">TP 3</fr:link></html:li>
+<html:li><fr:link href="/cours-polytech-peip2-algo/Seance-TP4/" title="TP 4: La course de Fibonacci" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP4/" display-uri="Seance-TP4" type="local">TP 4</fr:link></html:li></html:ul>
                 </html:p>
               </fr:mainmatter>
             </fr:tree>
@@ -123,6 +125,326 @@
         <fr:title text="Related">Related</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>11</fr:month>
+              <fr:day>21</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Seance-TP4/</fr:uri>
+            <fr:display-uri>Seance-TP4</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/Seance-TP4/</fr:route>
+            <fr:title text="TP 4: La course de Fibonacci">TP 4: La course de Fibonacci</fr:title>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>L'objectif de ce TP est de calculer les nombres de la suite de Fibonacci le plus rapidement possible. Ce TP est en grande partie inspiré par la <fr:link href="https://www.youtube.com/watch?v=KzT9I1d-LlQ" type="external">vidéo suivante</fr:link>, qui présente des méthodes de calcul de plus en plus avancées. La suite de Fibonacci est une suite de nombres définie par la relation de récurrence suivante:
+<fr:tex display="block"><![CDATA[
+\begin {cases}
+F(0) &= 0 \\
+F(1) &= 1 \\
+F(n) &= F(n-1)+F(n-2)
+\end {cases}
+]]></fr:tex>
+Contrairement à ce dont vous pouvez avoir l'habitude, la suite de Fibonacci a deux cas de base. Cela est du au fait que le relation de récurrence qui la définit fait appel à la fois à <fr:tex display="inline"><![CDATA[F(n-1)]]></fr:tex> et à <fr:tex display="inline"><![CDATA[F(n-2)]]></fr:tex>.
+</html:p>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>2</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/Rappel/</fr:uri>
+                <fr:display-uri>Rappel</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/Rappel/</fr:route>
+                <fr:title text="Anatomie d'un fichier C++">Anatomie d'un fichier C++</fr:title>
+                <fr:taxon>Rappel</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Pour écrire un fichier <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource>, on partira toujours de la base suivante
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+#include &lt;iostream&gt;
+using namespace std;
+
+// la définition des fonction se trouve ici
+
+int main (){
+  // le code dans la fonction main est celui
+  // qui sera exécuté par le programme.
+  return 0;
+}
+</html:code></html:pre></html:p>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>12</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0044/</fr:uri>
+                    <fr:display-uri>0044</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0044/</fr:route>
+                    <fr:title text="Remplir un tableau avec des valeurs aléatoires">Remplir un tableau avec des valeurs aléatoires</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+Pour remplir un tableau de taille <fr:tex display="inline"><![CDATA[n]]></fr:tex> avec des valeurs générées aléatoirement, on utilisera le code suivant. Notez que pour utiliser ce code, il faut recopier la ligne <html:code>#include&lt;cstdlib&gt;</html:code> dans la partie entête de vôtre fichier.
+
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[#include <cstdlib>
+
+void generateur_tableau (int n, int tab[]){
+  for (int i = 0; i < n; i++){
+    tab[i] = rand();
+  }
+ }]]></html:code></html:pre></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>12</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0045/</fr:uri>
+                    <fr:display-uri>0045</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/0045/</fr:route>
+                    <fr:title text="Calculer le temps mis pour exécuter une fonction">Calculer le temps mis pour exécuter une fonction</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>
+Pour mesurer le temps mis par une fonction, on commencera par ajouter les lignes suivantes à l'entête du fichier
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[#include <chrono>
+using namespace std::chrono;]]></html:code></html:pre>
+Puis, pour mesurer le temps pris par la fonction <html:code>f</html:code> sur une entrée <html:code>x</html:code>, on écrira:
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[auto start = high_resolution_clock::now();
+f(x);
+auto stop = high_resolution_clock::now();
+auto duree = duration_cast<microseconds>(stop - start);
+cout << "la fonction f a pris " << duree.count() << " ms";]]></html:code></html:pre></html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+                <fr:tree show-metadata="false">
+                  <fr:frontmatter>
+                    <fr:authors>
+                      <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                      </fr:author>
+                    </fr:authors>
+                    <fr:date>
+                      <fr:year>2025</fr:year>
+                      <fr:month>11</fr:month>
+                      <fr:day>15</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004L/</fr:uri>
+                    <fr:display-uri>004L</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/004L/</fr:route>
+                    <fr:title text="Longueur d'une chaîne de caractères">Longueur d'une chaîne de caractères</fr:title>
+                  </fr:frontmatter>
+                  <fr:mainmatter>
+                    <html:p>On rappelle que pour une chaîne de caractères <html:code>s</html:code>, on peut accéder à sa longueur en appelant la méthode <html:code>s.length()</html:code>.</html:p>
+                  </fr:mainmatter>
+                </fr:tree>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>21</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005H/</fr:uri>
+                <fr:display-uri>005H</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/005H/</fr:route>
+                <fr:title text="Manipulation des grands entiers">Manipulation des grands entiers</fr:title>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Pour manipuler des entiers qui dépassent la taille maximale des entiers que l'on représenter normalement en <fr:resource hash="9fd1e57f01dc7c94ca6f284db6e1aabb"><fr:resource-content><html:img src="/cours-polytech-peip2-algo/9fd1e57f01dc7c94ca6f284db6e1aabb.svg" /></fr:resource-content><fr:resource-source type="latex" part="preamble"><![CDATA[\newcommand {\CC }{C\nolinebreak \hspace {-.05em}\raisebox {.4ex}{\tiny \bf  +}\nolinebreak \hspace {-.10em}\raisebox {.4ex}{\tiny \bf  +}}]]></fr:resource-source><fr:resource-source type="latex" part="body"><![CDATA[\CC ]]></fr:resource-source></fr:resource>, on utilisera la bibliothèque externe GMP. Pour se faire, on ajoutera en début de fichier la ligne
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+<![CDATA[#include<gmpxx.h>]]>
+</html:code></html:pre>
+Cela nous donnera accès au type de donnée <html:code>mpz_class</html:code> que l'on utilisera pour représenter des nombres pouvant devenir arbitrairement grands. On pourra ensuite utiliser les opérateurs habituels pour manipuler ces nombres, sans risquer d'avoir des résultats faussés par un dépassement arithmétique
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+<![CDATA[mpz_class a, b, c;
+a = 123456789101112;
+b = 123456789101113;
+c = a * b;]]>
+</html:code></html:pre>
+Pour que les programmes qui utilisent cette bibliothèque compilent, on indiquera au compilateur qu'il doit aller chercher les bibliothèques idoines, en ajoutant les arguments <html:code>-lgmpxx -lgmp</html:code>. Par exemple pour compiler un programme, on écrira
+<html:pre><html:code><![CDATA[g++ -lgmpxx -lgmp monProgramme.cpp -o monProgramme.o]]></html:code></html:pre></html:p>
+              </fr:mainmatter>
+            </fr:tree>
+            <fr:tree show-metadata="false">
+              <fr:frontmatter>
+                <fr:authors>
+                  <fr:author>
+                    <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                  </fr:author>
+                </fr:authors>
+                <fr:date>
+                  <fr:year>2025</fr:year>
+                  <fr:month>11</fr:month>
+                  <fr:day>21</fr:day>
+                </fr:date>
+                <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005I/</fr:uri>
+                <fr:display-uri>005I</fr:display-uri>
+                <fr:route>/cours-polytech-peip2-algo/005I/</fr:route>
+                <fr:title text="Implémentation naïve des suites de Fibonacci">Implémentation naïve des suites de Fibonacci</fr:title>
+                <fr:taxon>Exercice</fr:taxon>
+              </fr:frontmatter>
+              <fr:mainmatter>
+                <html:p>Pour cette exercice, il ne sera pas la peine d'utiliser de grands entiers.</html:p>
+              </fr:mainmatter>
+            </fr:tree>
+          </fr:mainmatter>
+        </fr:tree>
         <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
           <fr:frontmatter>
             <fr:authors>
