@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+ <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+      <fr:contributor>
+        <fr:link href="/cours-polytech-peip2-algo/abdounourmisbah/" title="Abdounour Misbah" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/abdounourmisbah/" display-uri="abdounourmisbah" type="local">Abdounour Misbah</fr:link>
+      </fr:contributor>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>26</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006E/</fr:uri>
+    <fr:display-uri>006E</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/006E/</fr:route>
+    <fr:title text="Exemple de boucle for mal construite">Exemple de boucle for mal construite</fr:title>
+    <fr:taxon>Exemple</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+        <html:p>Théoriquement, il est possible d'écrire des boucles <html:code>for</html:code> qui ne s'arrête jamais.</html:p>
+        <html:p>  
+                <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+                <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+                <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+                <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+                <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+                <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+                <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+                <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+                <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+                <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+                <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+                <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+                <html:script>
+                        Prism.plugins.NormalizeWhitespace.setDefaults({
+                                "remove-trailing": true,
+                                "remove-indent": true,
+                                "left-trim": true,
+                                "right-trim": true,
+                        });</html:script>
+                <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[#include <iostream>
+using namespace std;
+
+int main(){
+    // Ceci est une mauvaise boucle for
+    for(int i=0;i<=10;i++){
+        cout << "Bonjour !" << endl;
+        i=0;
+    }
+    return 0;
+}]]>
+            </html:code></html:pre>
+        </html:p>
+        <html:p>Ici, la valeur de <html:code>i</html:code> est remise à zéro à chaque itération. Par conséquent, <html:code>i</html:code> ne dépasse jamais <html:code>2</html:code>, donc n'atteint jamais la valeur limite de <html:code>10</html:code>.</html:p>
+  </fr:mainmatter>
+  <fr:backmatter>
+  </fr:backmatter>
+</fr:tree>
