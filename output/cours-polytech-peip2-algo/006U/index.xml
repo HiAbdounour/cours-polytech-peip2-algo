@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/cours-polytech-peip2-algo/default.xsl"?>
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/cours-polytech-peip2-algo/">
+ <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+      <fr:contributor>
+        <fr:link href="/cours-polytech-peip2-algo/abdounourmisbah/" title="Abdounour Misbah" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/abdounourmisbah/" display-uri="abdounourmisbah" type="local">Abdounour Misbah</fr:link>
+      </fr:contributor>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>26</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006U/</fr:uri>
+    <fr:display-uri>006U</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/006U/</fr:route>
+    <fr:title text="Correction totale (définition)">Correction totale (définition)</fr:title>
+    <fr:taxon>Définition</fr:taxon>
+  </fr:frontmatter>
+  <fr:mainmatter>
+    <html:p>On dit que l'on a effectué la <html:em>correction totale</html:em> d'un algorithme lorsqu'on a prouvé que :</html:p>
+    <html:ul>
+        <html:li>l'algorithme renvoie un résultat (= se termine) : c'est la <fr:link href="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006A/" typ="local">terminaison</fr:link></html:li>
+        <html:li>et que ce résultat est bien ce qu'on attend de la fonction (= c'est le bon résultat) : c'est la <fr:link href="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006M/" typ="local">correction partielle</fr:link></html:li>
+    </html:ul>
+  </fr:mainmatter>
+  <fr:backmatter>
+
+  </fr:backmatter>
+</fr:tree>
