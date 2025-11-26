@@ -26,6 +26,238 @@
     <html:p>On appelle <html:em>invariant de boucle</html:em> une propriété <fr:tex>P</fr:tex> vérifiée à chaque itération et à l'entrée et à la sortie de la boucle.</html:p>
  </fr:mainmatter>
   <fr:backmatter>
+<fr:tree show-metadata="false" hidden-when-empty="true">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Context">Context</fr:title>
+      </fr:frontmatter>
 
+
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+ 
+
+        <fr:frontmatter>
+    <fr:authors>
+      <fr:author>
+        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+      </fr:author>
+      <fr:contributor>
+        <fr:link href="/cours-polytech-peip2-algo/abdounourmisbah/" title="Abdounour Misbah" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/abdounourmisbah/" display-uri="abdounourmisbah" type="local">Abdounour Misbah</fr:link>
+      </fr:contributor>
+    </fr:authors>
+    <fr:date>
+      <fr:year>2025</fr:year>
+      <fr:month>11</fr:month>
+      <fr:day>26</fr:day>
+    </fr:date>
+    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006M/</fr:uri>
+    <fr:display-uri>006M</fr:display-uri>
+    <fr:route>/cours-polytech-peip2-algo/006M/</fr:route>
+    <fr:title text="La correction partielle d'un algorithme">La correction partielle d'un algorithme</fr:title>
+  </fr:frontmatter>
+  <fr:mainmatter>
+
+    <fr:tree show-metadata="false">
+         <fr:frontmatter>
+            <fr:authors>
+            <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+            </fr:author>
+            <fr:contributor>
+                <fr:link href="/cours-polytech-peip2-algo/abdounourmisbah/" title="Abdounour Misbah" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/abdounourmisbah/" display-uri="abdounourmisbah" type="local">Abdounour Misbah</fr:link>
+            </fr:contributor>
+            </fr:authors>
+            <fr:date>
+            <fr:year>2025</fr:year>
+            <fr:month>11</fr:month>
+            <fr:day>26</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006N/</fr:uri>
+            <fr:display-uri>006N</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/006N/</fr:route>
+            <fr:title text="Immersion dans le concept de correction partielle">Immersion dans le concept de correction partielle</fr:title>
+        </fr:frontmatter>
+        <fr:mainmatter>
+            <html:p>Imaginons que vous êtes un grand paresseux - tellement paresseux que vous avez la flemme de faire une addition ! -. Votre ami sympa vous donne une calculatrice pour faire les additions à votre place. Bien sûr, vous êtes tout content. Vous commencez alors : vous tapez <fr:tex>2+2</fr:tex> et la calculatrice vous répond <fr:tex>-48</fr:tex> ! Qu'en pensez-vous ? Est-ce une calculatrice fiable ?</html:p>
+            <html:p>Lorsque l'on écrit un algorithme, il faut s'assurer que celui-ci fasse exactement ce qu'on veut. Par exemple, qu'un aspirateur aspire la poussière (mais pas qu'il sèche le linge !). C'est tout le principe de la <html:em>correction partielle</html:em></html:p>
+        <fr:tree show-metadata="false">
+                    <fr:frontmatter>
+                    <fr:authors>
+                    <fr:author>
+                        <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+                    </fr:author>
+                    <fr:contributor>
+                        <fr:link href="/cours-polytech-peip2-algo/abdounourmisbah/" title="Abdounour Misbah" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/abdounourmisbah/" display-uri="abdounourmisbah" type="local">Abdounour Misbah</fr:link>
+                    </fr:contributor>
+                    </fr:authors>
+                    <fr:date>
+                    <fr:year>2025</fr:year>
+                    <fr:month>11</fr:month>
+                    <fr:day>26</fr:day>
+                    </fr:date>
+                    <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006O/</fr:uri>
+                    <fr:display-uri>006O</fr:display-uri>
+                    <fr:route>/cours-polytech-peip2-algo/006O/</fr:route>
+                    <fr:title text="Correction partielle (définition)">Correction partielle (définition)</fr:title>
+                    <fr:taxon>Définition</fr:taxon>
+                </fr:frontmatter>
+                <fr:mainmatter>
+                    <html:p>Prouver la <html:em>correction partielle</html:em> d'un algorithme, c'est affirmer que l'algorithme renvoie toujours le bon résultat (autrement dit, la bonne réponse).</html:p>
+                </fr:mainmatter>
+        </fr:tree>
+
+        </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+                <fr:frontmatter>
+            <fr:authors>
+            <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+            </fr:author>
+            <fr:contributor>
+                <fr:link href="/cours-polytech-peip2-algo/abdounourmisbah/" title="Abdounour Misbah" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/abdounourmisbah/" display-uri="abdounourmisbah" type="local">Abdounour Misbah</fr:link>
+            </fr:contributor>
+            </fr:authors>
+            <fr:date>
+            <fr:year>2025</fr:year>
+            <fr:month>11</fr:month>
+            <fr:day>26</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006P/</fr:uri>
+            <fr:display-uri>006P</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/006P/</fr:route>
+            <fr:title text="Invariant de boucle">Invariant de boucle</fr:title>
+            <fr:taxon>Définition</fr:taxon>
+        </fr:frontmatter>
+        <fr:mainmatter>
+            <html:p>Pour s'assurer qu'un algorithme renvoie toujours le résultat attendu, on utilise une propriété propre au résultat et on vérifie que cette propriété est conservée tout au long du programme. En particulier, ce sont sur les boucles (y compris <html:code>for</html:code>) et les appels récursifs qu'il faut vérifier la conservation de la propriété.</html:p>
+            <html:p>On appelle <html:em>invariant de boucle</html:em> une propriété <fr:tex>P</fr:tex> vérifiée à chaque itération et à l'entrée et à la sortie de la boucle.</html:p>
+        </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+         <fr:frontmatter>
+            <fr:authors>
+            <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+            </fr:author>
+            <fr:contributor>
+                <fr:link href="/cours-polytech-peip2-algo/abdounourmisbah/" title="Abdounour Misbah" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/abdounourmisbah/" display-uri="abdounourmisbah" type="local">Abdounour Misbah</fr:link>
+            </fr:contributor>
+            </fr:authors>
+            <fr:date>
+            <fr:year>2025</fr:year>
+            <fr:month>11</fr:month>
+            <fr:day>26</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0059/</fr:uri>
+            <fr:display-uri>0059</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/0059/</fr:route>
+            <fr:title text="Comment prouver la correction partielle">Comment prouver la correction partielle</fr:title>
+        </fr:frontmatter>
+        <fr:mainmatter>
+            <html:p>Pour prouver la correction partielle, on utilise un procédé proche du raisonnement par récurrence (en mathématiques) :</html:p>
+            <html:ol>
+                <html:li>Trouver une propriété <fr:tex>P</fr:tex> adaptée</html:li>
+                <html:li>Initialisation : on vérifie que la propriété est vraie avant d'entrer dans la boucle</html:li>
+                <html:li>Hérédité : on suppose que la propriété est vraie à l'issue de la i-ème opération et on vérifie qu'elle reste vraie à la (i+1)-ème itération.</html:li>
+                <html:li>Conclusion : on vérifie que la propriété est vraie en sortant de la boucle</html:li>
+            </html:ol>  
+        </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+         <fr:frontmatter>
+            <fr:authors>
+            <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+            </fr:author>
+            <fr:contributor>
+                <fr:link href="/cours-polytech-peip2-algo/abdounourmisbah/" title="Abdounour Misbah" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/abdounourmisbah/" display-uri="abdounourmisbah" type="local">Abdounour Misbah</fr:link>
+            </fr:contributor>
+            </fr:authors>
+            <fr:date>
+            <fr:year>2025</fr:year>
+            <fr:month>11</fr:month>
+            <fr:day>26</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006R/</fr:uri>
+            <fr:display-uri>006R</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/006R/</fr:route>
+            <fr:title text="Exemple d'invariant de boucle">Exemple d'invariant de boucle</fr:title>
+            <fr:taxon>Exemple</fr:taxon>
+        </fr:frontmatter>
+        <fr:mainmatter>
+            <html:p>On va considérer le code suivant :</html:p>
+                <html:p>  
+                        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+                        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+                        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+                        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+                        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+                        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+                        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+                        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+                        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+                        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+                        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+                        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+                        <html:script>
+                                Prism.plugins.NormalizeWhitespace.setDefaults({
+                                        "remove-trailing": true,
+                                        "remove-indent": true,
+                                        "left-trim": true,
+                                        "right-trim": true,
+                                });</html:script>
+                        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié"><![CDATA[#include <iostream>
+        using namespace std;
+
+        // Renvoie le minimum d'un tableau de taille n
+        int minimum(int* tab,int n){
+            int mini = tab[0];
+            for(int i=1;i<n;i++){
+                if(tab[i]<mini){
+                    mini = tab[i];
+                }
+            }
+            return mini;
+        }
+
+        int main(){
+            int tableau_test[5] = {4,2,0,9,-1};
+            cout << "Le minimum du tableau est : " << minimum(tableau_test,5) << endl;
+            return 0;
+        }]]>
+                    </html:code></html:pre>
+                </html:p>
+
+                <html:ol>
+                    <html:li>On choisi comme propriété : <fr:tex>P(i) =</fr:tex> {<html:code>mini</html:code> contient le minimum du tableau <fr:tex>[a_0, a_1, ..., a_i]</fr:tex>}</html:li>
+                    <html:li>Avant d'entrer dans la boucle (c'est-à-dire pour <fr:tex>P(0)</fr:tex>), on a <html:code>int mini = tab[0]</html:code>. Or, <html:code>tab[0]</html:code> est bien le minimum du tableau <fr:tex>[a_0]</fr:tex></html:li>
+                    <html:li>Supposons que <fr:tex>P(i)</fr:tex> soit vraie pour un <fr:tex>i</fr:tex> fixé. Alors, on a <html:code>if(tab[i]&lt;mini){mini=tab[i];}</html:code>.
+                        <html:ol>
+                            <html:li>Si la condition est vraie, alors <html:code>mini</html:code> contient le minimum entre le minimum du tableau <fr:tex>[a_0, a_1, ..., a_{i+1}]</fr:tex>, en l'occurrence c'est <fr:tex>a_{i+1}</fr:tex>. En effet, si <fr:tex>a_{i+1}&lt;a_k</fr:tex> où <fr:tex>k</fr:tex> désigne la position du minimum dans le tableau <fr:tex>[a_0, ..., a_i]</fr:tex>, alors <fr:tex>a_{i+1}</fr:tex> correspond à la plus petite valeur du tableau jusqu'à la position <fr:tex>a_{i+1}</fr:tex></html:li>
+                            <html:li>Si la condition est fausse, cela signifie que <fr:tex>a_{i+1}&gt;a_k</fr:tex> donc que le minimum du tableau <fr:tex>[a_0, a_1, ..., a_{i+1}]</fr:tex> est le même que celui du tableau <fr:tex>[a_0, a_1, ..., a_i]</fr:tex></html:li>
+                        </html:ol>
+                    </html:li>
+                    <html:li>En sortant de la boucle (autrement dit, pour <fr:tex>P(n)</fr:tex>), <html:code>mini</html:code> contient la plus petite valeur du tableau <fr:tex>[a_0, a_1, ..., a_n]</fr:tex> donc le minimum.</html:li>
+                </html:ol>
+                <html:p>On vient de prouver la correction partielle de cet algorithme.</html:p>
+        </fr:mainmatter>
+    </fr:tree>
+
+  </fr:mainmatter>
+
+        </fr:tree>
+
+        
+        <fr:tree show-metadata="false" hidden-when-empty="true">
+     	<fr:frontmatter>
+        	<fr:authors />
+        	<fr:title text="Contributions">Contributions</fr:title>
+     	</fr:frontmatter>
+     	<fr:mainmatter />
+    	</fr:tree> 
+      </fr:mainmatter>
+</fr:tree>
   </fr:backmatter>
 </fr:tree>
