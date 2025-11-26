@@ -79,7 +79,7 @@
                 </html:p>
         </fr:mainmatter>
     </fr:tree>
-    <html:p>Dans cet exemple, il y a une boucle <html:code>while</html:code>. Il faut s'assurer que la boucle va s'arrêter, autrement dit que la condition devient fausse au bout d'un certain temps. Ici, la condition est <html:code>i<=0</html:code>. Or, <html:code>i</html:code> vaut <html:code>0</html:code> et à chaque itération, sa valeur est augmentée de <html:code>1</html:code>. On est donc assuré que <html:code>i</html:code> sera plus grand que <html:code>10</html:code> après un certain nombre d'itérations.</html:p>
+    <html:p>Dans cet exemple, il y a une boucle <html:code>while</html:code>. Il faut s'assurer que la boucle va s'arrêter, autrement dit que la condition devient fausse au bout d'un certain temps. Ici, la condition est <html:code>i&lt;=0</html:code>. Or, <html:code>i</html:code> vaut <html:code>0</html:code> et à chaque itération, sa valeur est augmentée de <html:code>1</html:code>. On est donc assuré que <html:code>i</html:code> sera plus grand que <html:code>10</html:code> après un certain nombre d'itérations.</html:p>
   </fr:mainmatter>
   <fr:backmatter>
 

@@ -79,7 +79,7 @@
                     </html:p>
             </fr:mainmatter>
         </fr:tree>
-        <html:p>Dans cet exemple, il faut s'assurer que la boucle <html:code>while</html:code> s'arrête, c'est-à-dire que la condition <html:code>i<=10</html:code> devient fausse. Ici, <html:code>i</html:code> est initialisé à <html:code>0</html:code>. À chaque itération, on décrémente sa valeur de 1 (c'est-à-dire: on fait -1 à chaque tour de boucle). Donc, <html:code>i</html:code> devient de plus en plus petit : il ne dépassera jamais <html:code>10</html:code>. Le programme va donc tourner indéfiniment.</html:p>
+        <html:p>Dans cet exemple, il faut s'assurer que la boucle <html:code>while</html:code> s'arrête, c'est-à-dire que la condition <html:code>i&lt;=10</html:code> devient fausse. Ici, <html:code>i</html:code> est initialisé à <html:code>0</html:code>. À chaque itération, on décrémente sa valeur de 1 (c'est-à-dire: on fait -1 à chaque tour de boucle). Donc, <html:code>i</html:code> devient de plus en plus petit : il ne dépassera jamais <html:code>10</html:code>. Le programme va donc tourner indéfiniment.</html:p>
   </fr:mainmatter>
   <fr:backmatter>
 

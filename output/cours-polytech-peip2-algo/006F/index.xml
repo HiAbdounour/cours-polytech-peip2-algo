@@ -99,8 +99,8 @@
                             </html:code></html:pre>
                         </html:p>
                 </fr:mainmatter>
-            </fr:tree>
-            <html:p>Dans cet exemple, il y a une boucle <html:code>while</html:code>. Il faut s'assurer que la boucle va s'arrêter, autrement dit que la condition devient fausse au bout d'un certain temps. Ici, la condition est <html:code>i<=0</html:code>. Or, <html:code>i</html:code> vaut <html:code>0</html:code> et à chaque itération, sa valeur est augmentée de <html:code>1</html:code>. On est donc assuré que <html:code>i</html:code> sera plus grand que <html:code>10</html:code> après un certain nombre d'itérations.</html:p>
+    </fr:tree>
+            <html:p>Dans cet exemple, il y a une boucle <html:code>while</html:code>. Il faut s'assurer que la boucle va s'arrêter, autrement dit que la condition devient fausse au bout d'un certain temps. Ici, la condition est <html:code>i&lt;=0</html:code>. Or, <html:code>i</html:code> vaut <html:code>0</html:code> et à chaque itération, sa valeur est augmentée de <html:code>1</html:code>. On est donc assuré que <html:code>i</html:code> sera plus grand que <html:code>10</html:code> après un certain nombre d'itérations.</html:p>
         </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false">
@@ -182,7 +182,7 @@
                             </html:p>
                     </fr:mainmatter>
                 </fr:tree>
-                <html:p>Dans cet exemple, il faut s'assurer que la boucle <html:code>while</html:code> s'arrête, c'est-à-dire que la condition <html:code>i<=10</html:code> devient fausse. Ici, <html:code>i</html:code> est initialisé à <html:code>0</html:code>. À chaque itération, on décrémente sa valeur de 1 (c'est-à-dire: on fait -1 à chaque tour de boucle). Donc, <html:code>i</html:code> devient de plus en plus petit : il ne dépassera jamais <html:code>10</html:code>. Le programme va donc tourner indéfiniment.</html:p>
+                <html:p>Dans cet exemple, il faut s'assurer que la boucle <html:code>while</html:code> s'arrête, c'est-à-dire que la condition <html:code>i&lt;=10</html:code> devient fausse. Ici, <html:code>i</html:code> est initialisé à <html:code>0</html:code>. À chaque itération, on décrémente sa valeur de 1 (c'est-à-dire: on fait -1 à chaque tour de boucle). Donc, <html:code>i</html:code> devient de plus en plus petit : il ne dépassera jamais <html:code>10</html:code>. Le programme va donc tourner indéfiniment.</html:p>
         </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false">
@@ -313,11 +313,11 @@
                     </fr:tree>
                     <html:p>On a affaire à une boucle <html:code>while</html:code> : on doit trouver un variant de boucle. On peut prendre le variant <html:code>10-i</html:code> et on suit son évolution au cours de la boucle :</html:p>
                     <html:ul>
-                        <html:li>À la première itération, on a <html:code>i=0</html:code> donc notre variant vaut <fr:tex>10-0=10</fr:tex></fr:li>
-                        <html:li>À la deuxième itération, on a <html:code>i=1</html:code> donc notre variant vaut <fr:tex>10-1=9</fr:tex></fr:li>
-                        <html:li>À la troisièmé itération, on a <html:code>i=2</html:code> donc notre variant vaut <fr:tex>10-2=8</fr:tex></fr:li>
-                        <html:li>...</fr:li>
-                        <html:li>À la douzième itération, on a <html:code>i=11</html:code> donc notre variant vaut <fr:tex>10-11=-1</fr:tex> qui est négatif. Donc la boucle s'arrête</fr:li>
+                        <html:li>À la première itération, on a <html:code>i=0</html:code> donc notre variant vaut <fr:tex>10-0=10</fr:tex></html:li>
+                        <html:li>À la deuxième itération, on a <html:code>i=1</html:code> donc notre variant vaut <fr:tex>10-1=9</fr:tex></html:li>
+                        <html:li>À la troisièmé itération, on a <html:code>i=2</html:code> donc notre variant vaut <fr:tex>10-2=8</fr:tex></html:li>
+                        <html:li>...</html:li>
+                        <html:li>À la douzième itération, on a <html:code>i=11</html:code> donc notre variant vaut <fr:tex>10-11=-1</fr:tex> qui est négatif. Donc la boucle s'arrête</html:li>
                     </html:ul>
                     <html:p>On vient de prouver la terminaison de notre algorithme.</html:p>
                 </fr:mainmatter>
@@ -403,10 +403,10 @@
                     </fr:tree>
                     <html:p>On a affaire à une boucle <html:code>while</html:code> : on doit trouver un variant de boucle. On peut prendre le variant <html:code>10-i</html:code> et on suit son évolution au cours de la boucle :</html:p>
                     <html:ul>
-                        <html:li>À la première itération, on a <html:code>i=0</html:code> donc notre variant vaut <fr:tex>10-0=10</fr:tex></fr:li>
-                        <html:li>À la deuxième itération, on a <html:code>i=-1</html:code> donc notre variant vaut <fr:tex>10-(-1)=11</fr:tex></fr:li>
-                        <html:li>À la troisième itération, on a <html:code>i=-2</html:code> donc notre variant vaut <fr:tex>10-(-2)=12</fr:tex></fr:li>
-                        <html:li>À la n-ième itération, on a <html:code>i=-(n+1)</html:code> donc notre variant vaut <fr:tex>10-(-(n+1))=n+11</fr:tex> qui est strictement positif. Donc la boucle ne s'arrêtera jamais</fr:li>
+                        <html:li>À la première itération, on a <html:code>i=0</html:code> donc notre variant vaut <fr:tex>10-0=10</fr:tex></html:li>
+                        <html:li>À la deuxième itération, on a <html:code>i=-1</html:code> donc notre variant vaut <fr:tex>10-(-1)=11</fr:tex></html:li>
+                        <html:li>À la troisième itération, on a <html:code>i=-2</html:code> donc notre variant vaut <fr:tex>10-(-2)=12</fr:tex></html:li>
+                        <html:li>À la n-ième itération, on a <html:code>i=-(n+1)</html:code> donc notre variant vaut <fr:tex>10-(-(n+1))=n+11</fr:tex> qui est strictement positif. Donc la boucle ne s'arrêtera jamais</html:li>
                     </html:ul>
                     <html:p>On vient de prouver que notre algorithme ne se terminera jamais. La terminaison n'est pas validée (c'est un mauvais algorithme).</html:p>
                 </fr:mainmatter>
