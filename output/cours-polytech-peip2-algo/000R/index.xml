@@ -6,6 +6,9 @@
       <fr:author>
         <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
       </fr:author>
+      <fr:contributor>
+        <fr:link href="/cours-polytech-peip2-algo/abdounourmisbah/" title="Abdounour Misbah" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/abdounourmisbah/" display-uri="abdounourmisbah" type="local">Abdounour Misbah</fr:link>
+      </fr:contributor>
     </fr:authors>
     <fr:date>
       <fr:year>2025</fr:year>
@@ -20,8 +23,12 @@
   <fr:mainmatter>
     <html:p>
       <html:img src="https://imgs.xkcd.com/comics/random_number.png" />
-      <html:mark>TODO</html:mark>
     </html:p>
+    <html:p>Il existe trois notions fondamentales en algorithmique : la <fr:link href="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006A/" type="local">terminaison</fr:link>, la <fr:link href="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/006M/" type="local">correction partielle</fr:link> et la <fr:link href="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/0006/" type="local">complexité</fr:link>.</html:p>
+
+
+
+
   </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
