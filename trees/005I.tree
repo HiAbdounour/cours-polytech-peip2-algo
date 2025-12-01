@@ -4,4 +4,8 @@
 \import{basemacros}
 \date{2025-11-21T13:47:23Z}
 
-\p{Pour cette exercice, il ne sera pas la peine d'utiliser de grands entiers.}
+\p{Pour cette exercice, il ne sera pas la peine d'utiliser de grands entiers. L'objectif ici est d'implémenter une version naïve de l'algorithme de Fibonacci.
+\ol{
+\li{Ecrire une fonction \code{fibonacci} prenant en argument un entier #{n}, et renvoyant le #{n^e} nombre de Fibonacci, calculé de manière récursive naïve.}
+\li{Rappeler la complexité de cette fonction vue en amphi.}
+\li{Mesurer le temps mis par cette fonction sur des entrées de tailles diverses et tracer une courbe. Arrêtez vous dès que la fonction dépasse 10 secondes.}}}

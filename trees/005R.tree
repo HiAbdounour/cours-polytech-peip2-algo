@@ -1,0 +1,12 @@
+\title{Implémentation mémoisée des suites de Fibonacci}
+\author{thibautbenjamin}
+\taxon{Exercice}
+\import{basemacros}
+\date{2025-12-01T10:26:14Z}
+
+\p{Pour cette exercice, on utilisera les grands entiers. L'objectif ici est d'implémenter l'algorithme de calcul des suites de Fibonacci grâce à la mémoisation. On rappelle que pour cela on placera les valeurs dans un tableau de grands entiers \code{memo}, de telle sorte que \code{memo[n]} contienne la valeur de \code{fibonacci(n)} si ce dernier a déjà été calculé, ou #{-1} sinon.
+\ol{
+\li{Ecrire une fonction \code{fibonacciMemoAux} prenant en argument un entier #{n} et un tableau de grands entiers \code{memo} contenant le calcul mémoisé, et renvoyant le #{n^e} nombre de Fibonacci, calculé de manière récursive avec mémoisation. Pensez à bien ajouter le résultat de votre calcul au tableau de mémoisation, si celui n'a pas déjà été mémoisé.}
+\li{Ecrire une fonction \code{fibonacciMemo} prenant en argument un entier #{n} et renvoyant un grand entier égal au #{n^e} nombre de Fibonacci calculé avec mémoisation, en appelant la fonction précédente. Pour cela il faudra créer un tableau de mémoisation de la bonne taille et l'initialiser correctement.}
+\li{Rappeler la complexité de cette fonction vue en amphi.}
+\li{Mesurer le temps mis par cette fonction sur des entrées de tailles diverses et tracer une courbe. Arrêtez vous dès que la fonction dépasse 10 secondes.}}}

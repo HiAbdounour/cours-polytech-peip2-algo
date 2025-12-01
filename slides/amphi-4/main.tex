@@ -1,0 +1,838 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{tcolorbox}
+\tcbuselibrary{listings}
+\tcbuselibrary{listingsutf8}
+\usetikzlibrary {graphs,graphdrawing}
+\usegdlibrary{trees}
+\usepackage{pgfplots}
+
+\usetheme{metropolis}
+
+\usepackage{macros}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\setbeamertemplate{itemize item}{{\usebeamercolor[fg]{alerted
+      text}{${\scriptstyle \blacktriangleright}$}}}
+
+
+\usepackage{xpatch}
+\makeatletter
+\newlength{\my@beamer@itemsepi}\setlength{\my@beamer@itemsepi}{3ex}
+\newlength{\my@beamer@itemsepii}\setlength{\my@beamer@itemsepii}{1.5ex}
+\newlength{\my@beamer@itemsepiii}\setlength{\my@beamer@itemsepiii}{1.5ex}
+\newcommand{\my@beamer@setsep}{%
+  \ifnum\@itemdepth=1\relax
+    \setlength\itemsep{\my@beamer@itemsepi}
+  \else
+    \ifnum\@itemdepth=2\relax
+      \setlength\itemsep{\my@beamer@itemsepii}
+    \else
+      \ifnum\@itemdepth=3\relax
+        \setlength\itemsep{\my@beamer@itemsepiii}
+      \fi\fi\fi}
+\xpatchcmd{\itemize}
+{\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\xpatchcmd{\beamer@enum@}
+{\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\newcommand\setlistsep[3]{%
+  \setlength{\my@beamer@itemsepi}{#1}%
+  \setlength{\my@beamer@itemsepii}{#2}%
+  \setlength{\my@beamer@itemsepiii}{#3}%
+}
+\makeatother
+
+\setlistsep{6.5ex}{2ex}{2ex}
+
+%%%
+\definecolor{lbcolor}{rgb}{0.1,0.1,0.1}
+\definecolor{commentcolor}{rgb}{0.4,0.4,0.4}
+\definecolor{keywordcolor}{HTML}{531ab6}
+\definecolor{stringcolor}{HTML}{005f5f}
+
+\lstset{
+  basicstyle=\small\ttfamily\color{black},
+  commentstyle=\rmfamily\color{commentcolor},
+  keywordstyle=\bfseries\color{keywordcolor},
+  showspaces=false,
+  showstringspaces=false,
+  stringstyle=\color{stringcolor},
+  tabsize=2,
+}
+
+\newtcblisting{slidelisting}{
+      arc=5mm,
+      top=0mm,
+      bottom=0mm,
+      left=0mm,
+      right=0mm,
+      boxrule=1pt,
+      listing only,
+      listing options={language=C++},
+      width=\textwidth
+    }
+    \NewTCBInputListing{\slideinputlisting}{ O{0} O{9999999} m }{
+      listing file = #3,
+      size = small,
+      arc=5mm,
+      top=0mm,
+      bottom=0mm,
+      left=0mm,
+      right=0mm,
+      boxrule=1pt,
+      listing only,
+      listing options={language=C++, firstline=#1, lastline=#2},
+      width=\textwidth
+}
+
+
+\NewDocumentCommand{\codeslide}{ O{4} O{9999999} m}{
+  \slideinputlisting[#1][#2]{#3}
+  \onslide<2>
+  \slideinputlisting[0]{#3.res}}
+
+
+\title{Algorithmique et complexité}
+\subtitle{Polytech Paris-Saclay, PEIP 2, Informatique 3}
+\author{Thibaut Benjamin}
+\date{26 Novembre 2025}
+\institute{Amphi 4}
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Séance du jour : Sujets avancés de complexité}
+
+  \begin{itemize}
+  \item Un dernier algorithme de tri
+  \item Mémoisation
+  \item Vecteurs \(\Cpp\) et complexité amortie
+  \item Classes \(\mathsf{P}\) et \(\mathsf{NP}\)
+  \end{itemize}
+
+\end{frame}
+
+\section{Complexité en moyenne et tri rapide}
+
+\begin{frame}
+  \frametitle{Visualisation}
+
+  \alert{\url{https://mszula.github.io/visual-sorting/?algorithm=quick-sort}}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Principe du tri rapide}
+
+  \begin{itemize}
+  \item Le tri rapide est un tri récursif en deux étapes
+  \item \textbf{1. Partitionnement:} on commence par arranger les éléments du
+    tableau à trier dans deux sous-tableaux tels que:
+
+    \alert{Tous les éléments du sous-tableau de gauche sont plus petits que tous
+      les éléments du sous-tableau de droite}
+
+  \item \textbf{2. Appels récursifs:} on procède au tri rapide sur chacun des
+    deux sous-tableaux.
+
+  \item A la fin, si chacun des deux sous-tableaux ont été trié, le tableau
+    initial a bien été trié.
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Principe du partitionnement}
+
+  \begin{itemize}
+  \item On choisit un élément particulier dans le tableau de longueur \(n\) que
+    l'on appelle le \textbf{pivot}, et on crée un tableau auxiliaire
+    \lstinline|aux| temporaire de longueur \(n\).
+  \item On parcourt le tableau, en maintenant deux indices \lstinline|debut| et
+    \lstinline|fin| initialisés respectivement à \(0\) et \(n-1\).
+    \begin{itemize}
+    \item Lorsque l'on rencontre un élément plus petit que le pivot, on l'ajoute
+      dans \lstinline|aux[debut]| et on incrémente \lstinline|debut|
+    \item Lorsque l'on rencontre un élément plus grand que le pivot, on l'ajoute
+      dans \lstinline|aux[fin]| et on décrémente \lstinline|fin|.
+    \end{itemize}
+  \item On copie le tableau auxiliaire dans notre tableau initial.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Complexité du partitionnement}
+
+  \begin{itemize}
+  \item 1 parcourt du tableau initial \(\to \Theta(n)\)
+  \item 1 copie \( \to \Theta(n)\)
+  \item Résultat global: \(\Theta(n)\)
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Complexité du tri rapide}
+
+  \begin{itemize}
+  \item \alert{Problème} on ne connaît pas a priori la taille des appels
+    récursifs.
+  \item Notons \(T(n)\) la complexité du tri rapide sur un tableau de
+    taille \(n\).
+    \begin{itemize}
+    \item \textbf{Partitionnement:} \(\Theta(n)\)
+    \item \textbf{Appels réccursifs:} \(T(\text{longueur tableau gauche}) +
+      T(\text{longueur tableau droit})\)
+
+      \alert{????}
+    \end{itemize}
+
+  \item La taille des appels récursifs dépend du choix du pivot. Plus les
+    tableaux sont équilibrés, plus l'algorithme sera rapide.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Complexité du tri rapide, pire cas}
+
+  \begin{itemize}
+  \item Pire des cas: lorsque les tableaux sont maximalement déséquilibrés.
+
+    \alert{l'un des deux sous-tableaux est de taille \(1\) et l'autre de taille
+      \(n-1\)}
+
+  \item La complexité est alors donnée par:
+    \begin{itemize}
+    \item \textbf{Partitionnement:} \(\Theta(n)\)
+    \item \textbf{Appels réccursifs:} \(T(1) + T(n-1)\)
+    \end{itemize}
+
+  \item Complexité dans le pire des cas \(\Theta(n^{2})\)
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Complexité du tri rapide, cas moyen}
+
+  \begin{itemize}
+  \item En moyenne, si on suppose que les tableaux sont bien mélangés, les deux
+    sous-tableaux seront en général équilibrés.
+
+  \item La complexité en moyenne est alors donnée par:
+    \begin{itemize}
+    \item \textbf{Partitionnement:} \(\Theta(n)\)
+    \item \textbf{Appels réccursifs:} \(T(\frac{n}{2}) + T(\frac{n}{2})\)
+    \end{itemize}
+
+  \item Complexité dans le pire des cas \(\Theta(n\log(n))\)
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Le choix du pivot}
+
+  \begin{itemize}
+
+  \item Si on connaît le cas typique d'utilisation de notre fonction, faire un
+    choix de pivot astucieux
+    \begin{itemize}
+    \item Si en moyenne les tableaux seront aléatoires, on peut choisir
+      n'importe quel élément du tableau.
+    \item Si dans le cas typique, les tableaux sont déjà presque triés, on peut
+      choisir le milieu du tableau
+     \item Si le cas typique on sait que certaines zones vont contenir des
+       petites/grandes cases, on essaiera de les éviter
+    \end{itemize}
+
+  \item Si on n'a aucune idée et que notre fonction pourrait être utilisée par
+    d'autres personnes, on peut commencer par mélanger le tableau avant de le
+    trier.
+  \end{itemize}
+
+\end{frame}
+
+
+
+\section{Mémoisation}
+
+\begin{frame}
+  \frametitle{Calcul de la suite de Fibonacci}
+
+  \begin{itemize}
+  \item La suite de Fibonacci est une suite mathématique définie par récurrence
+    de la manière suivante:
+
+    \[
+      \begin{cases}
+        F(0) = 0 \\
+        F(1) = 1 \\
+        F(n) = F(n-1) + F(n-2) & \text{pour \(n \ge 2 \)}
+      \end{cases}
+    \]
+  \item Notre objectif ici est d'écrire un algorithme pour calculer la valeur de
+    la suite de Fibonacci
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algorithme naïf}
+
+\slideinputlisting[4][8]{code/fibonacci.cpp}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Complexité de l'algorithme naïf}
+  \begin{itemize}
+  \item On note \(T(n)\) la complexité de \lstinline|fibonacci(n)|
+  \item Relation de récurrence:
+    \begin{itemize}
+    \item On a \(T(0) = \Theta(1)\) et \(T(1) = \Theta(1)\)
+    \item Et on a \(T(n) = T(n-1) + T(n-2) + \Theta(1)\)
+    \end{itemize}
+
+  \item La résolution de cette suite (formule de Binet) donne
+    \(T(n) = \Theta(2^{n})\)
+
+    \alert{Complexité exponentielle}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Liste des appels récursifs pour fibonacci(5)}
+
+  \begin{tikzpicture}
+\node[circle, draw] {f(5)} [sibling distance = 6cm]
+    child {node[circle, draw] {f(4)} [sibling distance = 3cm]
+           child {node[circle, draw] {f(3)} [sibling distance = 1.5cm]
+                  child {node[circle, draw] {f(2)} [sibling distance = 1.5cm]
+                        child {node[circle, draw] {f(1)}}
+                        child {node[circle, draw] {f(0)}}
+                  }
+                  child {node[circle, draw] {f(1)}}
+           }
+           child {node[circle, draw] {f(2)} [sibling distance = 1.5cm]
+                 child {node[circle, draw] {f(1)}}
+                 child {node[circle, draw] {f(0)}}
+           }
+    }
+    child {node[circle, draw] {f(3)} [sibling distance = 1.5cm]
+                  child {node[circle, draw] {f(2)} [sibling distance = 1.5cm]
+                        child {node[circle, draw] {f(1)}}
+                        child {node[circle, draw] {f(0)}}
+                  }
+                  child {node[circle, draw] {f(1)}}
+           };
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Remarque}
+  \begin{itemize}
+  \item Il y a \alert{beaucoup} d'appels récursif redondants à la fonction
+    fibonacci.
+  \item Par exemple, on appelle \lstinline|fibonacci(3)| à deux moments dans le
+    calcul de \lstinline|fibonacci(5)|. Ces deux appels renvoient le même
+    résultat, pas la peine de le recalculer!
+  \end{itemize}
+
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Liste des appels récursifs pour fibonacci(5), appels redondants en
+  rouge}
+
+  \begin{tikzpicture}
+\node[circle, draw] {f(5)} [sibling distance = 6cm]
+    child {node[circle, draw] {f(4)} [sibling distance = 3cm]
+           child {node[circle, draw] {f(3)} [sibling distance = 1.5cm]
+                  child {node[circle, draw] {f(2)} [sibling distance = 1.5cm]
+                        child {node[circle, draw] {f(1)}}
+                        child {node[circle, draw] {f(0)}}
+                  }
+                  child {node[circle, draw, red] {f(1)} edge from parent[red]}
+           }
+           child {node[circle, draw, red] {f(2)} [sibling distance = 1.5cm]
+                 edge from parent[red]
+                 child {node[circle, draw] {f(1)}}
+                 child {node[circle, draw] {f(0)}}
+           }
+    }
+    child {node[circle, draw, red] {f(3)} [sibling distance = 1.5cm]
+                  edge from parent[red]
+                  child {node[circle, draw] {f(2)} [sibling distance = 1.5cm]
+                        child {node[circle, draw] {f(1)}}
+                        child {node[circle, draw] {f(0)}}
+                  }
+                  child {node[circle, draw] {f(1)}}
+           };
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Mémoisation}
+
+  \begin{itemize}
+  \item Principe de la mémoisation: stocker dans un tableau le résultat de
+    l'appel à \lstinline|fibonacci(n)|.
+  \item La fonction fibonacci va maintenant d'abord vérifier si le nombre a déjà
+    été calculé dans le tableau de mémoisation.
+    \begin{itemize}
+    \item Si le résultat est déjà stocké dans le tableau, on le renvoie
+    \item Sinon, on le calcule, on l'ajoute au tableau, puis on le renvoie
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Fibonacci avec mémoisation: fonction auxiliaire}
+  \slideinputlisting[10][18]{code/fibonacci.cpp}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Fibonacci avec mémoisation: fonction finale}
+  \slideinputlisting[20][26]{code/fibonacci.cpp}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Complexité de Fibonacci mémoisé - pire cas naïf}
+  \begin{itemize}
+  \item La complexité de \lstinline{fibonacci_memo_aux} dépend de si la valeur
+    calculée est déjà dans le tableau.
+  \item On pourrait dire: au pire des cas, la valeur n'est jamais dans le
+    tableau.
+    \begin{itemize}
+    \item Il faut donc supposer que l'on fait toujours le maximum d'appels
+    récursifs
+    \[
+      \begin{cases}
+        T(0) = \Theta(1)\\
+        T(1) = \Theta(1) \\
+        T(n) = \mathcal{O}(T(n-1) + T(n-2))
+      \end{cases}
+    \]
+  \item On trouve alors a nouveau \(T (n) = \mathcal{O}(2^{n})\).
+
+    \alert{Complexité exponentielle.} C'est correct, mais on peut être bien plus
+    précis.
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Complexité de Fibonacci mémoisé - analyse fine}
+  \begin{itemize}
+  \item Notre erreur dans le raisonnement précédent: comme on ajoute le résultat
+    au tableau, on ne peut pas être toujours dans le pire cas.
+  \item Lors du calcul de \lstinline|fibonacci(n-1)+fibonacci(n-2)|, on aura
+    forcément déjà calculé \lstinline|fibonacci(n-2)| dans l'appel correspondant
+    à \lstinline|fibonacci(n-1)|.
+    \begin{itemize}
+    \item On peut donc simplifier la suite en
+    \[
+      \begin{cases}
+        T(0) = \Theta(1) \\
+        T(1) = \Theta(1) \\
+        T(n) = \mathcal{O}(T(n-1)) + \mathcal{O}(1)
+      \end{cases}
+    \]
+  \item Complexité globale: \(\mathcal{O}(n) \)
+
+    \alert{Cet algorithme est linéaire}
+
+    \end{itemize}
+   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Mémoisation à grande échelle}
+  \begin{itemize}
+  \item Dans notre exemple, on a mémoisé le résultat de la fonction de fibonacci
+    de manière locale.
+  \item Il peut être intéressant de plutôt mémoiser le résultat d'un calcul
+    globalement, de cette manière à pouvoir réutiliser les calcul à l'échelle de
+    notre programme.
+  \item Avec \lstinline|fibonacci|, cela permettrait à ce qu'un appel à
+    \lstinline|fibonacci(6)| à un moment dans le programme soit rendu plus
+    rapide par le fait qu'on a déjà calculé \lstinline|fibonacci(5)| à un autre
+    moment.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Mémoisation et effet de bords}
+  \begin{itemize}
+  \item \alert{Attention}: La mémoisation est une technique utile pour stocker
+    le résultat de fonctions \og pures\fg{}.
+  \item<+-> Par exemple: Ce serait une très mauvaise idée de mémoiser une fonction
+    qui renvoie la somme des éléments d'un tableau.
+  \item<+-> En effet, le tableau peut être modifié, et la somme mémoisée ne
+    retournera pas la bonne valeur.
+  \end{itemize}
+\end{frame}
+
+\section{Vecteurs et complexité amortie}
+\begin{frame}
+  \frametitle{Vecteurs et tableaux}
+
+  \begin{itemize}
+  \item Dans ce cours nous avons utilisé les tableaux de \Cpp, et non les
+    vecteurs.
+  \item Les vecteurs sont des tableaux dynamiques, c'est à dire dont la taille
+    peut changer.
+  \item La complexité des opérations sur les vecteurs est plus subtile à
+    évaluer.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ajouter un élément à un vecteur, cas rapide}
+  \begin{itemize}
+  \item  Si il reste de la place dans la zone mémoire allouée pour le vecteur, on
+  ajoute l'élément voulue à cette place:
+
+    \vspace{.5cm}
+    \begin{tikzpicture}[font=\small]
+      % Parameters for drawing
+  \def\cellw{1}
+  \def\cellh{0.9}
+  \def\n{4}
+  \def\base{0}          % base x-offset
+  \def\y{0}             % base y-offset
+  \def\z{-2}
+
+  \foreach \i in {0,...,\n} {
+    \draw[thick] (\base+\i*\cellw,\y) rectangle ++(\cellw,\cellh);
+  }
+  \node at (\base+0.5,\y+0.45) {1};
+  \node at (\base+\cellw+0.5,\y+0.45) {2};
+  \node at (\base+2*\cellw+0.5,\y+0.45) {3};
+
+  % Zone mémoire à gauche
+  \fill[gray!20] (\base-3*\cellw,\y) rectangle ++(3*\cellw,\cellh);
+\draw[thick,-] (\base-3*\cellw,\y) -- (\base,\y);
+  \draw[thick,-] (\base-3*\cellw,\cellh) -- (\base,\cellh);
+  \node[align=center] at (\base-1.5*\cellw,\y+0.45)
+    {};
+
+    % Zone mémoire à droite
+  \fill[gray!20] (\base+\n*\cellw,\y) rectangle ++(3*\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw,\y) -- (\base+\n*\cellw+3*\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw,\cellh) -- (\base+\n*\cellw+3*\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+1.5*\cellw,\y+0.45)
+    {};
+
+\draw[->] (\base+2*\cellw,\y) -- (\base+2*\cellw,\z+\cellh);
+
+  \foreach \i in {0,...,\n} {
+    \draw[thick] (\base+\i*\cellw,\z) rectangle ++(\cellw,\cellh);
+  }
+  \node at (\base+0.5,\z+0.45) {1};
+  \node at (\base+\cellw+0.5,\z+0.45) {2};
+  \node at (\base+2*\cellw+0.5,\z+0.45) {3};
+  \node at (\base+3*\cellw+0.5,\z+0.45) {4};
+
+  % Zone mémoire à gauche
+  \fill[gray!20] (\base-3*\cellw,\z) rectangle ++(3*\cellw,\cellh);
+  \draw[thick,-] (\base-3*\cellw,\z) -- (\base,\z);
+  \draw[thick,-] (\base-3*\cellw,\z+\cellh) -- (\base,\z+\cellh);
+  \node[align=center] at (\base-1.5*\cellw,\z+0.45)
+    {};
+
+    % Zone mémoire à droite
+  \fill[gray!20] (\base+\n*\cellw,\z) rectangle ++(3*\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw,\z) -- (\base+\n*\cellw+3*\cellw,\z);
+  \draw[thick,-] (\base+\n*\cellw,\z+\cellh) -- (\base+\n*\cellw+3*\cellw,\z+\cellh);
+  \node[align=center] at (\base+\n*\cellw+1.5*\cellw,\z+0.45)
+    {};
+
+\end{tikzpicture}
+
+\item Complexité : \(\Theta(1)\)
+
+  \alert{Temps constant}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ajouter un élément à un vecteur, cas lent}
+  \begin{itemize}
+  \item Si il n'y a plus de place dans la zone mémoire allouée pour le vecteur,
+    on commence par recopier tout le vecteur à dans une zone mémoire allouée
+    avec plus d'espace, et on ajoute l'élément ensuite.
+
+    \vspace{.5cm}
+    \begin{tikzpicture}[font=\small]
+      % Parameters for drawing
+  \def\cellw{1}
+  \def\cellh{0.9}
+  \def\n{4}
+  \def\base{0}          % base x-offset
+  \def\y{0}             % base y-offset
+  \def\z{-2}
+
+  \foreach \i in {0,...,\n} {
+    \draw[thick] (\base+\i*\cellw,\y) rectangle ++(\cellw,\cellh);
+  }
+  \node at (\base+0.5,\y+0.45) {1};
+  \node at (\base+\cellw+0.5,\y+0.45) {2};
+  \node at (\base+2*\cellw+0.5,\y+0.45) {3};
+  \node at (\base+3*\cellw+0.5,\y+0.45) {4};
+
+  % Zone mémoire à gauche
+  \fill[gray!20] (\base-\cellw,\y) rectangle ++(\cellw,\cellh);
+  \draw[thick,-] (\base-\cellw,\y) -- (\base,\y);
+  \draw[thick,-] (\base-\cellw,\cellh) -- (\base,\cellh);
+  \node[align=center] at (\base-1.5*\cellw,\y+0.45)
+    {};
+
+    % Zone mémoire à droite
+  \fill[gray!20] (\base+\n*\cellw,\y) rectangle ++(3*\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw,\y) -- (\base+\n*\cellw+3*\cellw,\y);
+  \draw[thick,-] (\base+\n*\cellw,\cellh) -- (\base+\n*\cellw+3*\cellw,\cellh);
+  \node[align=center] at (\base+\n*\cellw+1.5*\cellw,\y+0.45)
+    {};
+
+\draw[->] (\base+2*\cellw,\y) -- (\base+2*\cellw,\z+\cellh);
+
+  \foreach \i in {0,...,3} {
+    \draw[thick] (\base+\i*\cellw,\z) rectangle ++(\cellw,\cellh);
+  }
+  \node at (\base+0.5,\z+0.45) {1};
+  \node at (\base+\cellw+0.5,\z+0.45) {2};
+  \node at (\base+2*\cellw+0.5,\z+0.45) {3};
+  \node at (\base+3*\cellw+0.5,\z+0.45) {4};
+
+  % Zone mémoire à gauche
+  \fill[gray!20] (\base-\cellw,\z) rectangle ++(\cellw,\cellh);
+  \draw[thick,-] (\base-\cellw,\z) -- (\base,\z);
+  \draw[thick,-] (\base-\cellw,\z+\cellh) -- (\base,\z+\cellh);
+  \node[align=center] at (\base-1.5*\cellw,\z+0.45)
+    {};
+
+    % Zone mémoire à droite
+  \fill[gray!20] (\base+\n*\cellw,\z) rectangle ++(.5*\cellw,\cellh);
+  \draw[thick,-] (\base+\n*\cellw,\z) -- (\base+\n*\cellw+.5*\cellw,\z);
+  \draw[thick,-] (\base+\n*\cellw,\z+\cellh) -- (\base+\n*\cellw+.5*\cellw,\z+\cellh);
+
+  \foreach \i in {0,...,5} {
+    \draw[thick] (\base+\n*\cellw+.5\cellw+\i*\cellw,\z) rectangle ++(\cellw,\cellh);
+  }
+  \node at (\base+\n*\cellw+.25*\cellw,\z+0.45) {\ldots};
+  \node at (\base+\n*\cellw+\cellw,\z+0.45) {1};
+  \node at (\base+\n*\cellw+2*\cellw,\z+0.45) {2};
+  \node at (\base+\n*\cellw+3*\cellw,\z+0.45) {3};
+  \node at (\base+\n*\cellw+4*\cellw,\z+0.45) {4};
+  \node at (\base+\n*\cellw+5*\cellw,\z+0.45) {5};
+  \node at (\base+\n*\cellw+7*\cellw,\z+0.45) {\ldots};
+
+
+\end{tikzpicture}
+
+\item Complexité : \(\Theta(n)\)
+
+  \alert{Linéaire}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Le principe de la complexité amortie}
+\begin{tikzpicture}
+  \begin{axis} [ybar, bar width = 15 pt,
+    axis y line       = none,
+    axis x line       = none,
+    tickwidth         = 0pt,
+    enlarge y limits  = 0.2,
+    enlarge x limits  = 0.02,
+    xmin = -1,
+    xmax = 5, ymax=2.5]
+    \addplot[forget plot, fill=blue!40, draw=blue] coordinates {
+    (1,0.5)
+    (2,0.5)
+    (3,0.5)
+  };
+  \addplot[forget plot, fill=red!40, draw=red] coordinates {
+      (4,2.5)
+    };
+  \end{axis}
+\end{tikzpicture}
+\qquad \(\to\)\qquad
+\begin{tikzpicture}
+\begin{axis} [ybar, bar width = 15 pt,
+  axis y line       = none,
+  axis x line       = none,
+  tickwidth         = 0pt,
+  enlarge y limits  = 0.2,
+  enlarge x limits  = 0.02,
+  xmin = -1,
+  xmax = 5, ymax = 2.5]
+  \addplot[forget plot, fill=red!40, draw=red] coordinates {
+    (1,1)
+    (2,1)
+    (3,1)
+    (4,1)
+  };
+  \addplot[forget plot, fill=blue!40, draw=blue] coordinates {
+    (1,0.5)
+    (2,0.5)
+    (3,0.5)
+};
+\end{axis}
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Principe théorique}
+  \begin{itemize}
+  \item Si entre deux fois où l'opération coûte cher, on s'assure d'avoir
+    toujours assez d'opérations pas cher pour répartir les coûts de manière
+    homogène, on peut parler de complexité amortie.
+  \item On peut imaginer que chaque opération peu cher achète une part de
+    l'opération chère, et que l'on peut faire l'opération chère que lorsqu'on a
+    assez de part. \(\to\) Mathématiquement difficile à modéliser et à analyser.
+  \item En pratique, l'ajout d'un élément dans un vecteur est en \alert{temps
+      constant amorti}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tableaux et vecteurs, une dernière comparaison}
+  \begin{itemize}
+  \item Les tableaux sont moins pratiques à utiliser, mais ils sont plus simples
+    à analyser.
+  \item Les vecteurs permettent bien plus d'opérations, mais ils font beaucoup
+    de choses de manière cachées. Les opérations sont en moyenne peu chère, mais
+    peuvent de temps en temps être lentes.
+  \end{itemize}
+\end{frame}
+
+\section{Les classes \(\mathsf{P}\) et \(\mathsf{NP}\)}
+
+\begin{frame}
+  \frametitle{La classe $\mathsf{P}$}
+  \begin{itemize}
+  \item Une classe de complexité importante en informatique est la classe
+    \(\mathsf{P}\) contenant tous problèmes de décision dont la complexité est
+    \(\mathcal{O}\) d'un polynôme.
+  \item Elle contient par exemple tous les algorithmes de tri qu'on a vu, et la
+    grande majorité des exemples de ce cours.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{La classe $\mathsf{NP}$}
+  \begin{itemize}
+  \item La classe de complexité \(\mathsf{NP}\) contient les problèmes de
+    décisions, pour lesquels on sait vérifier qu'une solution est valide en un
+    temps polynômial.
+  \item Pour autant, on ne connaît pas nécessairement d'algorithme en temps
+    polynômial pour résoudre le problème
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Un exemple : 3-coloriabilité d'un graphe}
+  \begin{itemize}
+  \item Etant donné un graphe, existe-t-il un moyen de colorier ses sommets avec
+    4 couleurs, de manière à ce que deux sommets adjacents n'aient pas la même
+    couleur?
+
+    \[
+      \begin{tikzpicture}
+\node[circle, draw] (A) at (0,0) {};
+\node[circle, draw] (B) at (1,1) {};
+\node[circle, draw] (C) at (0,2) {};
+\node[circle, draw] (D) at (2,0) {};
+\node[circle, draw] (E) at (2,2) {};
+\draw[-] (A) -- (B);
+\draw[-] (A) -- (C);
+\draw[-] (C) -- (B);
+\draw[-] (D) -- (A);
+\draw[-] (E) -- (B);
+\draw[-] (D) -- (E);
+\end{tikzpicture}
+    \]
+
+
+  \item Si on me donne un coloriage, je peux vérifier qu'il est effectivement
+    valide, en temps polynomial. Mais tester tous les coloriages possibles
+    jusqu'à en trouver un est en temps exponentiel.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\(\mathsf{NP}\) = Non-deterministically polynomial}
+  \begin{itemize}
+  \item Imaginons que je cherche à construire un coloriage, et à chaque nouveau
+    noeud, je choisis une couleur.
+
+  \item Si j'ai beaucoup de chance, et que je fais tous les bons choix du
+    premier coup, alors j'ai construit une solution au problème.
+
+  \item Comme je sais vérifier en temps polynomial, ma solution est en temps
+    polynomial.
+
+    \alert{\(\mathsf{NP}\) = en temps polynomial avec beaucoup de chance}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Une question à 1 million de dollars}
+  \begin{itemize}
+  \item A ce jour, on ne sait pas si les classes \(\mathsf{P}\) et
+    \(\mathsf{NP}\)
+
+  \item Si c'était le cas, cela signifierai que pour chacun des problèmes
+    \(\mathsf{NP}\) -- que l'on peut résoudre en temps polynomial avec beaucoup
+    de chance -- il existe un algorithme en temps polynomial, sans avoir besoin
+    de chance.
+
+  \item C'est l'un des problème du millénaire, mis à pris à 1 million de dollars
+    par le Clay Mathematical Institute.
+  \end{itemize}
+\end{frame}
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% TeX-engine: luatex
+%%% End:

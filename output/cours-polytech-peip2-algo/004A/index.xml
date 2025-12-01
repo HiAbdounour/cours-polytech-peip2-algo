@@ -359,7 +359,70 @@ Commencer en déterminant le degré du polynôme résultant, et déterminer avec
         <fr:authors />
         <fr:title text="Backlinks">Backlinks</fr:title>
       </fr:frontmatter>
-      <fr:mainmatter />
+      <fr:mainmatter>
+        <fr:tree show-metadata="true" expanded="false" toc="false" numbered="false">
+          <fr:frontmatter>
+            <fr:authors>
+              <fr:author>
+                <fr:link href="/cours-polytech-peip2-algo/thibautbenjamin/" title="Thibaut Benjamin" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/thibautbenjamin/" display-uri="thibautbenjamin" type="local">Thibaut Benjamin</fr:link>
+              </fr:author>
+            </fr:authors>
+            <fr:date>
+              <fr:year>2025</fr:year>
+              <fr:month>12</fr:month>
+              <fr:day>1</fr:day>
+            </fr:date>
+            <fr:uri>http://thibautbenjamin.github.io/cours-polytech-peip2-algo/005S/</fr:uri>
+            <fr:display-uri>005S</fr:display-uri>
+            <fr:route>/cours-polytech-peip2-algo/005S/</fr:route>
+            <fr:title text="Implémentation des suites de Fibonacci à l'aide du calcul matriciel">Implémentation des suites de Fibonacci à l'aide du calcul matriciel</fr:title>
+            <fr:taxon>Exercice (optionnel)</fr:taxon>
+          </fr:frontmatter>
+          <fr:mainmatter>
+            <html:p>Le calcul des suites de Fibonacci avec la mémoisation est rapide, mais il n'est pas encore optimal. De plus il demande beaucoup de place en mémoire, car il demande, pour calculer une valeur de la suite de fibonacci de stocker en mémoire toutes les valeurs précédentes. En réalité, pour calculer une valeur, il suffit d'avoir accès seulement aux deux valeurs précédentes, il n'est pas nécessaire de stocker toutes les autres. Pour traduire cette contrainte, on va changer de stratégie, et plutôt que de calculer la suite de fibonacci, on va calculer la suite de vecteurs suivante:
+<fr:tex display="block"><![CDATA[A_n = \begin {bmatrix} F_n \\ F_{n-1} \end {bmatrix}]]></fr:tex>
+On remarque que la relation de récurrence sur les suites de Fibonacci se traduit en une relation de récurrence sur les <fr:tex display="inline"><![CDATA[A_n]]></fr:tex>, que l'on peut écrire comme ceci:
+<fr:tex display="block"><![CDATA[
+\begin {align*}
+A_1 &= \begin {bmatrix} 0 \\ 1 \end {bmatrix}
+& A_n &= \begin {bmatrix} 1 & 1 \\ 1 & 0 \end {bmatrix} A_{n-1}
+\end {align*}
+]]></fr:tex>
+
+<html:ol><html:li>Ecrire une fonction <html:code>multiplierMatrices</html:code> qui réalise la multiplication de deux matrices, qui prend en entrée deux entiers <fr:tex display="inline"><![CDATA[n_1]]></fr:tex>, <fr:tex display="inline"><![CDATA[k_1]]></fr:tex>, une matrice <html:code>mat1</html:code> de taille <fr:tex display="inline"><![CDATA[n_1\times  k_1]]></fr:tex>, un entier <fr:tex display="inline"><![CDATA[k_2]]></fr:tex>, une matrice <html:code>mat2</html:code> de taille <fr:tex display="inline"><![CDATA[k_1 \times  k_2]]></fr:tex>, et une matrice <html:code>res</html:code> de taille <fr:tex display="inline"><![CDATA[n_1\times  k_2]]></fr:tex>, et qui remplit la matrice <html:code>res</html:code> avec le résultat de la multiplication des deux matrices <html:code>mat1</html:code> et <html:code>mat2</html:code>. Pour déclarer dans une fonction un argument qui est une matrice de grands entiers on écrira
+
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.css" />
+        <html:link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/toolbar/prism-toolbar.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/show-language/prism-show-language.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/match-braces/prism-match-braces.min.js" />
+        <html:script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <html:script>
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                        "remove-trailing": true,
+                        "remove-indent": true,
+                        "left-trim": true,
+                        "right-trim": true,
+                });</html:script>
+        <html:pre><html:code class="language-cpp rainbow-braces line-numbers" data-prismjs-copy="Copier" data-prismjs-copy-error="Erreur" data-prismjs-copy-success="Copié">
+<![CDATA[void f (ttmath::Int<100>** matrice){}]]></html:code></html:pre></html:li>
+<html:li>A l'aide de la fonction de multiplication des matrices ci-dessus et de la formule de récurrence, écrire une fonction récursive permettant de calculer grâce à des produit matriciels le <fr:tex display="inline"><![CDATA[n^e]]></fr:tex> terme de la suite de Fibonacci.</html:li>
+<html:li>Mesurer le temps mis par cette fonction sur des entrées de tailles diverses et tracer une courbe. Arrêtez vous dès que la fonction dépasse 10 secondes.</html:li></html:ol></html:p>
+            <html:p>Le changement de perspective en passant aux matrices nous permet en réalité de gagner encore plus en efficacité. En effet, la suite de vecteurs précédente est en faite une suite géométrique (avec la multiplication des matrices, mais ce n'est pas grave). Cela permet d'écrire une formule close pour la valeur de <fr:tex display="inline"><![CDATA[A_n]]></fr:tex>:
+<fr:tex display="block"><![CDATA[A_n = \begin {bmatrix} 1 & 1 \\ 1 & 0 \end {bmatrix}^{n-1} A_{1}]]></fr:tex>
+Notre nouvel algorithme pour calculer le terme de la suite de fibonacci consiste à calculer la valeur de cette formule, grâce à <fr:link href="/cours-polytech-peip2-algo/004A/" title="Exponentiation" uri="http://thibautbenjamin.github.io/cours-polytech-peip2-algo/004A/" display-uri="004A" type="local">l'algorithme récursif d'exponentiation rapide</fr:link>.
+<html:ol><html:li>Ecrire une fonction <html:code>puissanceMatrice</html:code> qui prend en entrée un nombre <fr:tex display="inline"><![CDATA[k]]></fr:tex>, une matrice de taille de taille <fr:tex display="inline"><![CDATA[k\times  k]]></fr:tex> et un nombre <fr:tex display="inline"><![CDATA[n]]></fr:tex> et qui calcule la puissance <fr:tex display="inline"><![CDATA[n^e]]></fr:tex> de la matrice de manière récursive grâce à l'exponentiation rapide.</html:li>
+<html:li>A l'aide de la fonction de multiplication des matrices ci-dessus et de la formule de récurrence, écrire une fonction récursive permettant de calculer grâce à des produit matriciels le <fr:tex display="inline"><![CDATA[n^e]]></fr:tex> terme de la suite de Fibonacci.</html:li>
+<html:li>Mesurer le temps mis par cette fonction sur des entrées de tailles diverses et tracer une courbe. Arrêtez vous dès que la fonction dépasse 10 secondes.</html:li></html:ol></html:p>
+          </fr:mainmatter>
+        </fr:tree>
+      </fr:mainmatter>
     </fr:tree>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>

@@ -3,25 +3,29 @@
 \import{basemacros}
 \date{2025-11-21T13:38:03Z}
 
-\p{Pour manipuler des entiers qui dépassent la taille maximale des entiers que l'on représenter normalement en \Cpp, on utilisera la bibliothèque externe GMP. Pour se faire, on ajoutera en début de fichier la ligne
+\p{Pour manipuler des entiers qui dépassent la taille maximale des entiers que l'on représenter normalement en \Cpp, on utilisera la bibliothèque ttmath. Pour cela, veuillez tout d'abord [télécharger la dernière version](https://www.ttmath.org/_download). Ensuite, il faudra extraire le dossier appelé ttmath et le placer à la racine de votre projet. Pour utiliser cette bibliothèque, il faudra ajouter la ligne suivante à votre code:
 \cppdisplay{
 \startverb
-#include<gmpxx.h>
+#include"ttmath/ttmath.h"
 \stopverb
 }
-Cela nous donnera accès au type de donnée \code{mpz_class} que l'on utilisera pour représenter des nombres pouvant devenir arbitrairement grands. On pourra ensuite utiliser les opérateurs habituels pour manipuler ces nombres, sans risquer d'avoir des résultats faussés par un dépassement arithmétique
+Cela nous donnera accès au type de donnée \code{ttmath::Int<100>} que l'on utilisera pour représenter des nombres pouvant devenir très grands. On pourra ensuite utiliser les opérateurs habituels pour manipuler ces nombres, sans risquer d'avoir des résultats faussés par un dépassement arithmétique
 \cppdisplay{
 \startverb
-mpz_class a, b, c;
+ttmath::Int<100> a, b;
 a = 123456789101112;
 b = 123456789101113;
-c = a * b;
+cout << a * b;
 \stopverb
 }
-Pour que les programmes qui utilisent cette bibliothèque compilent, on indiquera au compilateur qu'il doit aller chercher les bibliothèques idoines, en ajoutant les arguments \code{-lgmpxx -lgmp}. Par exemple pour compiler un programme, on écrira
-\pre{\code{
+Pour initialiser un nombre avec une valeur supérieure à la valeur maximale d'un entier, on représentera ce nombre par une chaine de caractères:
+\cppdisplay{
 \startverb
-g++ -lgmpxx -lgmp monProgramme.cpp -o monProgramme.o
-\stopverb}
+ttmath::Int<100> c,d;
+c = "12345630890198039840983091384019384098";
+d = "9876787801900298098309809820980398";
+cout << c * d;
+\stopverb
 }
+On peut ensuite utiliser toutes les opérations habituelles sur les entiers, en utilisant le type des grands entiers à la place. Cependant, on ne passera pas de grands entiers comme argument d'une fonction, par contre on peut tout à fait écrire des fonctions qui retournent des grands entiers.
 }

@@ -1,0 +1,33 @@
+\title{Implémentation des suites de Fibonacci à l'aide du calcul matriciel}
+\author{thibautbenjamin}
+\taxon{Exercice (optionnel)}
+\import{basemacros}
+\date{2025-12-01T12:49:30Z}
+
+\p{Le calcul des suites de Fibonacci avec la mémoisation est rapide, mais il n'est pas encore optimal. De plus il demande beaucoup de place en mémoire, car il demande, pour calculer une valeur de la suite de fibonacci de stocker en mémoire toutes les valeurs précédentes. En réalité, pour calculer une valeur, il suffit d'avoir accès seulement aux deux valeurs précédentes, il n'est pas nécessaire de stocker toutes les autres. Pour traduire cette contrainte, on va changer de stratégie, et plutôt que de calculer la suite de fibonacci, on va calculer la suite de vecteurs suivante:
+##{A_n = \begin{bmatrix} F_n \\ F_{n-1} \end{bmatrix}}
+On remarque que la relation de récurrence sur les suites de Fibonacci se traduit en une relation de récurrence sur les #{A_n}, que l'on peut écrire comme ceci:
+##{
+\begin{align*}
+A_1 &= \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+& A_n &= \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix} A_{n-1}
+\end{align*}
+}
+
+\ol{
+\li{Ecrire une fonction \code{multiplierMatrices} qui réalise la multiplication de deux matrices, qui prend en entrée deux entiers #{n_1}, #{k_1}, une matrice \code{mat1} de taille #{n_1\times k_1}, un entier #{k_2}, une matrice \code{mat2} de taille #{k_1 \times k_2}, et une matrice \code{res} de taille #{n_1\times k_2}, et qui remplit la matrice \code{res} avec le résultat de la multiplication des deux matrices \code{mat1} et \code{mat2}. Pour déclarer dans une fonction un argument qui est une matrice de grands entiers on écrira
+\cppdisplay{
+\startverb
+void f (ttmath::Int<100>** matrice){}
+\stopverb}
+}
+\li{A l'aide de la fonction de multiplication des matrices ci-dessus et de la formule de récurrence, écrire une fonction récursive permettant de calculer grâce à des produit matriciels le #{n^e} terme de la suite de Fibonacci.}
+\li{Mesurer le temps mis par cette fonction sur des entrées de tailles diverses et tracer une courbe. Arrêtez vous dès que la fonction dépasse 10 secondes.}
+}}
+
+\p{Le changement de perspective en passant aux matrices nous permet en réalité de gagner encore plus en efficacité. En effet, la suite de vecteurs précédente est en faite une suite géométrique (avec la multiplication des matrices, mais ce n'est pas grave). Cela permet d'écrire une formule close pour la valeur de #{A_n}:
+##{A_n = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}^{n-1} A_{1}}
+Notre nouvel algorithme pour calculer le terme de la suite de fibonacci consiste à calculer la valeur de cette formule, grâce à [l'algorithme récursif d'exponentiation rapide](004A).
+\ol{\li{Ecrire une fonction \code{puissanceMatrice} qui prend en entrée un nombre #{k}, une matrice de taille de taille #{k\times k} et un nombre #{n} et qui calcule la puissance #{n^e} de la matrice de manière récursive grâce à l'exponentiation rapide.}
+\li{A l'aide de la fonction de multiplication des matrices ci-dessus et de la formule de récurrence, écrire une fonction récursive permettant de calculer grâce à des produit matriciels le #{n^e} terme de la suite de Fibonacci.}
+\li{Mesurer le temps mis par cette fonction sur des entrées de tailles diverses et tracer une courbe. Arrêtez vous dès que la fonction dépasse 10 secondes.}}}
