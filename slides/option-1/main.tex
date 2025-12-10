@@ -113,7 +113,7 @@
 
 \title{Introduction à la vérification de programmes}
 \subtitle{Polytech Paris-Saclay, PEIP 2, Informatique Option S3}
-\author{Thibaut Benjamin, Henry Saudubray, Philippe Volte--Vieira}
+\author{Thibaut Benjamin, Henri Saudubray, Philippe Volte--Vieira}
 \date{11 Décembre 2025}
 \institute{Cours 1}
 \begin{document}
@@ -241,11 +241,11 @@
 \begin{frame}
   \frametitle{La notion de variant}
   \begin{itemize}
-  \item Un variant est en entier positif qui décroît à chaque passage au point
-    d'entrée dans la boule.
+  \item Un variant est un entier positif qui décroît à chaque passage au point
+    d'entrée dans la boucle.
 
-  \item Toute suite d'entier décroissante est nécessairement finie, donc on fait
-    au plus un nombre fini de passages dans la boucle!
+  \item Toute suite d'entier positifs décroissante est nécessairement finie,
+    donc on fait au plus un nombre fini de passages dans la boucle!
   \end{itemize}
 \end{frame}
 
@@ -315,12 +315,10 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Le PGCD, version itérative}
+  \frametitle{La course}
   \begin{exercice}
     Donner un variant pour les boucles dans le programme suivant:
     \slideinputlisting[5][13]{code/exercice6.cpp}
-  \alert{Pour prouver ce variant, il faudra s'appuyer sur une propriété qui
-    reste vraie le long de l'exécution du programme.}
   \end{exercice}
 \end{frame}
 
@@ -328,17 +326,16 @@
 \begin{frame}
   \frametitle{Pourquoi s'embêter?}
   \begin{itemize}
-  \item Pourquoi y-a-t-il besoin de donner un variant un variant à la main?
-    Est-ce que le programme ne pourrait pas deviner tout seul qui est le
-    variant?
-  \item Plus généralement: on voudrait programme qui prend en entrée n'importe
-    quel programme avec des entrées et décide si ce programme termine sur ces
-    entrées.
+  \item Pourquoi y-a-t-il besoin de donner un variant à la main? Est-ce que le
+    programme ne pourrait pas deviner tout seul qui est le variant?
+  \item Plus généralement: on voudrait un programme qui prend en entrée
+    n'importe quel programme avec des entrées et décide si ce programme termine
+    sur ces entrées.
 
     \alert{Problème de l'arrêt}
   \item Un tel programme ne peut pas exister
 
-    \alert{Le progblème de l'arrêt est
+    \alert{Le problème de l'arrêt est
       indécidable.}
   \end{itemize}
 \end{frame}
