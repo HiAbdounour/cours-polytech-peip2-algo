@@ -125,7 +125,7 @@
   \begin{itemize}
   \item La semaine dernière, nous avons vu comment utiliser la méthode du
     variant pour prouver la terminaison des boucles.
-  \item \textbf{\alert{Rappel}}Un variant est une quantité entière positive
+  \item \textbf{\alert{Rappel}}: Un variant est une quantité entière positive
     associée à une boucle, et qui décroît strictement à chaque fois que l'on
     entre dans cette boucle.
   \end{itemize}
@@ -223,7 +223,7 @@
   Donner le variant et les préconditions pour la fonction suivante
   \slideinputlisting[3]{code/exercice2.cpp}
 
-  \href{https://www.why3.org/try/?name=isqrt.c&lang=micro-C&code=A7iA5includeA7xA3stdio7tAzhA7zNN1intyadditionBete%2F7nrzx7rrzy7I7J7OuAyPrecondition%2F70H3whilekniz0lLlA5VariantBlBHh7ys7qz17wHios7sppD79H4returnlqNq}{\alert{Démo}}
+  \href{https://www.why3.org/try/?name=isqrt.c&lang=micro-C&code=A7iA5includeA7xA3stdio7tAzhA7zNN1intyadditionBete%2F7nrzx7rrzy7I7J7OuAyPrecondition%2F70H3whileknB7Ayz0lLlA5VariantBlBHh7ys7qz17wHios7sppD79H4returnlqNq}{\alert{Démo}}
 
 \end{frame}
 
@@ -257,7 +257,7 @@
   \begin{itemize}
   \item Pour une fonction récursive, on peut ajouter un variant au contrat de la
     fonction.
-  \item Dans ce contexte, un variant est un entier positif qui décroit à chaque
+  \item Dans ce contexte, un variant est un entier positif qui décroît à chaque
     appel de la fonction
   \end{itemize}
 \end{frame}
@@ -308,7 +308,7 @@
   \frametitle{Solution: une post-condition}
   \begin{itemize}
   \item Pour pouvoir prouver la précondition, il faut un moyen de dire que la
-    fonction \lstinline|abs| renvoie tojours un entier positif
+    fonction \lstinline|abs| renvoie toujours un entier positif
     \vspace{-1cm}
   \item C'est le rôle d'une post condition (mot-clé \lstinline|@ensures| en Why3)
 
@@ -346,7 +346,7 @@
 
   \begin{itemize}
   \item Pour s'aider à donner les conditions, on peut définir des fonctions et
-    prédicats auxilliaires.
+    prédicats auxiliaries.
 
     \slideinputlisting[1][2]{code/exemple5.cpp}
 
