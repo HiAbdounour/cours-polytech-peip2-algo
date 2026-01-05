@@ -118,7 +118,7 @@
   \item Les contrats de fonctions comprenant
     \begin{itemize}
     \item Les pré-conditions: ce qu'il faut vérifier à chaque appel de fonction
-    \item Les variants: pour prouver le terminaison des fonctions récursives
+    \item Les variants: pour prouver la terminaison des fonctions récursives
     \item Les post-conditions: ce qui est vrai à la sortie de la fonction.
     \end{itemize}
   \end{itemize}
@@ -129,7 +129,7 @@
   \frametitle{Séance du jour}
 
   \begin{itemize}
-  \item Les invariants de boucles: pour prouver ce que fait une boucle.
+  \item Les invariants de boucle: pour prouver ce que fait une boucle.
   \item Une preuve d'un algorithme de tri
   \end{itemize}
 \end{frame}
@@ -212,7 +212,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Un premier exemple, l'addition naive}
+  \frametitle{Un premier exemple, l'addition naïve}
   \slideinputlisting{code/exemple1.cpp}
 
   \href{https://www.why3.org/try/?name=test.c&lang=micro-C&code=A1intyadditionBete%2F7nrza7rrzb7I7H7OO16requiresqA7zAz07wH3whileioB7AyokJk5variantolHqyinvariant%2FqA7TyAmoHe7ys7qz1pHmos7sppF79H4returnlqNqN}
@@ -259,9 +259,6 @@
   \frametitle{Rappel: PGCD récursif}
   \slideinputlisting{code/exemple2.cpp}
 
-  \href{https://www.why3.org/try/?name=test.c&lang=micro-C&code=A1int2pgcd7nrza7rrzb7I7H3whileAnnB7AyooJ0ifoo7zo7o77p7ys7so7w79H2elseAmpmsnmmmFtH4returnqqNq}{\alert{Démo
-      en Why3}}
-
   Comparer la réponse à l'exercice précédent avec cette spécification.
 
 \end{frame}
@@ -285,7 +282,7 @@
 
   \begin{itemize}
   \item \alert{Attention}: En Why3 un invariant est nécessairement une condition
-    booléenne: ca ne peut pas être un entier comme dans l'exemple de
+    booléenne: ça ne peut pas être un entier comme dans l'exemple de
     l'introduction.
   \item Pour construire ces booléens, on utilise souvent des \og labels\fg{}
     grâce au mot clé \lstinline|//@label|
@@ -297,7 +294,7 @@
 
 
 \begin{frame}[fragile]
-  \frametitle{Exercice: Spécification complète de l'addition naive}
+  \frametitle{Exercice: Spécification complète de l'addition naïve}
 
   On reprend le code du début. Ajouter une postcondition qui spécifie le
   résultat que renvoie cette fonction, et un invariant permettant de prouver
@@ -374,7 +371,7 @@
   \frametitle{Objectif}
   \begin{itemize}
   \item La dernière fois, on avait montré que la version récursive du tri par
-    instertion renvoie toujours un tableau trié (sans prouver la fonction
+    insertion renvoie toujours un tableau trié (sans prouver la fonction
     d'insertion).
   \item Aujourd'hui, on va faire la même chose pour la version itérative du tri
     par insertion.
